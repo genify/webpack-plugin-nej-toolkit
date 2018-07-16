@@ -8,6 +8,8 @@ describe('PrepareEntryPlugin', () => {
         let compiler = webpack(config);
         compiler.apply(new webpack.ProgressPlugin());
         compiler.run(function(err, stats) {
+            console.error(err);
+            console.error(stats);
             done();
         });
     });

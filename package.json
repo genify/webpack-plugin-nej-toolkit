@@ -15,10 +15,6 @@
     "type": "git",
     "url": "https://github.com/genify/webpack-plugin-nej-toolkit.git"
   },
-  "files": [
-    "lib",
-    "main.js"
-  ],
   "dependencies": {
     "webpack": "^4.15.1",
     "nej": "^1.7.0"
