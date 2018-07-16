@@ -1,0 +1,30 @@
+{
+  "name": "webpack-plugin-nej-toolkit",
+  "version": "0.0.1",
+  "author": "caijf <genify@163.com>",
+  "description": "Webpack Plugins for NEJ Toolkit",
+  "keywords": [
+    "webpack",
+    "plugin",
+    "nej",
+    "toolkit"
+  ],
+  "main": "./main.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/genify/webpack-plugin-nej-toolkit.git"
+  },
+  "files": [
+    "lib",
+    "main.js"
+  ],
+  "dependencies": {
+    "webpack": "^4.15.1",
+    "nej": "^1.7.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "chai": "^4.1.2"
+  }
+}
