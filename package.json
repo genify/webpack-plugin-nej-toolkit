@@ -17,9 +17,10 @@
   },
   "dependencies": {
     "webpack": "^4.15.1",
-    "nej": "^1.7.0"
+    "fecha": "^2.2.3"
   },
   "devDependencies": {
+    "eslint": "^5.2.0",
     "mocha": "^5.2.0",
     "chai": "^4.1.2"
   }
