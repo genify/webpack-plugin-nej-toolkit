@@ -4,6 +4,7 @@
  * @author caijf(genify@163.com)
  */
 const fs      = require('fs');
+const dt      = require('fecha');
 const qs      = require('querystring');
 const path    = require('path');
 const Emitter = require('events');
@@ -120,7 +121,7 @@ const FILTERS_CONFIG = [
             v = this[formatRegExp](v,'ig');
             if (!v){
                 // use start tag and end tag
-                var reg = /([$()[\]*+|])/g,
+                let reg = /([$()[\]*+|])/g,
                     beg = this.get('ALIAS_START_TAG').replace(reg,'\\$1'),
                     end = this.get('ALIAS_END_TAG').replace(reg,'\\$1');
                 this.remove('ALIAS_END_TAG','ALIAS_START_TAG');
@@ -294,7 +295,7 @@ const FILTERS_CONFIG = [
     },{
         NEJ_DIR: function (v) {
             if (!v) {
-                var root = this.get('DIR_WEBROOT');
+                let root = this.get('DIR_WEBROOT');
                 // check nej in lib
                 v = root + 'src/javascript/lib/nej/';
                 if (fs.existsSync(v + 'define.js')) {
@@ -618,7 +619,7 @@ const FILTERS_CONFIG = [
         X_LOGGER_FILE:function(v){
             return v||(
                 this.get('DIR_CONFIG')+
-                _util.formatTime('%s%s%s%s%s%s%s.log')
+                dt.format(new Date(),'YYYYMMDDHHmmssSSS.log')
             );
         }
     }];
@@ -1041,7 +1042,7 @@ class Parser extends Emitter{
             if ($2.toLowerCase()==='timestamp'){
                 return +time;
             }
-            return _util.formatTime(time, $2);
+            return dt.format(time, $2);
         });
     }
 
