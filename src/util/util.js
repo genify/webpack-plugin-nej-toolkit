@@ -14,6 +14,10 @@ const path = require('path');
  * @return {String} normalize path
  */
 exports.normalize = function(value, isdir) {
+    if (!value){
+        return value;
+    }
+    // format path
     let format = (val='') => {
         val = val.replace(/[\\/]+/g,'/');
         if (isdir&&!/\/$/.test(val)){
