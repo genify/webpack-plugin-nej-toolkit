@@ -2,7 +2,7 @@ let expect = require('chai').expect;
 let fs = require('fs');
 let Tokenizer = require('../../../src/parser/Tokenizer.js');
 
-describe('Tokenizer',function(){
+describe('Tokenizer',() => {
 
     let cases = [
         {
@@ -81,7 +81,7 @@ describe('Tokenizer',function(){
         }
     ];
 
-    describe('new Tokenizer',function(){
+    describe('new Tokenizer',() => {
 
         let dumpFirst = function(list, type) {
             return list.find((it) => {
