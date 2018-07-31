@@ -3,30 +3,30 @@
  *
  * @author caijf(genify@163.com)
  */
-const fs      = require('fs');
-const dt      = require('fecha');
-const qs      = require('querystring');
-const path    = require('path');
-const Emitter = require('events');
-const _util   = require('../util/util.js');
+const fs       = require('fs');
+const dt       = require('fecha');
+const qs       = require('querystring');
+const path     = require('path');
+const _util    = require('../util/util.js');
+const _Emitter = require('../util/emitter.js');
 
 // private name
-const cache         = Symbol('cache');
-const check         = Symbol('check');
-const filter        = Symbol('filter');
-const parse         = Symbol('parse');
-const parseProp     = Symbol('parseProp');
-const deprecate     = Symbol('deprecate');
-const formatKey     = Symbol('formatKey');
-const formatDir     = Symbol('formatDir');
-const formatDirSub  = Symbol('formatDirSub');
-const formatDomain  = Symbol('formatDomain');
-const formatDomains = Symbol('formatDomains');
-const formatBoolean = Symbol('formatBoolean');
-const formatNumber  = Symbol('formatNumber');
-const formatRegExp  = Symbol('formatRegExp');
-const formatPathVar = Symbol('formatPathVar');
-const formatJSONObj = Symbol('formatJSONObj');
+const cache          = Symbol('cache');
+const check          = Symbol('check');
+const filter         = Symbol('filter');
+const parse          = Symbol('parse');
+const parseProp      = Symbol('parseProp');
+const deprecate      = Symbol('deprecate');
+const formatKey      = Symbol('formatKey');
+const formatDir      = Symbol('formatDir');
+const formatDirSub   = Symbol('formatDirSub');
+const formatDomain   = Symbol('formatDomain');
+const formatDomains  = Symbol('formatDomains');
+const formatBoolean  = Symbol('formatBoolean');
+const formatNumber   = Symbol('formatNumber');
+const formatRegExp   = Symbol('formatRegExp');
+const formatPathVar  = Symbol('formatPathVar');
+const formatJSONObj  = Symbol('formatJSONObj');
 const formatCoreList = Symbol('formatCoreList');
 
 // config filters
@@ -149,32 +149,19 @@ const FILTERS_CONFIG = [
         },
         // @deprecated see NEJ_MODULE_ROOT
         DM_STATIC_MR:function(v){
-            if (v){
-                this[deprecate](
-                    'DM_STATIC_MR',
-                    'NEJ_MODULE_ROOT', v
-                );
-            }
+            this[deprecate]('DM_STATIC_MR','NEJ_MODULE_ROOT',v);
         },
         // @deprecated see MANIFEST_ROOT
         DM_STATIC_MF:function(v){
-            if (v){
-                this[deprecate](
-                    'DM_STATIC_MF',
-                    'MANIFEST_ROOT', v
-                );
-            }
+            this[deprecate]('DM_STATIC_MF','MANIFEST_ROOT',v);
         }
     },{
         // @deprecated see FILE_FILTER
         FILE_SUFFIXE:function(v){
             if (v){
-                this[deprecate](
-                    'FILE_SUFFIXE',
-                    'FILE_FILTER',
-                    '\\.(?:'+v+')$'
-                );
+                v = '\\.(?:'+v+')$';
             }
+            this[deprecate]('FILE_SUFFIXE','FILE_FILTER',v);
         }
     },{
         FILE_FILTER:function(v){
@@ -194,22 +181,17 @@ const FILTERS_CONFIG = [
                 if (v.search(/[._-]/)!==0){
                     v = '_'+v;
                 }
-                this[deprecate](
-                    'NAME_SUFFIX',
-                    'VERSION_MODE',
-                    '[FILENAME]'+v
-                );
+                v = '[FILENAME]'+v;
             }
+            this[deprecate]('NAME_SUFFIX','VERSION_MODE',v);
         },
         // @deprecated see VERSION_MODE
         RAND_VERSION:function(v){
+            // use rand mode
             if (v&&this[formatBoolean](v)){
-                let USE_RAND = 1;
-                this[deprecate](
-                    'RAND_VERSION',
-                    'VERSION_MODE', USE_RAND
-                );
+                v = 1;
             }
+            this[deprecate]('RAND_VERSION','VERSION_MODE',v);
         }
     },{
         VERSION_MODE:function(v){
@@ -218,10 +200,7 @@ const FILTERS_CONFIG = [
     },{
         // @deprecated see VERSION_STATIC
         STATIC_VERSION:function(v){
-            this[deprecate](
-                'STATIC_VERSION',
-                'VERSION_STATIC', v
-            );
+            this[deprecate]('STATIC_VERSION','VERSION_STATIC',v);
         }
     },{
         VERSION_STATIC:function(v){
@@ -233,64 +212,56 @@ const FILTERS_CONFIG = [
     },{
         // @deprecated see CORE_MERGE_FLAG
         X_NOCORE_STYLE:function(v){
-            let NOTHING = 0;
-            let MGSTYLE = 1;
-            v = (this[formatBoolean](v)?MGSTYLE:NOTHING)
-              + (this.get('CORE_MERGE_FLAG')||NOTHING);
+            if (v!=null){
+                let NOTHING = 0;
+                let MGSTYLE = 1;
+                v = (this[formatBoolean](v)?MGSTYLE:NOTHING)
+                    + (this.get('CORE_MERGE_FLAG')||NOTHING);
+            }
             this[deprecate]('X_NOCORE_STYLE','CORE_MERGE_FLAG',v);
         },
         // @deprecated see CORE_MERGE_FLAG
         X_NOCORE_SCRIPT:function(v){
-            let NOTHING = 0;
-            let MGSCRIPT = 2;
-            v = (this[formatBoolean](v)?MGSCRIPT:NOTHING)
-              + (this.get('CORE_MERGE_FLAG')||NOTHING);
+            if (v!=null){
+                let NOTHING = 0;
+                let MGSCRIPT = 2;
+                v = (this[formatBoolean](v)?MGSCRIPT:NOTHING)
+                    + (this.get('CORE_MERGE_FLAG')||NOTHING);
+            }
             this[deprecate]('X_NOCORE_SCRIPT','CORE_MERGE_FLAG',v);
         },
         // @deprecated see CORE_NOPARSE_FLAG
         X_NOPARSE_FLAG:function(v){
-            this[deprecate](
-                'X_NOPARSE_FLAG',
-                'CORE_NOPARSE_FLAG', v
-            );
+            this[deprecate]('X_NOPARSE_FLAG','CORE_NOPARSE_FLAG',v);
         }
     },{
         // @deprecated see WRP_INLINE_SOURCE
         X_MODULE_WRAPPER:function(v){
             if (v){
-                this[deprecate](
-                    'X_MODULE_WRAPPER',
-                    'WRP_INLINE_SOURCE',
-                    v||this.get('WRP_INLINE_SOURCE')||'%s'
-                );
+                v = v||this.get('WRP_INLINE_SOURCE')||'%s';
             }
+            this[deprecate]('X_MODULE_WRAPPER','WRP_INLINE_SOURCE',v);
         },
         // @deprecated see WRP_INLINE_SOURCE
         X_SCRIPT_WRAPPER:function(v){
             if (v){
-                this[deprecate](
-                    'X_SCRIPT_WRAPPER',
-                    'WRP_INLINE_SOURCE',
-                    v||this.get('WRP_INLINE_SOURCE')||'%s'
-                );
+                v = v||this.get('WRP_INLINE_SOURCE')||'%s';
             }
+            this[deprecate]('X_SCRIPT_WRAPPER','WRP_INLINE_SOURCE',v);
         }
     },{
         // @deprecated see CPRS_FLAG
         X_NOCOMPRESS:function(v){
-            let AUTO = 0;
-            let NOTZIP = 1;
-            this[deprecate](
-                'X_NOCOMPRESS','CPRS_FLAG',
-                this[formatBoolean](v)?NOTZIP:AUTO
-            );
+            if (v!=null){
+                let AUTO = 0;
+                let NOTZIP = 1;
+                v = this[formatBoolean](v)?NOTZIP:AUTO;
+            }
+            this[deprecate]('X_NOCOMPRESS','CPRS_FLAG',v);
         },
         // @deprecated see CPRS_KEEP_COMMENT
         X_KEEP_COMMENT:function(v){
-            this[deprecate](
-                'X_KEEP_COMMENT',
-                'CPRS_KEEP_COMMENT', v
-            );
+            this[deprecate]('X_KEEP_COMMENT','CPRS_KEEP_COMMENT',v);
         }
     },{
         NEJ_DIR: function (v) {
@@ -619,7 +590,7 @@ const FILTERS_CONFIG = [
         X_LOGGER_FILE:function(v){
             return v||(
                 this.get('DIR_CONFIG')+
-                dt.format(new Date(),'YYYYMMDDHHmmssSSS.log')
+                dt.format(new Date(),'YYYYMMDD-HHmmssSSS.log')
             );
         }
     }];
@@ -634,7 +605,7 @@ FILTERS_CONFIG.forEach((it) => {
 /**
  * Config Content Parser
  */
-class Parser extends Emitter{
+class Parser extends _Emitter{
     /**
      * Config Content Parser
      *
@@ -642,10 +613,13 @@ class Parser extends Emitter{
      * @param {Object|String} options.config - config object or config file path
      */
     constructor(options={}) {
-        super();
+        super(options);
         this[cache] = {};
         this[parse](options.config);
         this[check]();
+        this.emit('done',{
+            message: 'config parse done'
+        });
     }
 
     /**
@@ -656,7 +630,12 @@ class Parser extends Emitter{
      */
     get(key) {
         key = this[formatKey](key);
-        return this[cache][key];
+        // default value for config is empty string
+        let val = this[cache][key];
+        if (val==null){
+            val = '';
+        }
+        return val;
     }
 
     /**
@@ -705,10 +684,16 @@ class Parser extends Emitter{
      * @param  {String|Function} value - new value or get new value function
      */
     [deprecate](key1, key2, value) {
+        // not config old key
+        if (value==null||value===''){
+            return;
+        }
+        // warn if config with old key
         this.emit('warn',{
             field: [key1, key2],
             message: `${key1} is deprecated, use ${key2} instead`
         });
+        // delegate to new key
         let func = FILTERS_INDEXED[key2];
         this[filter](func, key2, value);
         FILTERS_INDEXED[key2] = (v) => {
@@ -741,7 +726,7 @@ class Parser extends Emitter{
                     'DIR_SOURCE','DIR_SOURCE_SUB',
                     'DIR_SOURCE_TP','DIR_SOURCE_TP_SUB'
                 ],
-                message: 'not found input directory config'
+                message: 'not found input directory'
             });
         }
         // check static entry and template entry directory
@@ -794,9 +779,6 @@ class Parser extends Emitter{
                 });
             }
         }
-
-
-
     }
 
     /**
@@ -805,6 +787,13 @@ class Parser extends Emitter{
      * @param  {Object|String} conf - config object or config file
      */
     [parse](conf) {
+        if (!conf){
+            this.emit('error',{
+                message: `not assign config file`
+            });
+            return;
+        }
+        // parse config
         let ret = conf;
         let dir = _util.absolute(
             process.cwd()+'/'
@@ -812,7 +801,7 @@ class Parser extends Emitter{
         // dump config from file
         if (typeof ret==='string'){
             let file = _util.absolute(dir,ret);
-            this.emit('debug', {
+            this.emit('info', {
                 message: `parse config file ${file}`
             });
             ret = this[parseProp](file);
@@ -835,9 +824,6 @@ class Parser extends Emitter{
         // cache config left
         Object.keys(ret).forEach((key) => {
             this.set(key, ret[key]);
-        });
-        this.emit('info', {
-            message: `config parse done, work dir is ${dir}`
         });
     }
 
