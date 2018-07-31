@@ -614,7 +614,10 @@ class Parser extends _Emitter{
      */
     constructor(options={}) {
         super(options);
+
         this[cache] = {};
+        this.errors = [];
+
         this[parse](options.config);
         this[check]();
         this.emit('done',{
@@ -711,6 +714,7 @@ class Parser extends _Emitter{
         // check web root
         let root = this.get('DIR_WEBROOT');
         if (!fs.existsSync(root)){
+            this.errors.push('DIR_WEBROOT');
             this.emit('error',{
                 field: 'DIR_WEBROOT',
                 message: `DIR_WEBROOT[${root}] not exist`
@@ -721,11 +725,13 @@ class Parser extends _Emitter{
             !this.get('DIR_SOURCE_SUB')&&
             !this.get('DIR_SOURCE_TP')&&
             !this.get('DIR_SOURCE_TP_SUB')){
+            let fields = [
+                'DIR_SOURCE','DIR_SOURCE_SUB',
+                'DIR_SOURCE_TP','DIR_SOURCE_TP_SUB'
+            ];
+            this.errors.push(...fields);
             this.emit('error',{
-                field: [
-                    'DIR_SOURCE','DIR_SOURCE_SUB',
-                    'DIR_SOURCE_TP','DIR_SOURCE_TP_SUB'
-                ],
+                field: fields,
                 message: 'not found input directory'
             });
         }
@@ -788,7 +794,9 @@ class Parser extends _Emitter{
      */
     [parse](conf) {
         if (!conf){
+            this.errors.push('DIR_CONFIG');
             this.emit('error',{
+                field: 'DIR_CONFIG',
                 message: `not assign config file`
             });
             return;
@@ -835,11 +843,12 @@ class Parser extends _Emitter{
      */
     [parseProp](file) {
         if (!fs.existsSync(file)){
+            this.errors.push('DIR_CONFIG');
             this.emit('error',{
                 field: 'DIR_CONFIG',
                 message: `config file [${file}] not exist`
             });
-            return null;
+            return {};
         }
         // try dump from json config file
         let parseJSON = () => {
@@ -896,8 +905,10 @@ class Parser extends _Emitter{
      * @return {String} absolute dir path
      */
     [formatDir](dir) {
-        let root = this.get('DIR_WEBROOT');
-        return _util.absolute(root, dir);
+        if (dir){
+            let root = this.get('DIR_WEBROOT');
+            return _util.absolute(root, dir);
+        }
     }
 
     /**
