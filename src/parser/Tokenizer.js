@@ -3,7 +3,7 @@
  *
  * @author caijf(genify@163.com)
  */
-const _Emitter = require('../util/emitter.js');
+const Emitter = require('../util/emitter.js');
 
 // private name
 const last            = Symbol('last');
@@ -150,7 +150,7 @@ TRANSFORM["'"] = TRANSFORM['"'];
  * - ontext       text parse end event, {source:'xxxxxxxx'}
  * - oncomment    comment pare end event, {comment:'xxxx',source:'<!-- xxxx -->'}
  */
-class Tokenizer extends _Emitter {
+class Tokenizer extends Emitter {
     /**
      * HTML Content Tag Tokenizer
      *
@@ -161,7 +161,7 @@ class Tokenizer extends _Emitter {
         super(options);
         // private attributes
         this[last]      = null;
-        this[status]     = STATE.TEXT;
+        this[status]    = STATE.TEXT;
         this[buffer]    = [];    // source cache
         this[string]    = [];    // string cache
         this[delimiter] = null;  // string split, ' or "
