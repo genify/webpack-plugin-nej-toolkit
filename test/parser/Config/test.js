@@ -2,6 +2,10 @@ let fs = require('fs');
 let expect = require('chai').expect;
 let CFGParser = require('../../../src/parser/Config.js');
 
+let log = (msg) => {
+    // console.log(msg);
+};
+
 describe('CFGParser', () => {
 
     describe('new CFGParser', () => {
@@ -9,19 +13,19 @@ describe('CFGParser', () => {
         it('should be ok to instance CFGParser without config file', (done) => {
             new CFGParser({
                 error: (e) => {
-                    console.error(e.message);
+                    log(e.message);
                 },
                 warn: (e) => {
-                    console.warn(e.message);
+                    log(e.message);
                 },
                 info: (e) => {
-                    console.info(e.message);
+                    log(e.message);
                 },
                 debug: (e) => {
-                    console.debug(e.message);
+                    log(e.message);
                 },
                 done: (e) => {
-                    console.info(e.message);
+                    log(e.message);
                     done();
                 }
             });
@@ -31,19 +35,19 @@ describe('CFGParser', () => {
             new CFGParser({
                 config: __dirname+'/release.conf',
                 error: (e) => {
-                    console.error(e.message);
+                    log(e.message);
                 },
                 warn: (e) => {
-                    console.warn(e.message);
+                    log(e.message);
                 },
                 info: (e) => {
-                    console.info(e.message);
+                    log(e.message);
                 },
                 debug: (e) => {
-                    console.debug(e.message);
+                    log(e.message);
                 },
                 done: (e) => {
-                    console.info(e.message);
+                    log(e.message);
                     done();
                 }
             });
