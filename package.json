@@ -16,6 +16,7 @@
     "url": "https://github.com/genify/webpack-plugin-nej-toolkit.git"
   },
   "dependencies": {
+    "winston": "^3.0.0",
     "webpack": "^4.15.1",
     "fecha": "^2.2.3"
   },
