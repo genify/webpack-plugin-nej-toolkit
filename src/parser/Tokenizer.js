@@ -105,11 +105,17 @@ const TRANSFORM = {
             this[endStringState]();
             return;
         }
+        // fix error ' or " in tag name
+        if (this[status]===STATE.TAG){
+            this[string].push(c);
+            return;
+        }
         // switch to string state
         if (this[status]===STATE.NAME||
             this[status]===STATE.VALUE){
             // fix error ' or " in name or value
             if (this[string].length>0){
+                this[string].push(c);
                 return;
             }
             this[begStringState](c);

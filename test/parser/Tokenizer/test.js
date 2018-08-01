@@ -6,11 +6,14 @@ describe('Tokenizer',() => {
 
     let cases = [
         {
-            code:"<def'a bc'>",
-            result:{name:"defa",closed:!1,selfClosed:!1,attrs:{"bc":''}}
+            code:"<def abc'ghi=123>",
+            result:{name:"def",closed:!1,selfClosed:!1,attrs:{"abc'ghi":"123"}}
         },{
             code:"<def'>",
-            result:{name:"def",closed:!1,selfClosed:!1}
+            result:{name:"def'",closed:!1,selfClosed:!1}
+        },{
+            code:"<def'a bc'>",
+            result:{name:"def'a",closed:!1,selfClosed:!1,attrs:{"bc'":''}}
         },{
             code:'<img src="/a.png" alt="test\\"abc">',
             result:{name:'img',attrs:{src:'/a.png',alt:'test\\"abc'},closed:!1,selfClosed:!1}
@@ -74,10 +77,10 @@ describe('Tokenizer',() => {
             result:{name:'img',closed:!1,selfClosed:!1,attrs:{src:'../../res/image/loading.gif',alt:'',class:'test'}}
         },{
             code:'<def"abc">',
-            result:{name:'defabc',closed:!1,selfClosed:!1,attrs:{}}
+            result:{name:'def"abc"',closed:!1,selfClosed:!1,attrs:{}}
         },{
             code:"<def'abc'>",
-            result:{name:"defabc",closed:!1,selfClosed:!1,attrs:{}}
+            result:{name:"def'abc'",closed:!1,selfClosed:!1,attrs:{}}
         }
     ];
 
