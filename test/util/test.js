@@ -1,7 +1,7 @@
 let expect = require('chai').expect;
-let path = require('../../src/util/util.js');
+let util = require('../../src/util/util.js');
 
-describe('util', () => {
+describe('util api', () => {
 
     describe('.normalize', () => {
         it('should be ok to normalize directory path', () => {
@@ -17,7 +17,7 @@ describe('util', () => {
                 'http://a.b.com/a' : 'http://a.b.com/a/'
             };
             Object.keys(test).forEach((key) => {
-                expect(path.normalize(key, true)).to.eql(test[key]);
+                expect(util.normalize(key, true)).to.eql(test[key]);
             });
         });
         it('should be ok to normalize file path', () => {
@@ -28,7 +28,7 @@ describe('util', () => {
                 'http://a.b.com/a/a.html' : 'http://a.b.com/a/a.html'
             };
             Object.keys(test).forEach((key) => {
-                expect(path.normalize(key)).to.eql(test[key]);
+                expect(util.normalize(key)).to.eql(test[key]);
             });
         });
     });
@@ -52,12 +52,22 @@ describe('util', () => {
                 '../c/v/a.html' : 'c:/a/c/v/a.html'
             };
             Object.keys(test).forEach((key) => {
-                expect(path.absolute(root, key)).to.eql(test[key]);
+                expect(util.absolute(root, key)).to.eql(test[key]);
             });
         });
     });
 
+    describe('.eval', () => {
+        
+        it('should be ok to eval right script', () => {
+            expect(util.eval('a = "1111"').a).to.eql('1111');
+        });
 
+        it('should be ok to eval script with error', () => {
+            expect(util.eval('a = alert(abc)').a).to.eql(undefined);
+        });
+        
+    });
 
 });
 
