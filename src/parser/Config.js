@@ -8,7 +8,7 @@ const dt       = require('fecha');
 const qs       = require('querystring');
 const path     = require('path');
 const _util    = require('../util/util.js');
-const _Emitter = require('../util/emitter.js');
+const Emitter  = require('../util/emitter.js');
 
 // private name
 const cache          = Symbol('cache');
@@ -605,7 +605,7 @@ FILTERS_CONFIG.forEach((it) => {
 /**
  * Config Content Parser
  */
-class Parser extends _Emitter{
+class Parser extends Emitter{
     /**
      * Config Content Parser
      *
