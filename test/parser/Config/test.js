@@ -1,3 +1,4 @@
+let fs = require('fs');
 let expect = require('chai').expect;
 let CFGParser = require('../../../src/parser/Config.js');
 
@@ -74,15 +75,17 @@ describe('CFGParser', () => {
             },
             {
                 desc: 'should emit error when DIR_WEBROOT not exist',
-                config: {DIR_WEBROOT:__dirname+'/'+(+new Date)},
+                config: {DIR_WEBROOT:__dirname+'/1'},
                 done: (self) => {
+                    fs.rmdirSync(__dirname+'/1');
                     expect(keys).to.include.members(self.errors);
                 }
             },
             {
                 desc: 'should emit error when no input',
-                config: {DIR_WEBROOT:__dirname+'/'+(+new Date)},
+                config: {DIR_WEBROOT:__dirname+'/2'},
                 done: (self) => {
+                    fs.rmdirSync(__dirname+'/2');
                     expect(keys).to.include.members(self.errors);
                 }
             },
