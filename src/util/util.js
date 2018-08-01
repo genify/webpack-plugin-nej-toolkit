@@ -4,6 +4,7 @@
  * @author caijf(genify@163.com)
  */
 const fs   = require('fs');
+const vm   = require('vm');
 const path = require('path');
 
 /**
@@ -67,4 +68,18 @@ exports.mkdir = function (dir) {
     fs.mkdirSync(dir);
 };
 
-
+/**
+ * eval script code
+ *
+ * @param  {String} code - script code
+ * @return {Object} sandbox
+ */
+exports.eval = function (code) {
+    let sandbox = {};
+    try{
+        vm.runInNewContext(code, sandbox);
+    }catch (e) {
+        // ignore script error
+    }
+    return sandbox;
+};
