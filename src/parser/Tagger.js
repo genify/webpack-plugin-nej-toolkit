@@ -16,71 +16,73 @@ const string            = Symbol('string');
 const onTag             = Symbol('onTag');
 const onText            = Symbol('onText');
 const onComment         = Symbol('onComment');
+const onResource        = Symbol('onResource');
 const updateState       = Symbol('updateState');
 const begTextState      = Symbol('begTextState');
 const endTextState      = Symbol('endTextState');
 const begResState       = Symbol('begResState');
 const endResState       = Symbol('endResState');
 const parseInstruction  = Symbol('parseInstruction');
-const isInResourceState = Symbol('isInResourceState');
 
 // parser state
 const STATE = {
-    TEXT     : 1,
-    STYLE    : 2,
-    SCRIPT   : 3,
-    TEXTAREA : 4,
-    NOTMATCH : 100
+    TEXT     : Symbol('text'),
+    STYLE    : Symbol('style'),
+    SCRIPT   : Symbol('script'),
+    TEXTAREA : Symbol('textarea'),
+    NOTMATCH : Symbol('notmatch')
 };
 
 // state transform handler
 const TRANSFORM = {
-    style:function(options){
-        // begin style
-        let attrs = options.attrs||{};
-        if (this[status]===STATE.TEXT&&attrs.disabled==null){
-            return STATE.STYLE;
-        }
-        // end style
-        if (this[status]===STATE.STYLE&&
-            !!options.closed&&!options.selfClosed){
-            return 'style';
-        }
-    },
-    script:function(options){
-        // begin script
-        if (this[status]===STATE.TEXT){
-            return STATE.SCRIPT;
-        }
-        // end script
-        if (this[status]===STATE.SCRIPT&&
-            !!options.closed&&!options.selfClosed){
-            return 'script';
+    style:{
+        beg: function(options){
+            let attrs = options.attrs||{};
+            if (this[status]===STATE.TEXT&&attrs.disabled==null){
+                return STATE.STYLE;
+            }
+        },
+        end: function (options) {
+            return this[status]===STATE.STYLE&&
+                !!options.closed&&!options.selfClosed;
         }
     },
-    textarea:function(options){
-        // begin textarea
-        if (this[status]===STATE.TEXT){
-            return STATE.TEXTAREA;
-        }
-        // end textarea
-        if (this[status]===STATE.TEXTAREA&&
-            !!options.closed&&!options.selfClosed){
-            return 'textarea';
+    script:{
+        beg: function(){
+            if (this[status]===STATE.TEXT){
+                return STATE.SCRIPT;
+            }
+        },
+        end: function (options) {
+            return this[status]===STATE.SCRIPT&&
+                !!options.closed&&!options.selfClosed;
         }
     },
-    link:function(options){
-        let attrs = options.attrs||{};
-        // external style link
-        if (this[status]===STATE.TEXT&&
-            !!attrs.href&&attrs.disabled==null){
-            // begin style
-            this[endTextState]();
-            this[begResState](STATE.STYLE,options);
-            // end style
-            this[endResState]('style','',options);
-            this[begTextState]();
-            return STATE.NOTMATCH;
+    textarea:{
+        beg: function(){
+            if (this[status]===STATE.TEXT){
+                return STATE.TEXTAREA;
+            }
+        },
+        end: function (options) {
+            return this[status]===STATE.TEXTAREA&&
+                !!options.closed&&!options.selfClosed;
+        }
+    },
+    link:{
+        beg: function(options){
+            let attrs = options.attrs||{};
+            // external style link
+            if (this[status]===STATE.TEXT&&
+                !!attrs.href&&attrs.disabled==null){
+                // begin style
+                this[endTextState]();
+                this[begResState](STATE.STYLE,options);
+                // end style
+                this[endResState]('style','',options);
+                this[begTextState]();
+                return STATE.NOTMATCH;
+            }
         }
     }
 };
@@ -90,14 +92,16 @@ const TRANSFORM = {
  *
  * input config
  * - content          html file content
+ * supported properties
+ * - result           html content line after tag parsing
  * supported events
- * - onstyle          style resource parse end event, {config:{},buffer:[],source:''}
- * - onscript         script resource parse end event, {config:{},buffer:[],source:''}
- * - ontextarea       textarea resource parse end event, {config:{},buffer:[],source:''}
+ * - onstyle          style resource parse end event, {config:{},source:''}
+ * - onscript         script resource parse end event, {config:{},source:''}
+ * - ontextarea       textarea resource parse end event, {config:{},source:''}
  * - oninstruction    nej deploy instruction parse end event, {command:'STYLE',config:{core:false},closed:false}
- * - ontag            tag parse end event, {tag:{},buffer:[]}
- * - ontext           text parse end event, {source:'',buffer:[]}
- * - oncomment        comment parse end event, {source:'',buffer:[]}
+ * - ontag            tag parse end event, {tag:{}}
+ * - ontext           text parse end event, {source:''}
+ * - oncomment        comment parse end event, {source:''}
  */
 class Tagger extends Emitter {
     /**
@@ -108,20 +112,18 @@ class Tagger extends Emitter {
      */
     constructor(options={}) {
         super(options);
-
         // init private status
         this[last]   = null;
         this[props]  = null;
         this[status] = STATE.TEXT;
         this[string] = [];
         this.result  = [];
-
         // tokenizer html content
         this[parser] = new Tokenizer({
             content : options.content||'',
-            tag     : this[onTag].bind(this),
-            text    : this[onText].bind(this),
-            comment : this[onComment].bind(this)
+            tag     : this[onResource].bind(this,onTag),
+            text    : this[onResource].bind(this,onText),
+            comment : this[onResource].bind(this,onComment)
         });
     }
 
@@ -165,17 +167,6 @@ class Tagger extends Emitter {
     }
 
     /**
-     * check resource state
-     *
-     * @return {Boolean} whether resource state
-     */
-    [isInResourceState]() {
-        return this[status]===STATE.STYLE||
-               this[status]===STATE.SCRIPT||
-               this[status]===STATE.TEXTAREA;
-    };
-
-    /**
      * update state
      *
      * @param  {Number} state - state value
@@ -200,8 +191,7 @@ class Tagger extends Emitter {
         let text = this[string].join('');
         if (!!text){
             this.emit('text',{
-                source: text,
-                buffer: this.result
+                source: text
             });
         }
     };
@@ -213,7 +203,7 @@ class Tagger extends Emitter {
      * @param  {Object} options - config options
      */
     [begResState](state,options) {
-        this[props]  = options.attrs;
+        this[props]  = options;
         this[string] = [options.source];
         this[updateState](state);
     };
@@ -230,8 +220,9 @@ class Tagger extends Emitter {
             end = source||'';
         let event = {
             tag: tag,
-            config: this[props],
-            buffer: this.result,
+            end: tag,
+            beg: this[props],
+            config: this[props].attrs,
             source: this[string].join('')
         };
         this.emit(name,event);
@@ -275,42 +266,70 @@ class Tagger extends Emitter {
     }
 
     /**
+     * check resource content
+     *
+     * @param  {String} name - resource callback name
+     * @param  {Object} options - resource result
+     */
+    [onResource](name, options) {
+        // check resource end tag
+        if (name===onTag){
+            let type = options.name.toLowerCase();
+            let func = (TRANSFORM[type]||{}).end;
+            if (func&&func.call(this, options)){
+                this[name].call(this, options);
+                return;
+            }
+        }
+        // check content in resource
+        let isInRes =
+            this[status]===STATE.STYLE||
+            this[status]===STATE.SCRIPT||
+            this[status]===STATE.TEXTAREA;
+        // save resource source
+        if (isInRes){
+            this[string].push(options.source);
+        }else{
+            this[name].call(this, options);
+        }
+    }
+
+    /**
      * on tag event from tokenizer
      *
      * @param  {Object} options - tag config
      */
     [onTag](options) {
         // script/style/textarea
-        let tname = options.name.toLowerCase(),
-            pfunc = TRANSFORM[tname];
-        if (!!pfunc){
-            let ret = pfunc.call(this,options);
-            // ignore cache
-            if (ret===STATE.NOTMATCH){
-                return;
-            }
-            // end state
-            if (typeof ret==='string'){
-                this[endResState](
-                    ret,options.source,options
-                );
-                this[begTextState]();
-                return;
-            }
-            // begin state
-            if (typeof ret==='number'){
-                this[endTextState]();
-                this[begResState](ret,options);
-                return;
-            }
-        }else{
+        let type = options.name.toLowerCase();
+        let conf = TRANSFORM[type];
+        if (!conf){
+            // for normal tag
             let event = {
-                tag: options,
-                buffer: this.result
+                tag: options
             };
             this.emit('tag',event);
             if (event.value!=null){
                 this.result.push(event.value);
+                return;
+            }
+        }else{
+            let ret = conf.beg.call(this, options);
+            // ignore cache for link style
+            if (ret===STATE.NOTMATCH){
+                return;
+            }
+            // for resource begin
+            if (ret){
+                this[endTextState]();
+                this[begResState](ret,options);
+                return;
+            }
+            // for resource end
+            ret = conf.end.call(this, options);
+            if (ret){
+                this[endResState](type,options.source,options);
+                this[begTextState]();
                 return;
             }
         }
@@ -324,29 +343,18 @@ class Tagger extends Emitter {
      * @param  {Object} options - text config
      */
     [onText](options) {
-        let event = {
-            source: options.source,
-            buffer: this.result
-        };
-        // save source
-        if (this[isInResourceState]()){
-            this.emit('restxt',event);
+        // text content
+        if (!options.name){
+            let event = {
+                source: options.source
+            };
+            this.emit('text',event);
             if (event.value!=null){
-                this[string].push(options.value);
-            }else{
-                this[string].push(options.source);
+                this.result.push(event.value);
+                return;
             }
-        }else{
-            // text content
-            if (!options.name){
-                this.emit('text',event);
-                if (event.value!=null){
-                    this.result.push(event.value);
-                    return;
-                }
-            }
-            this.result.push(options.source);
         }
+        this.result.push(options.source);
     };
     
     /**
@@ -357,12 +365,10 @@ class Tagger extends Emitter {
     [onComment](options) {
         let ret = this[parseInstruction](options.comment);
         if (!!ret){
-            ret.buffer = this.result;
             ret.source = options.source;
             this.emit('instruction',ret);
         }else{
             let event = {
-                buffer: this.result,
                 source: options.source
             };
             this.emit('comment',event);

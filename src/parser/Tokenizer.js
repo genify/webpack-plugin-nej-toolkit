@@ -36,13 +36,13 @@ const endCommentState = Symbol('endCommentState');
 
 // state decoration
 const STATE = {
-    TAG     : 1,    // <XX XX=XX />
-    TEXT    : 2,
-    NAME    : 3,    // attr=value
-    VALUE   : 4,
-    STRING  : 5,    // '' OR ""
-    ESCAPE  : 6,    // \
-    COMMENT : 7
+    TAG     : Symbol('tag'),    // <XX XX=XX />
+    TEXT    : Symbol('text'),
+    NAME    : Symbol('name'),   // attr=value
+    VALUE   : Symbol('value'),
+    STRING  : Symbol('string'), // '' OR ""
+    ESCAPE  : Symbol('escape'), // \
+    COMMENT : Symbol('comment')
 };
 
 // state transform handler
@@ -359,6 +359,7 @@ class Tokenizer extends Emitter {
         let sep = this[delimiter]||'';
         let name = `${sep}${this[string].join('').trim()}${sep}`;
         if (!!name){
+            this[string] = [];
             this[props].attr = name;
             this[props].attrs[name] = '';
         }
