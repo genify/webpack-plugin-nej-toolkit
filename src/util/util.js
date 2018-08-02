@@ -71,11 +71,12 @@ exports.mkdir = function (dir) {
 /**
  * eval script code
  *
- * @param  {String} code - script code
+ * @param  {String} code   - script code
+ * @param  {Object=} global - global context
  * @return {Object} sandbox
  */
-exports.eval = function (code) {
-    let sandbox = {};
+exports.eval = function (code, global) {
+    let sandbox = global||{};
     try{
         vm.runInNewContext(code, sandbox);
     }catch (e) {
