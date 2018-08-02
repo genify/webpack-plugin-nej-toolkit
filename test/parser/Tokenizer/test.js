@@ -6,6 +6,9 @@ describe('Tokenizer',() => {
 
     let cases = [
         {
+            code:'<a "hidefocus"="true"/>',
+            result:{name:'a',attrs:{'"hidefocus"':'true'},closed:!1,selfClosed:!0}
+        },{
             code:"<def abc'ghi=123>",
             result:{name:"def",closed:!1,selfClosed:!1,attrs:{"abc'ghi":"123"}}
         },{
@@ -58,9 +61,6 @@ describe('Tokenizer',() => {
             code:'<a hidefocus="true">',
             result:{name:'a',attrs:{hidefocus:'true'},closed:!1,selfClosed:!1}
         },{
-            code:'<a "hidefocus"="true"/>',
-            result:{name:'a',attrs:{hidefocus:'true'},closed:!1,selfClosed:!0}
-        },{
             code:'<#escape x as x?html>',
             result:{name:'#escape',attrs:{x:'',as:'','x?html':''},closed:!1,selfClosed:!1}
         },{
@@ -81,6 +81,12 @@ describe('Tokenizer',() => {
         },{
             code:"<def'abc'>",
             result:{name:"def'abc'",closed:!1,selfClosed:!1,attrs:{}}
+        },{
+            code:'<#assign a = b + c />',
+            result:{name:'#assign',closed:!1,selfClosed:!0,attrs:{a:'b','+':'',c:''}}
+        },{
+            code:'<@topbar title="title!\\"中文\\""/>',
+            result:{name:'@topbar',closed:!1,selfClosed:!0,attrs:{title:'title!\\"中文\\"'}}
         }
     ];
 
@@ -93,14 +99,6 @@ describe('Tokenizer',() => {
                 }
             });
         };
-
-        cases.push({
-            code:'<#assign a = b + c />',
-            result:{name:'#assign',closed:!1,selfClosed:!0}
-        },{
-            code:'<@topbar title="title!\"Ʒ��ҳ\""/>',
-            result:{name:'@topbar',closed:!1,selfClosed:!0}
-        });
 
         cases.forEach(function(config){
             config.type = config.type||'tag';
@@ -116,7 +114,7 @@ describe('Tokenizer',() => {
                 // check result
                 let r = config.result;
                 if (!!r.attrs){
-                    expect(ret.attrs).to.include(r.attrs);
+                    expect(ret.attrs).to.eql(r.attrs);
                 }
                 delete r.attrs;
                 delete ret.attrs;
