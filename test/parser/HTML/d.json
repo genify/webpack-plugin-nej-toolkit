@@ -1,0 +1,4469 @@
+[
+  {
+    "attrs": {
+      "模拟数据，不用注释,": "",
+      "如果storageList": "",
+      "与": "",
+      "purchaseOrder": "",
+      "都不存在，则加载假数据": "",
+      "--": ""
+    },
+    "name": "#--",
+    "source": "<#-- 模拟数据，不用注释, 如果storageList 与 purchaseOrder 都不存在，则加载假数据 -->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "在新建采购单时，后端不会给purchaseOrder对象，这边默认给一个状态及purchaseOrder对象": "",
+      "--": ""
+    },
+    "name": "#--",
+    "source": "<#-- 在新建采购单时，后端不会给purchaseOrder对象，这边默认给一个状态及purchaseOrder对象 -->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "storageList??": ""
+    },
+    "name": "#if",
+    "source": "<#if storageList??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "po": "purchaseOrder?default({\"purchaseCount\":0,\"purchaseAmount\":0,\"invoiceCount\":0,\"invoiceAmount\":0,",
+      "\"supplierId\"": "",
+      ":-9999999,": "",
+      "\"storageId\"": "",
+      ":": "",
+      "-9999999,": "",
+      "\"remark\"": "",
+      ":\"\",": "",
+      "\"status\"": "",
+      "1,": "",
+      "\"details\"": "",
+      ":[],\"logs\":[]})": ""
+    },
+    "name": "#assign",
+    "source": "<#assign po=purchaseOrder?default({\"purchaseCount\":0,\"purchaseAmount\":0,\"invoiceCount\":0,\"invoiceAmount\":0,\r\n    \"supplierId\":-9999999,\r\n    \"storageId\": -9999999,\r\n    \"remark\":\"\",\r\n    \"status\": 1,\r\n    \"details\":[],\"logs\":[]})/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "!storageList??": "",
+      "&&": "",
+      "!purchaseOrder??": ""
+    },
+    "name": "#if",
+    "source": "<#if !storageList?? && !purchaseOrder?? >",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "\"../fakedata/psinventory/create_fakedata.ftl\"": ""
+    },
+    "name": "#include",
+    "source": "<#include \"../fakedata/psinventory/create_fakedata.ftl\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "\"/common/macro.ftl\"": ""
+    },
+    "name": "#include",
+    "source": "<#include \"/common/macro.ftl\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "!purchaseOrder??": ""
+    },
+    "name": "#if",
+    "source": "<#if !purchaseOrder??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#assign",
+    "source": "<#assign status=1/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "statusText": "审核驳回"
+    },
+    "name": "#assign",
+    "source": "<#assign statusText=\"审核驳回\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "currencyType": "-1"
+    },
+    "name": "#assign",
+    "source": "<#assign currencyType=-1/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "purchaseWayType": "-1"
+    },
+    "name": "#assign",
+    "source": "<#assign purchaseWayType=-1/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "status:": "",
+      "编辑中(0),审核驳回(1),待审核(2),待入库(3),入库待确认(4),已入库(5),已取消(6),拒绝入库(7)": "",
+      "--": ""
+    },
+    "name": "#--",
+    "source": "<#-- status: 编辑中(0),审核驳回(1),待审核(2),待入库(3),入库待确认(4),已入库(5),已取消(6),拒绝入库(7) -->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "status": "po.status.intValue()"
+    },
+    "name": "#assign",
+    "source": "<#assign status=po.status.intValue()/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "status": "0||status-1"
+    },
+    "name": "#if",
+    "source": "<#if status==0||status==-1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#assign",
+    "source": "<#assign status=1/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "statusText": "po.status.toString()"
+    },
+    "name": "#assign",
+    "source": "<#assign statusText=po.status.toString()/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "currencyType": "po.currencyType.intValue()"
+    },
+    "name": "#assign",
+    "source": "<#assign currencyType=po.currencyType.intValue()/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "purchaseWayType": "po.purchaseWay.intValue()"
+    },
+    "name": "#assign",
+    "source": "<#assign purchaseWayType=po.purchaseWay.intValue()/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "tallyAuditStatus": "po.tallyAuditStatus!-999"
+    },
+    "name": "#assign",
+    "source": "<#assign tallyAuditStatus=po.tallyAuditStatus!-999/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "stages": "po.stages![]"
+    },
+    "name": "#assign",
+    "source": "<#assign stages=po.stages![]/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "\"../../common/import.ftl\"": ""
+    },
+    "name": "#include",
+    "source": "<#include \"../../common/import.ftl\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "title": "新建采购单"
+    },
+    "name": "@htmHead",
+    "source": "<@htmHead title=\"新建采购单\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@css",
+    "source": "<@css/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "uri": "${css_root}module/date.css"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "uri": "${css_root}module/psinventory/create.css"
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "@htmHead",
+    "source": "</@htmHead>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "@topHeader",
+    "source": "<@topHeader />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "class": "g-body"
+    },
+    "name": "div",
+    "source": "<div class=\"g-body\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@leftMenu",
+    "source": "<@leftMenu />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n\t"
+  },
+  {
+    "attrs": {
+      "class": "g-main"
+    },
+    "name": "div",
+    "source": "<div class=\"g-main\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "m-contents"
+    },
+    "name": "div",
+    "source": "<div class=\"m-contents\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "class": "m-title-bar f-clearfix"
+    },
+    "name": "div",
+    "source": "<div class=\"m-title-bar f-clearfix\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "m-po-ctrl f-fr"
+    },
+    "name": "div",
+    "source": "<div class=\"m-po-ctrl f-fr\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "f-warn",
+      "id": "po-alert"
+    },
+    "name": "span",
+    "source": "<span class=\"f-warn\" id=\"po-alert\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#if",
+    "source": "<#if status==1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "fromTrackTask??": ""
+    },
+    "name": "#if",
+    "source": "<#if fromTrackTask??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "value": "取消",
+      "class": "w-btn w-btn-blue u-btn",
+      "id": "cancelPageBtn"
+    },
+    "name": "a",
+    "source": "<a value=\"取消\" class=\"w-btn w-btn-blue u-btn\" id=\"cancelPageBtn\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "取消"
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "type": "button",
+      "value": "保存",
+      "class": "w-btn w-btn-blue u-btn",
+      "id": "saveBtn"
+    },
+    "name": "input",
+    "source": "<input type=\"button\" value=\"保存\" class=\"w-btn w-btn-blue u-btn\" id=\"saveBtn\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "!fromTrackTask??": ""
+    },
+    "name": "#if",
+    "source": "<#if !fromTrackTask??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "type": "button",
+      "value": "提交采购单",
+      "class": "w-btn w-btn-blue u-btn",
+      "id": "submitBtn"
+    },
+    "name": "input",
+    "source": "<input type=\"button\" value=\"提交采购单\" class=\"w-btn w-btn-blue u-btn\" id=\"submitBtn\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "status": "3"
+    },
+    "name": "#if",
+    "source": "<#if status==3>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "type": "button",
+      "value": "重推采购单",
+      "class": "w-btn w-btn-blue u-btn",
+      "id": "repushBtn"
+    },
+    "name": "input",
+    "source": "<input type=\"button\" value=\"重推采购单\" class=\"w-btn w-btn-blue u-btn\" id=\"repushBtn\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "type": "button",
+      "value": "取消采购单",
+      "class": "w-btn w-btn-blue u-btn",
+      "id": "cancelBtn"
+    },
+    "name": "input",
+    "source": "<input type=\"button\" value=\"取消采购单\" class=\"w-btn w-btn-blue u-btn\" id=\"cancelBtn\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "status": "5",
+      "&&": "",
+      "(!po.financeCheckState??": "",
+      "||": "",
+      "po.financeCheckState.intValue()": "0)"
+    },
+    "name": "#if",
+    "source": "<#if status==5 && (!po.financeCheckState?? || po.financeCheckState.intValue()==0)>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "type": "button",
+      "value": "财务核对",
+      "class": "w-btn w-btn-blue u-btn",
+      "id": "financeCheckBtn"
+    },
+    "name": "input",
+    "source": "<input type=\"button\" value=\"财务核对\" class=\"w-btn w-btn-blue u-btn\" id=\"financeCheckBtn\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "status": "6"
+    },
+    "name": "#if",
+    "source": "<#if status==6>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "type": "button",
+      "value": "复制采购单",
+      "class": "w-btn w-btn-blue u-btn",
+      "id": "copyBtn",
+      "onclick": "window.open('/backend/invoicing/order/create?copy_from_id=${(po.id)}')"
+    },
+    "name": "input",
+    "source": "<input type=\"button\" value=\"复制采购单\" class=\"w-btn w-btn-blue u-btn\" id=\"copyBtn\" onclick=\"window.open('/backend/invoicing/order/create?copy_from_id=${(po.id)}')\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "status": "7"
+    },
+    "name": "#if",
+    "source": "<#if status==7>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "type": "button",
+      "value": "复制采购单",
+      "class": "w-btn w-btn-blue u-btn",
+      "id": "copyBtn",
+      "onclick": "window.open('/backend/invoicing/order/create?copy_from_id=${(po.id)}')"
+    },
+    "name": "input",
+    "source": "<input type=\"button\" value=\"复制采购单\" class=\"w-btn w-btn-blue u-btn\" id=\"copyBtn\" onclick=\"window.open('/backend/invoicing/order/create?copy_from_id=${(po.id)}')\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "po.id??": ""
+    },
+    "name": "#if",
+    "source": "<#if po.id??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "poNumberPrefix": "采购单号： "
+    },
+    "name": "#assign",
+    "source": "<#assign poNumberPrefix=\"采购单号： \"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "poNumberPrefix": ""
+    },
+    "name": "#assign",
+    "source": "<#assign poNumberPrefix=\"\"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "copyOrder??": ""
+    },
+    "name": "#if",
+    "source": "<#if copyOrder??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "u-page-title",
+      "data-ponumber": "新建采购单"
+    },
+    "name": "span",
+    "source": "<span class=\"u-page-title\" data-ponumber=\"新建采购单\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        新建采购单\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "u-page-title",
+      "data-ponumber": "${(po.id)?default('新建采购单')}"
+    },
+    "name": "span",
+    "source": "<span class=\"u-page-title\" data-ponumber=\"${(po.id)?default('新建采购单')}\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        ${poNumberPrefix}${(po.id)?default('新建采购单')}\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "class": "m-poheader f-clearfix",
+      "id": "searchForm"
+    },
+    "name": "form",
+    "source": "<form class=\"m-poheader f-clearfix\" id=\"searchForm\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "term"
+    },
+    "name": "label",
+    "source": "<label class=\"term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "指定入库仓库"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#if",
+    "source": "<#if status==1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "fromTrackTask??": ""
+    },
+    "name": "#if",
+    "source": "<#if fromTrackTask??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "id": "po-warehouse"
+    },
+    "name": "select",
+    "source": "<select id=\"po-warehouse\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "storageList": "",
+      "as": "",
+      "st": ""
+    },
+    "name": "#list",
+    "source": "<#list storageList as st>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "st.storageId": "warehouseId4Audit"
+    },
+    "name": "#if",
+    "source": "<#if st.storageId==warehouseId4Audit>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                        "
+  },
+  {
+    "attrs": {
+      "value": "${st.storageId}",
+      "selected": "",
+      "data-type": "${st.storageType}"
+    },
+    "name": "option",
+    "source": "<option value=\"${st.storageId}\" selected data-type=${st.storageType}>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${st.storageName}"
+  },
+  {
+    "attrs": {},
+    "name": "option",
+    "source": "</option>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                        "
+  },
+  {
+    "attrs": {
+      "value": "${st.storageId}",
+      "data-type": "${st.storageType}"
+    },
+    "name": "option",
+    "source": "<option value=\"${st.storageId}\"  data-type=${st.storageType}>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${st.storageName}"
+  },
+  {
+    "attrs": {},
+    "name": "option",
+    "source": "</option>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "select",
+    "source": "</select>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "id": "po-warehouse"
+    },
+    "name": "select",
+    "source": "<select id=\"po-warehouse\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "storageList": "",
+      "as": "",
+      "st": ""
+    },
+    "name": "#list",
+    "source": "<#list storageList as st>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "st.storageId": "po.storageId"
+    },
+    "name": "#if",
+    "source": "<#if st.storageId==po.storageId>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "value": "${st.storageId}",
+      "selected": "",
+      "data-type": "${st.storageType}"
+    },
+    "name": "option",
+    "source": "<option value=\"${st.storageId}\" selected  data-type=${st.storageType}>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${st.storageName}"
+  },
+  {
+    "attrs": {},
+    "name": "option",
+    "source": "</option>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "value": "${st.storageId}",
+      "data-type": "${st.storageType}"
+    },
+    "name": "option",
+    "source": "<option value=\"${st.storageId}\"  data-type=${st.storageType}>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${st.storageName}"
+  },
+  {
+    "attrs": {},
+    "name": "option",
+    "source": "</option>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "select",
+    "source": "</select>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    :${po.storageName}\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "term"
+    },
+    "name": "label",
+    "source": "<label class=\"term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "采货供应商"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#if",
+    "source": "<#if status==1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "fromTrackTask??": ""
+    },
+    "name": "#if",
+    "source": "<#if fromTrackTask??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "diffSupplierIdValue": "supplierId4Audit"
+    },
+    "name": "#assign",
+    "source": "<#assign diffSupplierIdValue = supplierId4Audit>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "diffSupplierIdValue": "po.supplierId"
+    },
+    "name": "#assign",
+    "source": "<#assign diffSupplierIdValue = po.supplierId>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "supplierList": "",
+      "as": "",
+      "sp": ""
+    },
+    "name": "#list",
+    "source": "<#list supplierList as sp>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "sp.supplierId": "diffSupplierIdValue"
+    },
+    "name": "#if",
+    "source": "<#if sp.supplierId == diffSupplierIdValue>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "supplierName": "sp.supplierName"
+    },
+    "name": "#assign",
+    "source": "<#assign supplierName = sp.supplierName>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "supplybox"
+    },
+    "name": "span",
+    "source": "<span class=\"supplybox\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "id": "J_supplierName",
+      "data-selectName": "supplierSelect",
+      "type": "text",
+      "name": "supplierName",
+      "placeholder": "搜索供应商",
+      "class": "supplieript j-suggest",
+      "value": "${supplierName!''}"
+    },
+    "name": "input",
+    "source": "<input id=\"J_supplierName\" data-selectName=\"supplierSelect\" type=\"text\" name=\"supplierName\"\r\n                                   placeholder=\"搜索供应商\" class=\"supplieript j-suggest\" value=\"${supplierName!''}\"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "supply",
+      "style": "display:none",
+      "name": "supplierSelect",
+      "id": "po-vendor"
+    },
+    "name": "select",
+    "source": "<select class=\"supply\" style=\"display:none\" name=\"supplierSelect\" id=\"po-vendor\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "supplierList": "",
+      "as": "",
+      "sp": ""
+    },
+    "name": "#list",
+    "source": "<#list supplierList as sp>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "text": "<option value=\"${sp.supplierId}\"\r\n                                            "
+  },
+  {
+    "attrs": {
+      "sp.supplierId": "diffSupplierIdValue"
+    },
+    "name": "#if",
+    "source": "<#if sp.supplierId == diffSupplierIdValue>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "#t",
+    "source": "<#t>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                                selected"
+  },
+  {
+    "attrs": {},
+    "name": "#t",
+    "source": "<#t>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                            "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "#t",
+    "source": "<#t>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    >${sp.supplierName}"
+  },
+  {
+    "attrs": {},
+    "name": "option",
+    "source": "</option>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "select",
+    "source": "</select>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        :${po.supplierName}\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "status!": "1"
+    },
+    "name": "#if",
+    "source": "<#if status!=1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "term"
+    },
+    "name": "label",
+    "source": "<label class=\"term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "供应商等级"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "id": "supplierLevel"
+    },
+    "name": "label",
+    "source": "<label id=\"supplierLevel\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": ": "
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "term"
+    },
+    "name": "label",
+    "source": "<label class=\"term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "供应商欠款"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "id": "supplierDebt",
+      "class": "s-fc-6"
+    },
+    "name": "label",
+    "source": "<label id=\"supplierDebt\" class=\"s-fc-6\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "获取中..."
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#if",
+    "source": "<#if status==1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "f-required term"
+    },
+    "name": "label",
+    "source": "<label class=\"f-required term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        预计入库时间\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "!fromTrackTask??": ""
+    },
+    "name": "#if",
+    "source": "<#if !fromTrackTask??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "!po.expectedTime??": ""
+    },
+    "name": "#if",
+    "source": "<#if !po.expectedTime??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "_expectedTime": ""
+    },
+    "name": "#assign",
+    "source": "<#assign _expectedTime=\"\"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "_expectedTime": "po.expectedTime?number_to_datetime?string('yyyy-MM-dd')"
+    },
+    "name": "#assign",
+    "source": "<#assign _expectedTime=po.expectedTime?number_to_datetime?string('yyyy-MM-dd') />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "_expectedTime": "expectInstockDay4Audit?number_to_datetime?string('yyyy-MM-dd')"
+    },
+    "name": "#assign",
+    "source": "<#assign _expectedTime=expectInstockDay4Audit?number_to_datetime?string('yyyy-MM-dd') />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "type": "text",
+      "value": "${_expectedTime}",
+      "class": "datepick",
+      "placeholder": "点击选择时间",
+      "id": "po-expectedtime",
+      "readonly": "true"
+    },
+    "name": "input",
+    "source": "<input type=\"text\" value=\"${_expectedTime}\" class=\"datepick\" placeholder=\"点击选择时间\"  id=\"po-expectedtime\" readonly=\"true\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div  class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "term"
+    },
+    "name": "label",
+    "source": "<label class=\"term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "预计入库时间"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        : ${po.expectedTime?number_to_date?string('yyyy-MM-dd')}\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "1": "",
+      "status": "",
+      "gt": ""
+    },
+    "name": "#if",
+    "source": "<#if status gt 1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "term"
+    },
+    "name": "label",
+    "source": "<label class=\"term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "处理状态"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "TODO": "",
+      "${po.status.intValue()}--": ""
+    },
+    "name": "#--",
+    "source": "<#-- TODO ${po.status.intValue()}-->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "<label>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": ": ${po.status}"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "f-required term"
+    },
+    "name": "label",
+    "source": "<label class=\"f-required term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "币种"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#if",
+    "source": "<#if status==1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "!fromTrackTask??": ""
+    },
+    "name": "#if",
+    "source": "<#if !fromTrackTask??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "id": "po-currency"
+    },
+    "name": "select",
+    "source": "<select id=\"po-currency\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "currencyList": "",
+      "as": "",
+      "currency": ""
+    },
+    "name": "#list",
+    "source": "<#list currencyList as currency>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "currency.currencyId": "currencyType"
+    },
+    "name": "#if",
+    "source": "<#if currency.currencyId == currencyType>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                        "
+  },
+  {
+    "attrs": {
+      "value": "${currency.currencyId}",
+      "selected": ""
+    },
+    "name": "option",
+    "source": "<option value=\"${currency.currencyId}\" selected>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${currency.currencyName}"
+  },
+  {
+    "attrs": {},
+    "name": "option",
+    "source": "</option>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                        "
+  },
+  {
+    "attrs": {
+      "value": "${currency.currencyId}"
+    },
+    "name": "option",
+    "source": "<option value=\"${currency.currencyId}\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${currency.currencyName}"
+  },
+  {
+    "attrs": {},
+    "name": "option",
+    "source": "</option>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "select",
+    "source": "</select>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "id": "po-currency",
+      "disabled": "disabled"
+    },
+    "name": "select",
+    "source": "<select id=\"po-currency\" disabled=\"disabled\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "currencyList": "",
+      "as": "",
+      "currency": ""
+    },
+    "name": "#list",
+    "source": "<#list currencyList as currency>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "currency.currencyId": "currencyType4Audit"
+    },
+    "name": "#if",
+    "source": "<#if currency.currencyId == currencyType4Audit>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                        "
+  },
+  {
+    "attrs": {
+      "value": "${currency.currencyId}",
+      "selected": ""
+    },
+    "name": "option",
+    "source": "<option value=\"${currency.currencyId}\" selected>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${currency.currencyName}"
+  },
+  {
+    "attrs": {},
+    "name": "option",
+    "source": "</option>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                        "
+  },
+  {
+    "attrs": {
+      "value": "${currency.currencyId}"
+    },
+    "name": "option",
+    "source": "<option value=\"${currency.currencyId}\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${currency.currencyName}"
+  },
+  {
+    "attrs": {},
+    "name": "option",
+    "source": "</option>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "select",
+    "source": "</select>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "id": "currencyname"
+    },
+    "name": "label",
+    "source": "<label id=\"currencyname\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": ": ${po.getCurrencyName()!''}"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "status": "",
+      "!": "6"
+    },
+    "name": "#if",
+    "source": "<#if status != 6>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "href": "javascript:void(0);",
+      "id": "J_edit-currencyname",
+      "data-currencyName": "${po.getCurrencyName()!''}"
+    },
+    "name": "a",
+    "source": "<a href=\"javascript:void(0);\" id=\"J_edit-currencyname\" data-currencyName=\"${po.getCurrencyName()!''}\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "修改"
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "f-required term"
+    },
+    "name": "label",
+    "source": "<label class=\"f-required term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "审批单号"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#if",
+    "source": "<#if status==1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "fromTrackTask??": ""
+    },
+    "name": "#if",
+    "source": "<#if fromTrackTask??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            ${contractNo4Audit!''}\r\n                            "
+  },
+  {
+    "attrs": {
+      "type": "hidden",
+      "value": "${contractNo4Audit!''}",
+      "id": "po-contractno"
+    },
+    "name": "input",
+    "source": "<input type=\"hidden\" value=\"${contractNo4Audit!''}\" id=\"po-contractno\" />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "type": "text",
+      "value": "${po.contractNo!''}",
+      "id": "po-contractno"
+    },
+    "name": "input",
+    "source": "<input type=\"text\" value=\"${po.contractNo!''}\" id=\"po-contractno\" />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "<label>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": ": ${po.contractNo!''}"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "status": "",
+      "!": "6"
+    },
+    "name": "#if",
+    "source": "<#if status != 6>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "href": "javascript:void(0);",
+      "id": "edit-contractno"
+    },
+    "name": "a",
+    "source": "<a href=\"javascript:void(0);\" id=\"edit-contractno\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "修改"
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "f-col-4 f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"f-col-4 f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "term"
+    },
+    "name": "label",
+    "source": "<label class=\"term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "合同金额"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    ${auditAmount!''} ${currency!''}\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "!po.id??": "",
+      "||": "",
+      "fromTrackTask??": ""
+    },
+    "name": "#if",
+    "source": "<#if !po.id?? || fromTrackTask??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#--这直接取仓库第一个值对应的跨境方式--",
+    "source": "<#--这直接取仓库第一个值对应的跨境方式-->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "importType": "storageList[0].importType"
+    },
+    "name": "#assign",
+    "source": "<#assign importType = storageList[0].importType>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "fromTrackTask??": ""
+    },
+    "name": "#if",
+    "source": "<#if fromTrackTask??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "storageId": "warehouseId4Audit"
+    },
+    "name": "#assign",
+    "source": "<#assign storageId = warehouseId4Audit>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "storageId": "po.storageId"
+    },
+    "name": "#assign",
+    "source": "<#assign storageId = po.storageId>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "storageList": "",
+      "as": "",
+      "item": ""
+    },
+    "name": "#list",
+    "source": "<#list storageList as item>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "item.storageId": "storageId"
+    },
+    "name": "#if",
+    "source": "<#if item.storageId == storageId>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "importType": "item.importType"
+    },
+    "name": "#assign",
+    "source": "<#assign importType = item.importType>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "id": "J_documentaryNum_box"
+    },
+    "name": "div",
+    "source": "<div id=\"J_documentaryNum_box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "<#if status == 1>f-col-8<#else>f-col-4</#if> f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"<#if status == 1>f-col-8<#else>f-col-4</#if> f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "<#if status == 1>f-required</#if> term"
+    },
+    "name": "label",
+    "source": "<label class=\"<#if status == 1>f-required</#if> term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "国际物流单"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "1": "",
+      "status": "",
+      "gt": ""
+    },
+    "name": "#if",
+    "source": "<#if status gt 1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "："
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "documentaryNum": "(po.documentaryNum!'')?string"
+    },
+    "name": "#assign",
+    "source": "<#assign documentaryNum = (po.documentaryNum!'')?string>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "ladingNumber": "(po.ladingNumber!'')?string"
+    },
+    "name": "#assign",
+    "source": "<#assign ladingNumber = (po.ladingNumber!'')?string>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#--保税模式--",
+    "source": "<#--保税模式-->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "noDocumentaryNum": "(!po.id??",
+      "&&": "",
+      "importType": "",
+      "!": "1)",
+      "||": "",
+      "(": "",
+      "po.id??": "",
+      "!po.documentaryNum??": "",
+      "(po.documentaryNum??": "",
+      "po.documentaryNum?string": "",
+      ")": ""
+    },
+    "name": "#assign",
+    "source": "<#assign noDocumentaryNum = (!po.id?? && importType != 1) ||\r\n                                                    (\r\n                                                        po.id?? && !po.documentaryNum?? ||\r\n                                                        (po.documentaryNum?? && po.documentaryNum?string == '')\r\n                                                    )>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#if",
+    "source": "<#if status == 1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "class": "J_hasDocumentaryNum_box"
+    },
+    "name": "span",
+    "source": "<span class=\"J_hasDocumentaryNum_box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "text": "<input value=\"0\" type=\"radio\" class=\"J_LogisticsOrder_radio J_noRadio\""
+  },
+  {
+    "attrs": {},
+    "name": "#t",
+    "source": "<#t>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "noDocumentaryNum": "",
+      "||": "",
+      "(po.id??": "",
+      "&&": "",
+      "documentaryNum": ""
+    },
+    "name": "#if",
+    "source": "<#if noDocumentaryNum || (po.id?? && documentaryNum == '')>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": " checked "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "#t",
+    "source": "<#t>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                       "
+  },
+  {
+    "attrs": {},
+    "name": "#t",
+    "source": "<#t>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "name=\"isHasLogisticsOrder\">\r\n                                无\r\n                                "
+  },
+  {
+    "text": "<input value=\"1\" type=\"radio\" class=\"J_LogisticsOrder_radio J_hasRadio\""
+  },
+  {
+    "attrs": {},
+    "name": "#t",
+    "source": "<#t>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "!noDocumentaryNum": "",
+      "||": "",
+      "(po.id??": "",
+      "&&": "",
+      "documentaryNum??": "",
+      "documentaryNum": "",
+      "!": ""
+    },
+    "name": "#if",
+    "source": "<#if !noDocumentaryNum || (po.id?? && documentaryNum?? && documentaryNum != '')>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": " checked "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "#t",
+    "source": "<#t>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                       "
+  },
+  {
+    "attrs": {},
+    "name": "#t",
+    "source": "<#t>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "name=\"isHasLogisticsOrder\">\r\n                                有\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "documentaryNum": ""
+    },
+    "name": "#if",
+    "source": "<#if documentaryNum == ''>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                无\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n                        "
+  },
+  {
+    "attrs": {
+      "hasOrderTpl": "",
+      "documentaryNum": "",
+      "status": "1"
+    },
+    "name": "#macro",
+    "source": "<#macro hasOrderTpl documentaryNum = '' status = 1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "documentaryNum": "",
+      "!": "",
+      "||": "",
+      "status": "1"
+    },
+    "name": "#if",
+    "source": "<#if documentaryNum != '' || status = 1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "class": "J_documentaryNumText"
+    },
+    "name": "span",
+    "source": "<span class=\"J_documentaryNumText\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${documentaryNum!''}"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "status": "1"
+    },
+    "name": "#if",
+    "source": "<#if status == 1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "type": "hidden",
+      "class": "J_documentaryNum",
+      "value": "${documentaryNum!''}"
+    },
+    "name": "input",
+    "source": "<input type=\"hidden\" class=\"J_documentaryNum\" value=\"${documentaryNum!''}\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "href": "javascript:;",
+      "class": "J_logisticsOrder_btn <#if documentaryNum??>hasNo</#if>"
+    },
+    "name": "a",
+    "source": "<a href=\"javascript:;\" class=\"J_logisticsOrder_btn <#if documentaryNum??>hasNo</#if>\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                        "
+  },
+  {
+    "attrs": {
+      "documentaryNum": "",
+      "!": ""
+    },
+    "name": "#if",
+    "source": "<#if documentaryNum != ''>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                            修改\r\n                                        "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                            添加\r\n                                        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "#macro",
+    "source": "</#macro>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "id": "J_hasOrderBox"
+    },
+    "name": "span",
+    "source": "<span id=\"J_hasOrderBox\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "!noDocumentaryNum": ""
+    },
+    "name": "#if",
+    "source": "<#if !noDocumentaryNum>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "documentaryNum": "documentaryNum",
+      "status": "status"
+    },
+    "name": "@hasOrderTpl",
+    "source": "<@hasOrderTpl documentaryNum=documentaryNum status=status/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "<#if status == 1>f-col-8<#else>f-col-4</#if> f-row-1"
+    },
+    "name": "div",
+    "source": "<div class=\"<#if status == 1>f-col-8<#else>f-col-4</#if> f-row-1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "<#if status == 1>f-required</#if> term"
+    },
+    "name": "label",
+    "source": "<label class=\"<#if status == 1>f-required</#if> term\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "提单号码"
+  },
+  {
+    "attrs": {},
+    "name": "label",
+    "source": "</label>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "1": "",
+      "status": "",
+      "gt": ""
+    },
+    "name": "#if",
+    "source": "<#if status gt 1>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "："
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "text": "<#--后端老数据空为' '-->\r\n                        <#if ladingNumber == ' '>\r\n                            <#assign ladingNumber = ''/>\r\n                        </#if>\r\n                        <#assign ladingNumberArr = ladingNumber?split(\"/\")>\r\n                        <#assign mainOrder = ladingNumberArr[0]!''>\r\n                        <#assign subOrder = ladingNumberArr[1]!''>\r\n                        <#if status == 1>\r\n                            <span id=\"J_ladingNumber_radio_box\">\r\n                                <#if po.id?? || !noDocumentaryNum>\r\n                                    <@ladingNumberAllTpl ladingNumber=ladingNumber mainOrder=mainOrder subOrder=subOrder status=status noDocumentaryNum=noDocumentaryNum/>\r\n                                <#else>\r\n                                    --\r\n                                </#if>\r\n                            </span>\r\n                        <#else>\r\n                            <#if ladingNumber != ''>\r\n                                ${mainOrder}<#t>\r\n                                <#if subOrder != ''>/</#if><#t>\r\n                                ${subOrder}<#t>\r\n                            <#else>\r\n                                无\r\n                            </#if>\r\n                        </#if>\r\n                        <#macro ladingNumberTextTpl mainOrder='' subOrder=''>\r\n                            <input class=\"J_main_order\" type=\"text\"\r\n                                   value=\"${mainOrder!''}\"\r\n                                   placeholder=\"请输入主要单号（MBL）\">/\r\n                            <input class=\"J_sub_order\" type=\"text\"\r\n                                   value=\"${subOrder!''}\"\r\n                                   placeholder=\"请输入分单号（HBL）\">\r\n                        </#macro>\r\n                        <#macro ladingNumberTpl mainOrder = '' subOrder=''  status = 1 hasTpl=false>\r\n                            <#if po.id??>\r\n                                <#if mainOrder != '' || subOrder != '' || hasTpl>\r\n                                    <@ladingNumberTextTpl mainOrder=mainOrder subOrder=subOrder/>\r\n                                </#if>\r\n                            <#elseif status = 1>\r\n                                <@ladingNumberTextTpl/>\r\n                            </#if>\r\n                        </#macro>\r\n                        <#macro ladingNumberAllTpl ladingNumber='' mainOrder='' subOrder='' status = 1 noDocumentaryNum=true>\r\n                            <input value=\"0\" type=\"radio\" class=\"J_ladingNumber_radio\"\r\n                                   <#if po.id?? && ladingNumber == ''> checked </#if><#t>\r\n                                   name=\"isHasLadingNumberOrder\">\r\n                            无\r\n                            <input value=\"1\" type=\"radio\" class=\"J_ladingNumber_radio hasLadingNumber\"\r\n                                   <#if (po.id?? && ladingNumber != '' ) || (!po.id?? && !noDocumentaryNum)> checked </#if><#t>\r\n                                   name=\"isHasLadingNumberOrder\">\r\n                            有\r\n                            <span id=\"J_ladingNumberBox\">\r\n                                <@ladingNumberTpl mainOrder=mainOrder subOrder=subOrder status=status/>\r\n                            </span>\r\n                        </#macro>\r\n                        <#if status == 1>\r\n                            <textarea id=\"J_hasOrderTpl\" style=\"display: none\">\r\n                                <@hasOrderTpl/>\r\n                            </textarea>\r\n                            <textarea id=\"J_ladingNumberBoxTpl\" style=\"display: none\">\r\n                                <@ladingNumberTpl hasTpl=true/>\r\n                            </textarea>\r\n                            <textarea id=\"J_ladingNumberAllTpl\" style=\"display: none\">\r\n                                <@ladingNumberAllTpl noDocumentaryNum=false/>\r\n                            </textarea>\r\n                        </#if>\r\n                    </div>\r\n                </div>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"f-required term\">采购方式</label>\r\n                    <#if status==1>\r\n                        <select id=\"po-purchaseway\">\r\n                            <#list purchaseWayList as purchaseWay>\r\n                                <#if purchaseWay?? && purchaseWay.purchaseWayId == purchaseWayType>\r\n                                    <option value=\"${purchaseWay.purchaseWayId}\" selected=\"selected\">${purchaseWay.purchaseWayName}</option>\r\n                                <#elseif fromTrackTask?? && purchaseWay.purchaseWayId == purchaseWay4Audit>\r\n                                    <option value=\"${purchaseWay.purchaseWayId}\" selected=\"selected\">${purchaseWay.purchaseWayName}</option>\r\n                                <#else>\r\n                                    <option value=\"${purchaseWay.purchaseWayId}\">${purchaseWay.purchaseWayName}</option>\r\n                                </#if>\r\n                            </#list>\r\n                        </select>\r\n                    <#else>\r\n                        <label>: ${po.getPurchaseWayName()!''}</label>\r\n                        <#if status==2 || status==3 || status==5 >\r\n                            <a href=\"javascript:void(0);\" id=\"J_edit-purchaseway\" data-purchaseWayName=\"${po.getPurchaseWayName()!''}\">修改</a>\r\n                        </#if>\r\n                    </#if>\r\n                </div>\r\n                <#if status gt 4>\r\n                    <div class=\"f-col-4 f-row-1\">\r\n                        <label class=\"term\">汇率</label>\r\n                        <label>: ${po.exchangeRate!''}</label>\r\n                        <#if status != 6>\r\n                            <a href=\"javascript:void(0);\" id=\"edit-exchangerate\">修改</a>\r\n                        </#if>\r\n                    </div>\r\n                </#if>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"f-required term\">运输方式</label>\r\n                    <#if status==1>\r\n                          <select id=\"po-transport\">\r\n                              <#list transportList![] as transport>\r\n                                  <#if transport.index == settedTransportType>\r\n                                      <option value=\"${transport.index}\" selected>${transport.value}</option>\r\n                                  <#else>\r\n                                      <option value=\"${transport.index}\">${transport.value}</option>\r\n                                  </#if>\r\n                              </#list>\r\n                          </select>\r\n                    <#else>\r\n                        <label>: ${po.transportTypeName!''}</label>\r\n                        <#if status==2 || status==3 || status==5 >\r\n                            <a href=\"javascript:void(0);\" id=\"J_edit-transportname\" data-transportName=\"${po.transportTypeName!''}\">修改</a>\r\n                        </#if>\r\n                    </#if>\r\n                </div>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"term\">起运港</label>\r\n                    <#if status == 1>\r\n                        <span class=\"supplybox\">\r\n                            <input type=\"text\" name=\"departPort\" placeholder=\"起运港\"  class=\"supplieript j-suggest\" data-selectName=\"departPortSelect\" id=\"po-departport\" value=\"${po.departPort!''}\"/>\r\n                        </span>\r\n                        <select name=\"departPortSelect\" class=\"supply\" style=\"display:none\">\r\n                            <#list declarationPortList as item>\r\n                            <option value=\"${item}\" data-pinyin=\"${item}\" <#if po.departPort?? && po.departPort == item>selected</#if>>${item}</option>\r\n                            </#list>\r\n                        </select>\r\n                    <#else>\r\n                        ${po.departPort!''}\r\n                    </#if>\r\n                </div>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"term\">目的港</label>\r\n                    <#if status == 1>\r\n                        <span class=\"supplybox\">\r\n                            <input type=\"text\" name=\"destPort\" placeholder=\"目的港\"  class=\"supplieript j-suggest\" data-selectName=\"destPortSelect\" id=\"po-destport\" value=\"${po.destPort!''}\"/>\r\n                        </span>\r\n                        <select name=\"destPortSelect\" class=\"supply\" style=\"display:none\">\r\n                            <#list declarationPortList as item>\r\n                            <option value=\"${item}\" data-pinyin=\"${item}\" <#if po.destPort?? && po.destPort == item>selected</#if>>${item}</option>\r\n                            </#list>\r\n                        </select>\r\n                    <#else>\r\n                        ${po.destPort!''}\r\n                    </#if>\r\n                </div>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"term\">批次</label>\r\n                    <#if status==1>\r\n                        <input type=\"text\" value=\"${arrivalBatchNo!''}\" id=\"po-arrivalbatchno\" />\r\n                    <#else>\r\n                        <label>: ${arrivalBatchNo!''}</label>\r\n                    </#if>\r\n                </div>\r\n                <#if status==5>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"term\">财务核对</label>\r\n                    <span class=\"u-counter\">${po.financeCheckState}</span>\r\n                </div>\r\n                </#if>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"term\">采购件数</label>\r\n                    <#if fromTrackTask?? && auditDetailGoodsList??>\r\n                        <#assign auditPurchaseCount=0/>\r\n                        <#list auditDetailGoodsList as line>\r\n                            <#assign auditPurchaseCount = auditPurchaseCount + line.purchaseCount />\r\n                        </#list>\r\n                        <span id=\"goods-count\" class=\"u-counter\">${auditPurchaseCount?c}</span>\r\n                    <#else>\r\n                        <span id=\"goods-count\" class=\"u-counter\">${po.purchaseCount?c}</span>\r\n                    </#if>\r\n                </div>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"term\" style=\"width: 120px;\">采购总金额(不含税)</label>\r\n                    <#if fromTrackTask?? && auditDetailGoodsList??>\r\n                        <#assign auditPurchaseAmount=0/>\r\n                        <#list auditDetailGoodsList as line>\r\n                            <#assign auditPurchaseAmount = auditPurchaseAmount + line.purchaseCount * line.unitPrice />\r\n                        </#list>\r\n                        <span id=\"goods-amount\" class=\"u-counter\">${auditPurchaseAmount?c}</span>\r\n                    <#else>\r\n                        <span id=\"goods-amount\" class=\"u-counter\">${po.purchaseAmount?c}</span>\r\n                    </#if>\r\n                </div>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"term\" style=\"width: 120px;\">采购总金额(含税)</label>\r\n                    <span id=\"j-goods-amount-tax\" class=\"u-counter\">${po.purchaseAmountWithTax!0}</span>\r\n                </div>\r\n\r\n                <#if status gte 3>\r\n                <div class=\"m-instoreinfo\">\r\n                    <#if status==3 || status==4 || status==5 || status==6 || status==7>\r\n                    <div>\r\n                        <div class=\"f-col-4 f-row-1\">\r\n                            <label class=\"term\">实际入库数量</label>\r\n                            <span class=\"u-counter\">${po.totalStorageCount?c}</span>\r\n                        </div>\r\n                        <div class=\"f-col-4 f-row-1\">\r\n                            <label class=\"term\">实际入库金额</label>\r\n                            <span class=\"u-counter\">${po.totalStorageAmount?c}</span>\r\n                        </div>\r\n                        <#if status == 4 || status == 5 || status == 7>\r\n                        <!-- 入库待确认、已入库、拒绝入库状态采购单详情页新增入库统计信息 -->\r\n                        <div class=\"f-col-4 f-row-1\">\r\n                            <label class=\"term\">\r\n                                到货率\r\n                            </label>\r\n                            :${(po.arrivalPlanRate)!''}\r\n                        </div>\r\n                        </#if>\r\n                    </div>\r\n                    </#if>\r\n\r\n\r\n                    <#if status == 4 || status == 5 || status == 7>\r\n                    <!-- 入库待确认、已入库、拒绝入库状态采购单详情页新增入库统计信息 -->\r\n                        <div class=\"f-col-4 f-row-1\">\r\n                            <label class=\"term\">\r\n                                良品数量\r\n                            </label>\r\n                            :${(po.totalStorageGoodsCount)!''}\r\n                        </div>\r\n                        <div class=\"f-col-4 f-row-1\">\r\n                            <label class=\"term\">\r\n                                良品货值\r\n                            </label>\r\n                            :${(po.totalStorageGoodsAmount)!''}\r\n                        </div>\r\n                        <div class=\"f-col-4 f-row-1\">\r\n                            <label class=\"term\">次品率</label>:\r\n                            <#assign goodCount=0/>\r\n                            <#assign badCount=0/>\r\n                            <#assign badPercent=0/>\r\n                            <#assign totalCount=0/>\r\n                            <#if fromTrackTask??>\r\n                                <#list auditDetailGoodsList as line>\r\n                                    <#assign goodCount = goodCount + line.goodCount />\r\n                                    <#assign badCount = badCount + line.badCount />\r\n                                </#list>\r\n                                <#assign totalCount = badCount + goodCount />\r\n                                <#if totalCount gt 0>\r\n                                    <#assign badPercent = (badCount*100)/totalCount />\r\n                                </#if>\r\n                            ${badPercent?string[\"0.00\"]}%\r\n                            <#else>\r\n                                <#list po.details as line>\r\n                                    <#assign goodCount = goodCount + line.goodCount />\r\n                                    <#assign badCount = badCount + line.badCount />\r\n                                </#list>\r\n                                <#assign totalCount = badCount + goodCount />\r\n                                <#if totalCount gt 0>\r\n                                    <#assign badPercent = (badCount*100)/totalCount />\r\n                                </#if>\r\n                            ${badPercent?string[\"0.00\"]}%\r\n                            </#if>\r\n                        </div>\r\n                    </#if>\r\n                </div>\r\n            </#if>\r\n\r\n            <#if status==1>\r\n                <div class=\"f-col-8 f-row-2\">\r\n                    <label class=\"term\">\r\n                        入库物流备注\r\n                    </label>\r\n                    <textarea class=\"logistics\" placeholder=\"请填写入库配送的物流单号信息\"  id=\"po-headermemo\">${po.remark}</textarea>\r\n                </div>\r\n            </#if>\r\n            <#if status gt 1>\r\n                <div>\r\n                    <div class=\"f-col-8 f-row-2\">\r\n                        <label class=\"term\">\r\n                            入库物流备注\r\n                        </label>\r\n                        : ${po.remark?html}\r\n                    </div>\r\n                </div>\r\n            </#if>\r\n            <#if po.id??>\r\n                <div class=\"f-col-4 f-row-1\">\r\n                    <label class=\"term\">货物状态</label>\r\n                    <span>\r\n                        ：\r\n                        <#if documentaryNum == ''>\r\n                            ${po.trackTaskStatus!''}\r\n                        <#else>\r\n                            ${po.goodsStatus!''}\r\n                        </#if>\r\n                    </span>\r\n                </div>\r\n            </#if>\r\n            </form>\r\n            <div class=\"m-variousfees\" id=\"variousfeesbox\"></div>\r\n            <div class=\"m-polines\">\r\n                <table class=\"poline-tab w-table\">\r\n                    <colgroup>\r\n                        <col width=\"6%\" />\r\n                        <col width=\"12%\" />\r\n                        <col width=\"8%\" />\r\n                        <col width=\"12%\" />\r\n                    <#-- 增加料号显示 -->\r\n                        <col width=\"12%\" />\r\n                        <col width=\"12%\" />\r\n                        <col width=\"10%\" />\r\n\r\n                        <col width=\"8%\" />\r\n                        <col width=\"8%\" />\r\n                    <#-- <#if status==1>\r\n                    <col width=\"8%\" />\r\n                    </#if> -->\r\n                        <col width=\"8%\" />\r\n                        <col width=\"8%\" />\r\n                        <col width=\"8%\" />\r\n                        <col width=\"8%\" />\r\n                        <col width=\"8%\" />\r\n                        <col width=\"8%\" />\r\n                        <col width=\"10%\" />\r\n                        <col width=\"10%\" />\r\n                        <col width=\"12%\" />\r\n                    <#if status==1>\r\n                        <col width=\"6%\" />\r\n                    </#if>\r\n                    <#if status gte 3>\r\n                        <col width=\"8%\" />\r\n                        <col width=\"6%\" />\r\n                        <col width=\"6%\" />\r\n                        <col width=\"6%\" />\r\n                    </#if>\r\n                    </colgroup>\r\n                    <thead>\r\n                    <tr>\r\n                        <th>商品ID</th>\r\n                        <th>商品名称</th>\r\n                        <th>跨境方式</th>\r\n                    <#-- 增加料号显示 -->\r\n                        <th>料号</th>\r\n                        <th>SKU条码</th>\r\n                        <th>SKU规格</th>\r\n\r\n                        <th>是否白名单商品</th>\r\n                        <th>是否受限</th>\r\n                    <#-- <#if status==1>\r\n                    <th>参考单价</th>\r\n                    </#if> -->\r\n                        <th>审批单单价（含税）</th>\r\n                         <th>审批单单价（不含税）</th>\r\n                        <th>审批单数量</th>\r\n                        <th>采购单价（含税）</th>\r\n                        <th>采购单价（不含税）</th>\r\n                        <th>采购数量</th>\r\n                        <th>采购金额小计(含税)</th>\r\n                        <th>采购金额小计(不含税)</th>\r\n                        <th>备注</th>\r\n                    <#if status==1>\r\n                        <th>操作</th>\r\n                    </#if>\r\n                    <#if status gte 3>\r\n                        <th>已入库</th>\r\n                        <th>良品</th>\r\n                        <th>次品</th>\r\n                        <th>差异数量</th>\r\n                    </#if>\r\n                    </tr>\r\n                    </thead>\r\n                    <tbody id=\"proList\">\r\n                    <#if fromTrackTask?? && auditDetailGoodsList??>\r\n                        <#list auditDetailGoodsList as line>\r\n                        <#assign firstchange2 = (line.unitPriceWithTax!0) + (line.unitPrice!0)  />\r\n                        <tr data-goodsid=\"${line.goodsId?c}\" data-isnew=\"${line.isNew!''}\" data-skuid=\"${line.skuId}\" data-firstchange=\"${firstchange2}\">\r\n                            <td class=\"goodsid ma\">${line.goodsId?c}</td>\r\n                            <td class=\"goodsname ma\">${line.goodsName!''}</td>\r\n                            <td class=\"import-type ma\">${line.importTypeStr!''}</td>\r\n                        <#-- 增加料号显示 -->\r\n                            <td class=\"barcode ma\">${line.productSkuCode!''}</td>\r\n                            <td class=\"barcode ma\">${line.skuBarcode!''}</td>\r\n                            <td class=\"skudesc ma\">${line.skuDesc!''}</td>\r\n\r\n                            <td class=\"ma\">${(line.blankStatus!\"\")}</td>\r\n                            <td class=\"ma\">${(line.restrict!\"\")}</td>\r\n                        <#-- 审批单单价(含税)-->\r\n                            <td class=\"ma\">\r\n                                <span class=\"invoiceprice-i invoiceUnitPriceWithTax\" >${line.invoiceUnitPriceWithTax!''}</span>\r\n                            <#--<input type=\"text\" class=\"invoiceprice-i\" value=\"${line.invoiceUnitPrice!''}\">-->\r\n                            </td>\r\n                        <#-- 审批单单价（不含税）-->\r\n                            <td class=\"ma\">\r\n                                <span class=\"invoiceprice-i invoiceUnitPrice\" >${line.invoiceUnitPrice!''}</span>\r\n                            <#--<input type=\"text\" class=\"invoiceprice-i\" value=\"${line.invoiceUnitPrice!''}\">-->\r\n                            </td>\r\n                        <#-- 审批单数量-->\r\n                            <td class=\"ma\">\r\n                                <span class=\"invoicecount-i\">${line.invoiceCount!''}</span>\r\n                            <#--<input type=\"text\" class=\"invoicecount-i\" value=\"${line.invoiceCount!''}\">-->\r\n                            </td>\r\n                        <#-- 采购单价（含税）-->\r\n                            <td class=\"poprice ma\">\r\n                                <input type=\"text\" class=\"poprice-i purchasePriceWithTax\"  data-fromtrack=\"true\" data-originvalue=\"${(line.unitPriceWithTax)!''}\"  data-avg=\"${line.referUnitPrice!0}\" data-rate=\"${line.taxRate!''}\" value=\"${(line.unitPriceWithTax)!''}\">\r\n                            </td>\r\n                        <#-- 采购单价（不含税）-->\r\n                            <td class=\"poprice ma\">\r\n                                <input type=\"text\" class=\"poprice-i purchasePrice\"  data-fromtrack=\"true\" data-originvalue=\"${(line.unitPrice)!''}\"  data-avg=\"${line.referUnitPrice!0}\" data-rate=\"${line.taxRate!''}\" value=\"${(line.unitPrice)!''}\">\r\n                            </td>\r\n                            <#--采购数量-->\r\n                            <td class=\"poqty ma\">\r\n                                <input type=\"text\" class=\"poqty-i\" value=\"${(line.purchaseCount)!''}\" >\r\n                            </td>\r\n                            <#--金额小计含税-->\r\n                            <td class=\"lineamounttax ma\">\r\n                                <#if (line.purchaseCount)?? && (line.purchaseUnitPriceWithTax)??>\r\n                                ${(line.purchaseCount * line.purchaseUnitPriceWithTax )?c}\r\n                                <#else>\r\n                                    0\r\n                                </#if>\r\n                            </td>\r\n                            <#--金额小计不含税-->\r\n                            <td class=\"lineamount ma\">\r\n                                <#if (line.purchaseCount)?? && (line.unitPrice)??>\r\n                                ${(line.purchaseCount * line.unitPrice)?c}\r\n                                <#else>\r\n                                    0\r\n                                </#if>\r\n                            </td>\r\n                            <td class=\"linememo ma\">\r\n                                <textarea class=\"linememo-i\">${line.remark!''}</textarea>\r\n                            </td>\r\n                            <td class=\"lineaction ma\">\r\n                                <a class=\"action-delete\" href=\"#\">删除</a>\r\n                            </td>\r\n                        </tr>\r\n                        </#list>\r\n                    <#else>\r\n                        <#list po.details as line>\r\n                         <#assign firstchange1 = (line.purchaseUnitPriceWithTax!0) + (line.purchaseUnitPrice!0) />\r\n                        <tr data-goodsid=\"<#if line.inventory??>${line.inventory.goodsId!''}</#if>\" data-skuid=\"${line.skuId}\" data-firstchange=\"${firstchange1}\">\r\n                            <td class=\"goodsid ma\"><#if line.inventory??>${line.inventory.goodsId!''}</#if></td>\r\n                            <td class=\"goodsname ma\"><#if line.inventory??>${line.inventory.goodsName!''}</#if></td>\r\n                            <td class=\"import-type ma\"><#if line.inventory??>${line.inventory.importType!''}</#if></td>\r\n                        <#-- 增加料号显示 -->\r\n                            <td class=\"barcode ma\"><#if line.inventory??>${line.inventory.productSkuCode!''}</#if></td>\r\n                            <td class=\"barcode ma\"><#if line.inventory??>${line.inventory.skuBarcode!''}</#if></td>\r\n                            <td class=\"skudesc ma\"><#if line.inventory??>${line.inventory.skuDesc!''}</#if></td>\r\n                            <td class=\"ma\">${(line.blankStatus!\"\")}</td>\r\n                            <td class=\"ma\">${(line.restrict!\"\")}</td>\r\n\r\n                            <#if status==1>\r\n                            <#-- 审批单单含税-->\r\n                                <td class=\"ma\">\r\n                                    <span class=\"invoiceprice-i invoiceUnitPriceWithTax\">${line.invoiceUnitPriceWithTax!''}</span>\r\n                                <#--<input type=\"text\" class=\"invoiceprice-i\" value=\"${line.invoiceUnitPrice!''}\">-->\r\n                                </td>\r\n                            <#-- 审批单单不含税-->\r\n                                <td class=\"ma\">\r\n                                    <span class=\"invoiceprice-i invoiceUnitPrice\">${line.invoiceUnitPrice!''}</span>\r\n                                <#--<input type=\"text\" class=\"invoiceprice-i\" value=\"${line.invoiceUnitPrice!''}\">-->\r\n                                </td>\r\n                            <#-- 审批单数量-->\r\n                                <td class=\"ma\">\r\n                                    <span class=\"invoicecount-i\">${line.invoiceCount!''}</span>\r\n                                <#--<input type=\"text\" class=\"invoicecount-i\" value=\"${line.invoiceCount!''}\">-->\r\n                                </td>\r\n                            <#-- <td class=\"refprice ma\">${line.referUnitPrice?default(\"\")}</td> -->\r\n                                <#-- 采购单价（含税）-->\r\n                                <td class=\"poprice ma\">\r\n                                    <input type=\"text\" class=\"poprice-i purchasePriceWithTax\"\r\n                                           <#if line.invoiceUnitPriceWithTax??>\r\n                                               data-fromtrack=\"true\"\r\n                                               data-originvalue=\"${line.invoiceUnitPriceWithTax!''}\"\r\n                                           </#if>\r\n                                           data-avg=\"${line.referUnitPrice!0}\" data-rate=\"${line.taxRate!''}\" value=\"${(line.purchaseUnitPriceWithTax)!''}\">\r\n                                     <#--<input type=\"text\" class=\"poprice-i\" data-avg=\"${line.referUnitPrice!0}\" value=\"${(line.purchaseUnitPrice)!''}\">-->\r\n                                </td>\r\n                             <#-- 采购单价（不含税）-->\r\n                                <td class=\"poprice ma\">\r\n                                    <input type=\"text\" class=\"poprice-i purchasePrice\"\r\n                                            <#if line.invoiceUnitPrice??>\r\n                                               data-fromtrack=\"true\"\r\n                                               data-originvalue=\"${line.invoiceUnitPrice!''}\"\r\n                                            </#if>\r\n                                           data-avg=\"${line.referUnitPrice!0}\" data-rate=\"${line.taxRate!''}\"  value=\"${(line.purchaseUnitPrice)!''}\">\r\n                                </td>\r\n                                <td class=\"poqty ma\">\r\n                                    <input type=\"text\" class=\"poqty-i\" value=\"${(line.purchaseCount)!''}\">\r\n                                </td>\r\n                                <td class=\"lineamounttax ma\">\r\n                                ${(line.purchaseCount!0) * (line.purchaseUnitPriceWithTax !0)}\r\n                                </td>\r\n                                <td class=\"lineamount ma\">\r\n                                   ${(line.purchaseCount!0) * (line.purchaseUnitPrice!0)}\r\n                                </td>\r\n                                <td class=\"linememo ma\">\r\n                                    <textarea class=\"linememo-i\">${line.remark}</textarea>\r\n                                </td>\r\n                                <td class=\"lineaction ma\">\r\n                                    <a class=\"action-delete\" href=\"#\">删除</a>\r\n                                </td>\r\n                            <#else>\r\n                            <#-- 审批单单价-->\r\n                                <td class=\"ma\">\r\n                                ${line.invoiceUnitPriceWithTax!''}\r\n                                </td>\r\n                                <td class=\"ma\">\r\n                                ${line.invoiceUnitPrice!''}\r\n                                </td>\r\n                            <#-- 审批单数量-->\r\n                                <td class=\"ma\">\r\n                                ${line.invoiceCount!''}\r\n                                </td>\r\n                                <td class=\"poprice purchasePriceWithTax ma\">\r\n                                ${(line.purchaseUnitPriceWithTax)!0} <#if status==5><a href=\"javascript:void(0)\"   class=\"j-updateup\"   data-rate=\"${line.taxRate!''}\" data-orginprice=\"${(line.purchaseUnitPriceWithTax)!0}\"   data-price=\"${(line.purchaseUnitPrice)!0}\" data-orderid=\"${(po.id)!''}\"  data-skuid=\"${(line.skuId)!''}\">修改</a></#if>\r\n                                </td>\r\n                                <td class=\"poprice purchasePrice ma\">\r\n                                ${(line.purchaseUnitPrice)!0}<#if status==5><a href=\"javascript:void(0)\" class=\"j-updateup\" data-rate=\"${line.taxRate!''}\"  data-orginprice=\"${(line.purchaseUnitPriceWithTax)!0}\"   data-price=\"${(line.purchaseUnitPrice)!0}\" data-orderid=\"${(po.id)!''}\"  data-skuid=\"${(line.skuId)!''}\">修改</a></#if>\r\n                                </td>\r\n                                <td class=\"poqty ma\">\r\n                                ${(line.purchaseCount)!''}\r\n                                </td>\r\n                                <#--金额小计含税-->\r\n                                <td class=\"lineamounttax ma\">\r\n                                    <#if (line.purchaseCount)?? && (line.purchaseUnitPriceWithTax)??>\r\n                                    ${(line.purchaseCount * line.purchaseUnitPriceWithTax )?c}\r\n                                    <#else>\r\n                                        0\r\n                                    </#if>\r\n                                </td>\r\n                                <td class=\"lineamount ma\">${(line.purchaseCount * (line.purchaseUnitPrice!0))?c}\r\n                                </td>\r\n\r\n                                <td class=\"linememo ma\">\r\n                                    ${line.remark?html}\r\n                                </td>\r\n                                <#if status gte 3>\r\n                                    <td class=\"ma\">${line.storedCount?c}</td>\r\n                                    <td class=\"ma\">${line.goodCount?c}</td>\r\n                                    <td class=\"ma\">${line.badCount?c}</td>\r\n                                    <td class=\"ma\">${(line.storedCount-line.purchaseCount)?c}</td>\r\n                                </#if>\r\n                            </#if>\r\n                        </tr>\r\n                        </#list>\r\n                    </#if>\r\n                    </tbody>\r\n                </table>\r\n            </div>\r\n            <div class=\"m-line-ctrl\">\r\n            <#if status==1>\r\n                <input type=\"button\" value=\"清空列表\" class=\"w-btn w-btn-blue u-btn\" id=\"clearBtn\">\r\n                <input type=\"button\" value=\"添加商品\" class=\"w-btn w-btn-blue u-btn\" id=\"addBtn\">\r\n                <input type=\"button\" value=\"导入商品\" class=\"w-btn w-btn-blue u-btn\" id=\"importBtn\">\r\n            <#elseif status==2>\r\n                <input type=\"button\" value=\"审核通过\" class=\"w-btn w-btn-blue u-btn\" id=\"approveBtn\">\r\n                <input type=\"button\" value=\"审核驳回\" class=\"w-btn w-btn-blue u-btn\" id=\"rejectBtn\">\r\n            <#elseif status==4>\r\n                <input type=\"button\" value=\"入库确认\" class=\"w-btn w-btn-blue u-btn\" id=\"confirmBtn\">\r\n                <input type=\"button\" value=\"入库拒绝\" class=\"w-btn w-btn-blue u-btn\" id=\"refuseBtn\">\r\n            </#if>\r\n            <#if status gte 4>\r\n                <#if needShowExport?? && needShowExport == 1>\r\n                    <input type=\"button\" value=\"导出入库批次明细\" class=\"w-btn w-btn-blue u-btn\" id=\"exportBatchInfoBtn\" />\r\n                </#if>\r\n                <#if expMessage??>\r\n                    <span class=\"color-red\">${expMessage!\"\"}</span>\r\n                </#if>\r\n            </#if>\r\n            </div>\r\n            <#if tallyAuditStatus?? && (tallyAuditStatus == 0 || tallyAuditStatus == 1 || tallyAuditStatus == 2)>\r\n            <a class=\"w-btn w-btn-blue\" href=\"/backend/invoicing/order/tallyreport?id=${po.id}\" target=\"_blank\">查看理货报告（${['待审核', '已审核', '已驳回'][tallyAuditStatus]}）"
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "text": "<!-- 效期文件上传模块 -->"
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "id": "expiryModule"
+    },
+    "name": "div",
+    "source": "<div id=\"expiryModule\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "text": "<!-- 箱单发票上传模板 -->"
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "id": "packingAndInvoice"
+    },
+    "name": "div",
+    "source": "<div id=\"packingAndInvoice\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n            "
+  },
+  {
+    "attrs": {
+      "po??": "",
+      "&&": "",
+      "po.taskAttachments?has_content": ""
+    },
+    "name": "#if",
+    "source": "<#if po?? && po.taskAttachments?has_content>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "class": "m-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "s-fs-16 s-fw-bold"
+    },
+    "name": "h5",
+    "source": "<h5 class=\"s-fs-16 s-fw-bold\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "附件"
+  },
+  {
+    "attrs": {},
+    "name": "h5",
+    "source": "</h5>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "po.taskAttachments": "",
+      "as": "",
+      "atm": ""
+    },
+    "name": "#list",
+    "source": "<#list po.taskAttachments as atm>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "href": "${atm.attachmentUrl}",
+      "target": "_blank"
+    },
+    "name": "a",
+    "source": "<a href=\"${atm.attachmentUrl}\" target=\"_blank\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${atm.attachmentName}"
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "&emsp;\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "<div>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "class": "u-attach-title"
+    },
+    "name": "h5",
+    "source": "<h5 class=\"u-attach-title\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n              仓库处理到货状态\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "h5",
+    "source": "</h5>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "class": "m-timeline"
+    },
+    "name": "ul",
+    "source": "<ul class=\"m-timeline\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n              "
+  },
+  {
+    "attrs": {
+      "stages![]": "",
+      "as": "",
+      "stage": ""
+    },
+    "name": "#list",
+    "source": "<#list stages![] as stage>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n              "
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "<li>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "u-timestamp"
+    },
+    "name": "div",
+    "source": "<div class=\"u-timestamp\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                  "
+  },
+  {
+    "attrs": {
+      "stage.time??": ""
+    },
+    "name": "#if",
+    "source": "<#if stage.time??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                  "
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "<span>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${stage.time?number_to_date}"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "<span>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                  "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                  "
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "<span>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "TBD"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "<span>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                  "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "u-status"
+    },
+    "name": "div",
+    "source": "<div class=\"u-status\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                  "
+  },
+  {
+    "attrs": {},
+    "name": "h4",
+    "source": "<h4>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${stage.stage}"
+  },
+  {
+    "attrs": {},
+    "name": "h4",
+    "source": "</h4>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n              "
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n              "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n             "
+  },
+  {
+    "attrs": {},
+    "name": "ul",
+    "source": "</ul>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "class": "m-action-history"
+    },
+    "name": "div",
+    "source": "<div class=\"m-action-history\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "title"
+    },
+    "name": "h5",
+    "source": "<h5 class=\"title\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "操作记录"
+  },
+  {
+    "attrs": {},
+    "name": "h5",
+    "source": "</h5>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "logs"
+    },
+    "name": "div",
+    "source": "<div class=\"logs\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "po.logs": "",
+      "as": "",
+      "log": ""
+    },
+    "name": "#list",
+    "source": "<#list po.logs as log>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "detail"
+    },
+    "name": "p",
+    "source": "<p class=\"detail\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${log.operatorName?default(\"null\")?html} 于 ${log.time?number_to_datetime?string(\"yyyy-MM-dd HH:mm:ss\")} ${log.action}"
+  },
+  {
+    "attrs": {
+      "!log.feesOperationInfo??": ""
+    },
+    "name": "#if",
+    "source": "<#if !log.feesOperationInfo??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "；"
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "${log.remark?? ?string(\"备注：\",\"\")}${log.remark?default(\"\")?html}"
+  },
+  {
+    "attrs": {},
+    "name": "p",
+    "source": "</p>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "@htmFoot",
+    "source": "<@htmFoot />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "商品选择清单模板": "",
+      "--": ""
+    },
+    "name": "#--",
+    "source": "<#-- 商品选择清单模板 -->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "style": "display:none"
+    },
+    "name": "div",
+    "source": "<div style=\"display:none\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "<#noparse>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "jst",
+    "id": "jst-itemlist",
+    "text": "\r\n        <div>\r\n            <label>搜索</label>\r\n            <input type=\"text\" placeholder=\"可按照商品名称、料号、条形码和后台ID搜索\" style=\"width:300px;\" class=\"psearch\" />\r\n            <input type=\"button\" value=\"搜索\" class=\"w-btn w-btn-blue\" onclick=\"haitao.g.filterProducts(event)\">\r\n        </div>\r\n        <ul class=\"itemlist\" id=\"treebox\"></ul>\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "jst",
+    "id": "jst-treelist",
+    "text": "\r\n        {list items as item}\r\n        <li class=\"itementry\" data-goodsid=\"${item.goodsId}\">\r\n            <label class=\"item name\" >\r\n                <input type=\"checkbox\" value=\"1\">(${item.importType|escape})${item.goodsName|escape}\r\n            </label>\r\n            {list item.skuList as sku}\r\n            <label class=\"item sku\">\r\n                <input type=\"checkbox\" data-skuid=\"${sku.skuId}\">${sku.skuDesc|escape}【${sku.skuCode}】\r\n            </label>\r\n            {/list}\r\n        </li>\r\n        {/list}\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "</#noparse>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "<#noparse>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "jst",
+    "id": "jst-ullist",
+    "text": "\r\n        {list items as item}\r\n        <li class=\"itementry\" data-goodsid=\"${item.goodsId}\">\r\n            <label class=\"item name\" >\r\n                <input type=\"checkbox\" value=\"1\">(${item.importType|escape})${item.goodsName|escape}\r\n            </label>\r\n            {list item.skuList as sku}\r\n            <label class=\"item sku\">\r\n                <input type=\"checkbox\" data-skuid=\"${sku.skuId}\">${sku.skuDesc|escape}【${sku.skuCode}】\r\n            </label>\r\n            {/list}\r\n        </li>\r\n        {/list}\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "</#noparse>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "<#noparse>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "jst",
+    "id": "jst-new-poline",
+    "text": "\r\n    {list lines as line}\r\n    <tr data-goodsid=\"${line.goodsId}\" data-skuid=\"${line.skuId}\"  data-firstchange=\"${line.firstchange}\" >\r\n        <td class=\"goodsid ma\">${line.goodsId}</td>\r\n        <td class=\"goodsname ma\">${line.goodsName|escape}</td>\r\n        <td class=\"import-type ma\">${line.importType|escape}</td>\r\n        <#-- 增加料号显示 -->\r\n        <td class=\"barcode ma\">${line.productSkuCode|escape}</td>\r\n        <td class=\"barcode ma\">${line.skuBarcode|escape}</td>\r\n        <td class=\"skudesc ma\">${line.skuDesc|escape}</td>\r\n\r\n        <td class=\"ma\">${(line.blankStatus || '')}</td>\r\n        <td class=\"ma\">${(line.restrict || '')}</td>\r\n        <#-- 审批单单价-->\r\n        <td class=\"ma\">\r\n            <span class=\"invoiceprice-i invoiceUnitPriceWithTax\">${line.invoiceUnitPriceWithTax || ''}</span>\r\n        </td>\r\n        <td class=\"ma\">\r\n            <span class=\"invoiceprice-i invoiceUnitPrice\">${line.invoiceUnitPrice || ''}</span>\r\n        </td>\r\n        <#-- 审批单数量-->\r\n        <td class=\"ma\">\r\n            <span class=\"invoicecount-i\">${line.invoiceCount || ''}</span>\r\n        </td>\r\n        <#-- 采购单价-->\r\n        <td class=\"poprice ma\">\r\n            <input type=\"text\" class=\"poprice-i purchasePriceWithTax\"\r\n                   {if line.invoiceUnitPriceWithTax}\r\n                       data-fromtrack=\"true\"\r\n                       data-originvalue=\"${line.invoiceUnitPriceWithTax}\"\r\n                   {/if}\r\n            data-avg=\"${line.referUnitPrice}\" data-rate=\"${line.taxRate}\" value=\"${line.purchasePriceWithTax}\">\r\n        </td>\r\n         <td class=\"poprice ma\">\r\n            <input type=\"text\" class=\"poprice-i purchasePrice\"\r\n                   {if line.invoiceUnitPrice}\r\n                       data-fromtrack=\"true\"\r\n                       data-originvalue=\"${line.invoiceUnitPrice}\"\r\n                   {/if}\r\n             data-avg=\"${line.referUnitPrice}\" data-rate=\"${line.taxRate}\"  value=\"${line.purchasePrice}\">\r\n        </td>\r\n        <#-- 采购数量-->\r\n        <td class=\"poqty ma\">\r\n            <input type=\"text\" class=\"poqty-i\" value=\"${line.purchaseCount}\">\r\n        </td>\r\n        <#--小计含税-->\r\n        <td class=\"lineamounttax ma\">\r\n            {if line.purchaseCount * line.purchaseUnitPriceWithTax  }\r\n            {var amount = (line.purchaseCount * line.purchaseUnitPriceWithTax ).toFixed(2)}\r\n            ${amount}\r\n            {/if}\r\n        </td>\r\n        <td class=\"lineamount ma\">\r\n            {if line.purchaseCount * line.purchasePrice }\r\n            {var amount = (line.purchaseCount * line.purchasePrice).toFixed(2)}\r\n            ${amount}\r\n            {/if}\r\n        </td>\r\n        <td class=\"linememo ma\">\r\n            <textarea class=\"linememo-i\">${line.remark}<&#47textarea>\r\n        </td>\r\n        <td class=\"lineaction ma\">\r\n            <a class=\"action-delete\" href=\"#\">删除</a>\r\n        </td>\r\n    </tr>\r\n    {/list}\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "jst",
+    "id": "jst-approve",
+    "text": "\r\n        <div class=\"simple-content\">\r\n            确定要审核：<span class=\"f-hightlight\">${poNumber}</span> 这笔采购单吗？\r\n        </div>\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "jst",
+    "id": "jst-submit",
+    "text": "\r\n        <div class=\"simple-content\">\r\n            确定要提交：<span class=\"f-hightlight\">${poNumber}</span> 这笔采购单吗？\r\n        </div>\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "jst",
+    "id": "jst-confirm",
+    "text": "\r\n        <div class=\"confirm-content\">\r\n            <span class=\"confirm-text\">确定要对：<span class=\"f-hightlight\">${poNumber} </span>这笔采购单进行入库确认？</span>\r\n            <p>确认后库存会更新到前台</p>\r\n            <div style=\"margin-bottom:10px;\">\r\n                <label class=\"f-required\">汇率\r\n                    <input class=\"confirm-exchange\" value=\"${exchangeRate}\"/>\r\n                </label>\r\n                {if !exchangeRate}<span class=\"u-info-tip\">财务还未录入相应的汇率，请跟财务确认</span>{/if}\r\n            </div>\r\n            <div class=\"f-required\">\r\n            是否最后一批审批单：\r\n            <input type=\"radio\" name=\"last-audit\" value=\"false\" checked> 否\r\n            <input type=\"radio\" name=\"last-audit\" value=\"true\"> 是(自动终止采购单对应的审批单)\r\n            </div>\r\n            <label class=\"f-required\">备注\r\n                <textarea class=\"confirm-memo\"><&#47textarea>\r\n            </label>\r\n        </div>\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "jst",
+    "id": "jst-refuse",
+    "text": "\r\n        <div class=\"confirm-content\">\r\n            <span class=\"confirm-text\">确定要对：<span class=\"f-hightlight\">${poNumber} </span>这笔采购单进行入库拒绝？</span>\r\n            <br>\r\n            <label class=\"f-required\">备注\r\n                <textarea class=\"confirm-memo\"><&#47textarea>\r\n            </label>\r\n        </div>\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "jst",
+    "id": "jst-finance",
+    "text": "\r\n        <div class=\"confirm-content\">\r\n            <span class=\"confirm-text\">确定要对：<span class=\"f-hightlight\">${poNumber} </span>这笔采购单进行财务核对吗？</span>\r\n            <br>\r\n            <span>核对后表示该采购单财务已审核确认</span>\r\n            <label class=\"f-required\">备注\r\n                <textarea class=\"confirm-memo\"><&#47textarea>\r\n            </label>\r\n        </div>\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "</#noparse>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "Regualr模板": "",
+      "--": ""
+    },
+    "name": "#--",
+    "source": "<#-- Regualr模板 -->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "id": "template",
+      "style": "display:none"
+    },
+    "name": "div",
+    "source": "<div id=\"template\" style=\"display:none\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "beg": {
+      "attrs": {
+        "id": "variousfees"
+      },
+      "name": "textarea",
+      "source": "<textarea id=\"variousfees\">",
+      "closed": false,
+      "selfClosed": false
+    },
+    "end": {
+      "attrs": {},
+      "name": "textarea",
+      "source": "</textarea>",
+      "closed": true,
+      "selfClosed": false
+    },
+    "text": "\r\n    {#list dataAry as data}\r\n        {#if state > 1}\r\n            <div class=\"row f-clearfix\">\r\n            <label class=\"tit\">{data.text}</label>\r\n            <div class=\"block\">\r\n                <label>有无情况：</label>\r\n                <span>{data.StateName}</span>\r\n            </div>\r\n            {#if data.State==1}\r\n            <div class=\"block\">\r\n                <label>币种：</label>\r\n                <span>{data.CurrencyTypeName}</span>\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>汇率：</label>\r\n                <span>{data.ExchangeRate}</span>\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>支付金额：</label>\r\n                <span>{data.PaymentAmount}</span>\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>国际物流订单：</label>\r\n                {#if data.OrderNum != '--'}\r\n                <a href=\"{data.OrderUrl}\" target=\"_blank\">{data.OrderNum}</a>\r\n                {#else}--\r\n                {/if}\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>状态：</label>\r\n                <span>{data.OrderStatus}</span>\r\n            </div>\r\n            {/if}\r\n            {#if state != 7 && (data_index >= 2 || feeEdit)}\r\n            <div class=\"modify\" on-click={this.modify(data, data_index)}>修改</div>\r\n            {/if}\r\n        </div>\r\n        {#else}\r\n            <div class=\"row f-clearfix\">\r\n            <label class=\"tit\">{data.text}</label>\r\n            <div class=\"block\">\r\n                <label>有无情况</label>\r\n                <select r-model=\"{data.State}\" >\r\n                <#list feesStateList as feesState>\r\n                    <option value=\"${feesState.feesStateId}\">${feesState.feesStateName}</option>\r\n                </#list>\r\n                </select>\r\n            </div>\r\n            {#if data.State==1}\r\n            <div class=\"block\">\r\n                <label>币种</label>\r\n                <select on-mouseup={this.checkItem(data, data_index)} r-model=\"{data.CurrencyType}\"{#if data.currencyError} class=\"f-alert\"{/if}>\r\n            <#list currencyList as currency>\r\n                <option value=\"${currency.currencyId}\">${currency.currencyName}</option>\r\n            </#list>\r\n                </select>\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>汇率</label>\r\n                <input on-blur={this.checkItem(data, data_index)} type=\"text\" placeholder=\"兑人民币汇率\" r-model=\"{data.ExchangeRate}\"{#if data.exchangeError} class=\"f-alert\"{/if} />\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>支付金额</label>\r\n                <input on-blur={this.checkItem(data, data_index)} type=\"text\" r-model={data.PaymentAmount}{#if data.paymentError} class=\"f-alert\"{/if} />\r\n            </div>\r\n            {/if}\r\n            <div class=\"block\">\r\n                <label>国际物流订单：</label>\r\n                {#if data.orderNum}\r\n                <a href=\"data.OrderUrl\" target=\"_blank\">{data.OrderNum}</a>\r\n                {#else}--\r\n                {/if}\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>状态：</label>\r\n                <span>{data.OrderStatus}</span>\r\n            </div>\r\n        </div>\r\n        {/if}\r\n    {/list}\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "beg": {
+      "attrs": {
+        "id": "feesChange"
+      },
+      "name": "textarea",
+      "source": "<textarea id=\"feesChange\">",
+      "closed": false,
+      "selfClosed": false
+    },
+    "end": {
+      "attrs": {},
+      "name": "textarea",
+      "source": "</textarea>",
+      "closed": true,
+      "selfClosed": false
+    },
+    "text": "\r\n        <div class=\"m-feeslayer f-clearfix\">\r\n            <div class=\"block\">\r\n                <label>有无情况</label>\r\n                <select r-model=\"{feesData.State}\" >\r\n                    <#list feesStateList as feesState>\r\n                        <option value=\"${feesState.feesStateId}\">${feesState.feesStateName}</option>\r\n                    </#list>\r\n                </select>\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>币种</label>\r\n                <select r-model=\"{feesData.CurrencyType}\"{#if feesData.State==0} disabled{/if}>\r\n                    <#list currencyList as currency>\r\n                        <option value=\"${currency.currencyId}\">${currency.currencyName}</option>\r\n                    </#list>\r\n                </select>\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>汇率</label>\r\n                <input type=\"text\" placeholder=\"兑人民币汇率\" r-model=\"{feesData.ExchangeRate}\"{#if feesData.State==0} disabled{/if} />\r\n            </div>\r\n            <div class=\"block\">\r\n                <label>支付金额</label>\r\n                <input type=\"text\" r-model={feesData.PaymentAmount}{#if feesData.State==0} disabled{/if} />\r\n            </div>\r\n        </div>\r\n    "
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n"
+  },
+  {
+    "closed": false,
+    "command": "NOPARSE",
+    "source": "<!-- @NOPARSE -->"
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "text": "\r\n    var variousfeesData = {\r\n        dataAry : [{text:\"国际费用\",index:0,pre:'internationalFees',State:1},{text:\"转关费用\",index:1,pre:'transitCosts',State:1},{text:\"佣金费用\",index:2,pre:'commissionCharges',State:1}]\r\n    };\r\n    var currencyList = ${stringify(currencyList![])};\r\n    var transportList = ${stringify(transportList![])};\r\n    var purchaseWayList = ${stringify(purchaseWayList![])};\r\n    variousfeesData.state = <#if !purchaseOrder??>-1<#else>${po.status.intValue()}</#if>;\r\n    <#assign prelist=[\"internationalFees\",\"transitCosts\",\"commissionCharges\"] />\r\n    <#if !!purchaseOrder??>\r\n        <#list prelist as pre>\r\n        variousfeesData.dataAry[${pre_index}].State = ${purchaseOrder[pre+\"State\"].intValue()?default(1)};\r\n        variousfeesData.dataAry[${pre_index}].StateName = '${purchaseOrder[pre+\"State\"]?default(\"有费用\")}';\r\n        variousfeesData.dataAry[${pre_index}].CurrencyType = ${purchaseOrder[pre+\"CurrencyType\"].intValue()?default(-1)};\r\n        variousfeesData.dataAry[${pre_index}].CurrencyTypeName = '${purchaseOrder[pre+\"CurrencyType\"]?default(\"未指定\")}';\r\n        variousfeesData.dataAry[${pre_index}].ExchangeRate = ${purchaseOrder[pre+\"ExchangeRate\"]?default(\"''\")};\r\n        variousfeesData.dataAry[${pre_index}].PaymentAmount = ${purchaseOrder[pre+\"PaymentAmount\"]?default(\"''\")};\r\n        variousfeesData.dataAry[${pre_index}].MaintenanceStatus = ${purchaseOrder[pre+\"MaintenanceStatus\"].intValue()?default(-1)};\r\n        variousfeesData.dataAry[${pre_index}].MaintenanceStatusName = '${purchaseOrder[pre+\"MaintenanceStatus\"]?default(\"未维护\")}';\r\n        variousfeesData.dataAry[${pre_index}].OrderNum = '${purchaseOrder[pre+\"OrderNum\"]?default(\"--\")}';\r\n        variousfeesData.dataAry[${pre_index}].OrderUrl = '${purchaseOrder[pre+\"OrderUrl\"]?default(\"javascript:;\")}';\r\n        variousfeesData.dataAry[${pre_index}].OrderStatus = '${purchaseOrder[pre+\"OrderStatus\"]?default(\"--\")}';\r\n        </#list>\r\n    </#if>\r\n    var auditId = ${auditId!0},\r\n            poId    = \"${(po.id)!''}\",\r\n            fromTrackTask = ${(fromTrackTask!false)?c},\r\n            exchangeRate = '${exchange_rate!''}',\r\n            purchaseOrderStatus= '${status}';\r\n    if ( exchangeRate == '' || isNaN(exchangeRate) ) {\r\n        exchangeRate = '';\r\n    } else {\r\n        exchangeRate = exchangeRate;\r\n    }\r\n    <#if status==1>\r\n        <#if fromTrackTask??>\r\n        var contractno = '${contractNo4Audit!\"\"}';\r\n        <#else>\r\n        var contractno = '${po.contractNo!\"\"}';\r\n        </#if>\r\n    <#else>\r\n    var contractno = '${po.contractNo!\"\"}';\r\n    </#if>\r\n    var supplierGradeList={<#list supplierGradeList as item>${item.index}:'${item.value!\"\"}',</#list>};\r\n    <#if status!=1>\r\n    var supplierId=${po.supplierId};\r\n    </#if>\r\n    <#if !po?? || !(po.id)?? || po.id == 0>\r\n    window.createmode = true;\r\n\r\n    window.expiryattachments = [];\r\n    <#else>\r\n    window.purchaseOrderAttachments = [];\r\n        <#if po.attachments?has_content>\r\n            <#list po.attachments as attachment>\r\n            window.purchaseOrderAttachments.push({\r\n                id:${(attachment.id)!''},\r\n                relatedId:${(attachment.relatedId)!''},\r\n                attachmentName:'${(attachment.attachmentName)!''}',\r\n                attachmentUrl:'${(attachment.attachmentUrl)!''}',\r\n                typeValue:${(attachment.typeValue)!''}\r\n            });\r\n            </#list>\r\n        </#if>\r\n    </#if>\r\n    <#if feeEdit??>\r\n    var feeEdit = ${feeEdit?c};\r\n    </#if>\r\n    var declarationPortList = ${stringify(declarationPortList![])};\r\n"
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "closed": true,
+    "command": "NOPARSE",
+    "source": "<!-- /@NOPARSE -->"
+  },
+  {
+    "text": "\r\n\r\n"
+  },
+  {
+    "text": "",
+    "uri": "${lib_root}define.js?pro=${pro_root}"
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "text": "",
+    "uri": "${js_root}/module/psinventory/create.js"
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "body",
+    "source": "</body>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "html",
+    "source": "</html>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  }
+]

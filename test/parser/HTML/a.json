@@ -1,0 +1,1463 @@
+[
+  {
+    "closed": false,
+    "command": "NOCOMPRESS",
+    "source": "<!-- @NOCOMPRESS -->"
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "x": "",
+      "as": "",
+      "x?html": ""
+    },
+    "name": "#escape",
+    "source": "<#escape x as x?html>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "@compress",
+    "source": "<@compress>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {
+      "html": ""
+    },
+    "name": "!DOCTYPE",
+    "source": "<!DOCTYPE html>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "html",
+    "source": "<html>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n  "
+  },
+  {
+    "attrs": {},
+    "name": "head",
+    "source": "<head>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": false,
+    "command": "IGNORE",
+    "source": "<!-- @IGNORE -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "\"./mock.ftl\"": ""
+    },
+    "name": "#include",
+    "source": "<#include \"./mock.ftl\"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": true,
+    "command": "IGNORE",
+    "source": "<!-- /@IGNORE -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "\"../../wrap/3g.common.ftl\"": ""
+    },
+    "name": "#include",
+    "source": "<#include \"../../wrap/3g.common.ftl\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "title",
+    "source": "<title>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${title!\"品购页\"}"
+  },
+  {
+    "attrs": {},
+    "name": "title",
+    "source": "</title>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@meta",
+    "source": "<@meta/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "beg": {
+      "attrs": {
+        "rel": "shortcut icon",
+        "href": "http://shared.ydstatic.com/images/favicon.ico",
+        "type": "image/x-icon"
+      },
+      "name": "link",
+      "source": "<link rel=\"shortcut icon\" href=\"http://shared.ydstatic.com/images/favicon.ico\" type=\"image/x-icon\"/>",
+      "closed": false,
+      "selfClosed": true
+    }
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "<!-- test nej template -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "css",
+    "uri": "/src/css/page/schedule.css"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "js",
+    "uri": "/src/js/page/schedule.js"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "html",
+    "uri": "/src/js/page/schedule.html"
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@css",
+    "source": "<@css/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": false,
+    "command": "STYLE",
+    "config": {
+      "core": false,
+      "inline": true
+    },
+    "source": "<!-- @STYLE {core:false,inline:true} -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "uri": "/src/css/page/schedule.css"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "\r\n        .a{color:#aaa;}\r\n        .b{background:#bbb;}\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": false,
+    "command": "NOPARSE",
+    "source": "<!-- @noparse -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "\r\n      .a{color:#aaa;}\r\n      .b{background:#bbb;}\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": true,
+    "command": "NOPARSE",
+    "source": "<!-- /@noparse -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "type": "css",
+    "text": "\r\n        .aa{color:#aaa;}\r\n        .bb{background:#bbb;}\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "beg": {
+      "attrs": {
+        "type": "template/css"
+      },
+      "name": "style",
+      "source": "<style type=\"template/css\">",
+      "closed": false,
+      "selfClosed": false
+    },
+    "end": {
+      "attrs": {},
+      "name": "style",
+      "source": "</style>",
+      "closed": true,
+      "selfClosed": false
+    },
+    "text": "\r\n        .aa{color:#aaa;}\r\n        .bb{background:#bbb;}\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": false,
+    "command": "NOPARSE",
+    "source": "<!-- @noparse -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "\r\n      <#assign nowTime = .now?long>\r\n      <#assign endTime = (schedule.endTime)!0>\r\n      <#assign startTime = (schedule.startTime)!0>\r\n      window.config = {\r\n          brandId:${(schedule.brandId)!\"0\"},\r\n          scheduleId:${(schedule.id)!\"0\"},\r\n          leftTime:${endTime-nowTime},\r\n          noprice:${(startTime>nowTime)?string(\"true\",\"false\")}\r\n      };\r\n    "
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": true,
+    "command": "NOPARSE",
+    "source": "<!-- /@noparse -->"
+  },
+  {
+    "text": "\r\n\r\n    "
+  },
+  {
+    "text": "\r\n      console.log('abc')\r\n    "
+  },
+  {
+    "text": "\r\n  "
+  },
+  {
+    "attrs": {},
+    "name": "head",
+    "source": "</head>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n  "
+  },
+  {
+    "attrs": {
+      "id": "schedule-netease-com",
+      "class": "p-schedule"
+    },
+    "name": "body",
+    "source": "<body id=\"schedule-netease-com\" class=\"p-schedule\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "<div>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": " aaaa"
+  },
+  {
+    "text": "<"
+  },
+  {
+    "attrs": {
+      "ccccc": ""
+    },
+    "name": "bbbbb",
+    "source": "<bbbbb ccccc>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": ">ddddd "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "title": "title!\"品购页\""
+    },
+    "name": "@topbar",
+    "source": "<@topbar title=title!\"品购页\"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "attrs": {
+      "class": "m-pocat j-category",
+      "id": "category-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-pocat j-category\" id=\"category-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "ttl"
+    },
+    "name": "div",
+    "source": "<div class=\"ttl\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "t"
+    },
+    "name": "span",
+    "source": "<span class=\"t\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "筛选"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "c m-pobg",
+      "data-action": "close"
+    },
+    "name": "span",
+    "source": "<span class=\"c m-pobg\" data-action=\"close\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "&nbsp;"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "mit j-it",
+      "data-value": ""
+    },
+    "name": "div",
+    "source": "<div class=\"mit j-it\" data-value=\"\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "全部"
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "category??&&category?size&gt;0": ""
+    },
+    "name": "#if",
+    "source": "<#if category??&&category?size&gt;0>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "category": "",
+      "as": "",
+      "x": ""
+    },
+    "name": "#list",
+    "source": "<#list category as x>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "mit j-it",
+      "data-value": "${x.id}"
+    },
+    "name": "div",
+    "source": "<div class=\"mit j-it\" data-value=\"${x.id}\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${x.name}"
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "<@module>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "m-pobanner m-img"
+    },
+    "name": "div",
+    "source": "<div class=\"m-pobanner m-img\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "u-loading-1",
+      "src": "/res/3g/images/blank.gif",
+      "data-src": "${banner}"
+    },
+    "name": "img",
+    "source": "<img class=\"u-loading-1\" src=\"/res/3g/images/blank.gif\"  data-src=\"${banner}\"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "follow ${followed?string(",
+      "id": "follow-box"
+    },
+    "name": "div",
+    "source": "<div class=\"follow ${followed?string(\"j-follow\",\"\")}\" id=\"follow-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {
+      "class": "m-pobg i"
+    },
+    "name": "i",
+    "source": "<i class=\"m-pobg i\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "&nbsp;"
+  },
+  {
+    "attrs": {},
+    "name": "i",
+    "source": "</i>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "<span>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${followed?string(\"取消关注\",\"关注品牌\")}"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "</@module>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "<@module>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "startTime&gt;nowTime": ""
+    },
+    "name": "#if",
+    "source": "<#if startTime&gt;nowTime>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "m-poact"
+    },
+    "name": "div",
+    "source": "<div class=\"m-poact\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "c"
+    },
+    "name": "span",
+    "source": "<span class=\"c\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${startTime?number_to_datetime?string(\"MM月dd日hh点\")}开售"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "m-poact f-cb"
+    },
+    "name": "div",
+    "source": "<div class=\"m-poact f-cb\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "activities??&&activities?size&gt;0": ""
+    },
+    "name": "#if",
+    "source": "<#if activities??&&activities?size&gt;0>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "x a ${(activities?size&gt;1)?string(",
+      "id": "activity-box"
+    },
+    "name": "div",
+    "source": "<div class=\"x a ${(activities?size&gt;1)?string(\"j-show\",\"\")}\" id=\"activity-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {
+      "class": "t"
+    },
+    "name": "span",
+    "source": "<span class=\"t\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${activities}"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {
+      "class": "m-pobg i"
+    },
+    "name": "i",
+    "source": "<i class=\"m-pobg i\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "&nbsp;"
+  },
+  {
+    "attrs": {},
+    "name": "i",
+    "source": "</i>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "m-pohd",
+      "id": "activity-box-list"
+    },
+    "name": "div",
+    "source": "<div class=\"m-pohd\" id=\"activity-box-list\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {
+      "class": "w"
+    },
+    "name": "span",
+    "source": "<span class=\"w\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "&nbsp;"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {
+      "activities": "",
+      "as": "",
+      "x": ""
+    },
+    "name": "#list",
+    "source": "<#list activities as x>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {},
+    "name": "p",
+    "source": "<p>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "${x}"
+  },
+  {
+    "attrs": {},
+    "name": "p",
+    "source": "</p>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "x b"
+    },
+    "name": "div",
+    "source": "<div class=\"x b\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {
+      "class": "m-pobg i"
+    },
+    "name": "i",
+    "source": "<i class=\"m-pobg i\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "&nbsp;"
+  },
+  {
+    "attrs": {},
+    "name": "i",
+    "source": "</i>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n          "
+  },
+  {
+    "attrs": {
+      "id": "count-down-box"
+    },
+    "name": "span",
+    "source": "<span id=\"count-down-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "0天0时0分0秒后结束"
+  },
+  {
+    "attrs": {},
+    "name": "span",
+    "source": "</span>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "</@module>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "<@module>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "m-potab",
+      "id": "type-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-potab\" id=\"type-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "it j-it a",
+      "data-value": "0"
+    },
+    "name": "div",
+    "source": "<div class=\"it j-it a\" data-value=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "推荐"
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "it j-it b j-toggle",
+      "data-value": "1",
+      "data-toggled": "true"
+    },
+    "name": "div",
+    "source": "<div class=\"it j-it b j-toggle\" data-value=\"1\" data-toggled=\"true\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "价格"
+  },
+  {
+    "attrs": {
+      "class": "m-pobg i"
+    },
+    "name": "i",
+    "source": "<i class=\"m-pobg i\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "&nbsp;"
+  },
+  {
+    "attrs": {},
+    "name": "i",
+    "source": "</i>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "it j-it c",
+      "data-value": "3"
+    },
+    "name": "div",
+    "source": "<div class=\"it j-it c\" data-value=\"3\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "折扣"
+  },
+  {
+    "attrs": {
+      "class": "m-pobg i"
+    },
+    "name": "i",
+    "source": "<i class=\"m-pobg i\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "&nbsp;"
+  },
+  {
+    "attrs": {},
+    "name": "i",
+    "source": "</i>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "it j-it d",
+      "data-value": "0"
+    },
+    "name": "div",
+    "source": "<div class=\"it j-it d\" data-value=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "筛选"
+  },
+  {
+    "attrs": {
+      "class": "m-pobg i"
+    },
+    "name": "i",
+    "source": "<i class=\"m-pobg i\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "&nbsp;"
+  },
+  {
+    "attrs": {},
+    "name": "i",
+    "source": "</i>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "</@module>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "<@module>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "m-pobox f-cb",
+      "id": "product-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-pobox f-cb\" id=\"product-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "</@module>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@footer",
+    "source": "<@footer/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@template",
+    "source": "<@template>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "<#noparse>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "closed": false,
+    "command": "TEMPLATE",
+    "source": "<!-- @TEMPLATE -->"
+  },
+  {
+    "text": "\r\n      \r\n      "
+  },
+  {
+    "text": "<!-- test nej template -->"
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "css",
+    "uri": "./a.css",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "js",
+    "uri": "./a.js",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "./a.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      \r\n      "
+  },
+  {
+    "type": "txt",
+    "id": "product-loading",
+    "text": "\r\n        <div class=\"loading\">加载中...</div>\r\n      "
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "jst",
+    "id": "product-list",
+    "text": "\r\n        {list beg..end as y}\r\n          {var x=xlist[y]}\r\n          <div class=\"m-poprd {if noprice}j-nobg{/if}\">\r\n            <a class=\"body\" href=\"/detail?id=${x.id}\">\r\n              <div class=\"img m-img\">\r\n                <img class=\"u-loading-1\" src=\"/res/3g/images/blank.gif\" data-src=\"${x.listShowPicList[0]}\"/>\r\n                {if isSoldout(x.skuList)}\r\n                <div class=\"so\">&nbsp;</div>\r\n                {/if}\r\n              </div>\r\n              <div class=\"x ln0\">${x.productName||'商品名称'}</div>\r\n              {var sale = x.salePrice}\r\n              {var market = x.marketPrice}\r\n              {if noprice}\r\n              <div class=\"x ln1\">\r\n                <span class=\"zg\">专柜价</span>\r\n                <span class=\"mp\">&yen;${Math.floor(market)}</span>\r\n              </div>\r\n              {else}\r\n              <div class=\"x ln1\">\r\n                <span class=\"sp\">&yen;<em>${Math.floor(sale)}</em></span>\r\n                <span class=\"mp\">&yen;${Math.floor(market)}</span>\r\n                <span class=\"zk\">${(sale*10/market)|toFixed:1}折</span>\r\n              </div>\r\n              {/if}\r\n            </a>\r\n          </div>\r\n        {/list}\r\n      "
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "closed": false,
+    "command": "MODULE",
+    "source": "<!-- @MODULE -->"
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "./a.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "./b.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "./c.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "closed": true,
+    "command": "MODULE",
+    "source": "<!-- /@MODULE -->"
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "</#noparse>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@template",
+    "source": "</@template>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": false,
+    "command": "SCRIPT",
+    "source": "<!-- @SCRIPT -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "",
+    "uri": "${jslib}define.js?${jscnf}"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "",
+    "uri": "${jspro}page/schedule/schedule.js"
+  },
+  {
+    "text": "\r\n  "
+  },
+  {
+    "attrs": {},
+    "name": "body",
+    "source": "</body>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "html",
+    "source": "</html>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "@compress",
+    "source": "</@compress>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "#escape",
+    "source": "</#escape>",
+    "closed": true,
+    "selfClosed": false
+  }
+]

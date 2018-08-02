@@ -1,0 +1,2205 @@
+[
+  {
+    "attrs": {
+      "t20151226": "1451059200000"
+    },
+    "name": "#assign",
+    "source": "<#assign t20151226=1451059200000>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n"
+  },
+  {
+    "attrs": {
+      "x": "",
+      "as": "",
+      "x?html": ""
+    },
+    "name": "#escape",
+    "source": "<#escape x as x?html>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@compress",
+    "source": "<@compress>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "html": ""
+    },
+    "name": "!DOCTYPE",
+    "source": "<!DOCTYPE html>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "html",
+    "source": "<html>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "head",
+    "source": "<head>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "\"../../wrap/common.ftl\"": ""
+    },
+    "name": "#include",
+    "source": "<#include \"../../wrap/common.ftl\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "links": "[\"http:"
+    },
+    "name": "#assign",
+    "source": "<#assign  links=[\"http://www.xiupin.com/activity/show?pageId=6029\",\"http://www.xiupin.com/activity/show?pageId=6030\",\"http://www.xiupin.com/activity/show?pageId=6031\",\"http://www.xiupin.com/activity/show?pageId=6032\"] />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "stagesLink": "[\"http:",
+      "\"http://www.xiupin.com/activity/show?pageId=6034\"": "",
+      ",": "",
+      "\"http://www.xiupin.com/activity/show?pageId=6035\"": "",
+      "\"http://www.xiupin.com/activity/show?pageId=6036\"": "",
+      "\"http://www.xiupin.com/activity/show?pageId=6037\"": "",
+      "\"http://www.xiupin.com/activity/show?pageId=6038\"": "",
+      "\"http://www.xiupin.com/activity/show?pageId=6039\"": "",
+      "]": ""
+    },
+    "name": "#assign",
+    "source": "<#assign stagesLink=[\"http://www.xiupin.com/activity/show?pageId=6033\",\r\n        \"http://www.xiupin.com/activity/show?pageId=6034\",\r\n        \"http://www.xiupin.com/activity/show?pageId=6035\",\r\n        \"http://www.xiupin.com/activity/show?pageId=6036\",\r\n        \"http://www.xiupin.com/activity/show?pageId=6037\",\r\n        \"http://www.xiupin.com/activity/show?pageId=6038\",\r\n        \"http://www.xiupin.com/activity/show?pageId=6039\"]>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "text": "<#--"
+  },
+  {
+    "attrs": {
+      "\"./datamacro.ftl\"": ""
+    },
+    "name": "#include",
+    "source": "<#include \"./datamacro.ftl\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "-->\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "title",
+    "source": "<title>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "圣诞节"
+  },
+  {
+    "attrs": {},
+    "name": "title",
+    "source": "</title>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "charset": "utf-8"
+    },
+    "name": "meta",
+    "source": "<meta charset=\"utf-8\"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "@css",
+    "source": "<@css/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "uri": "/src/css/page/activity/activity/20151224.css"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "head",
+    "source": "</head>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "body",
+    "source": "<body>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "class": "g-hd"
+    },
+    "name": "div",
+    "source": "<div class=\"g-hd\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "@topbar",
+    "source": "<@topbar/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "@navigator",
+    "source": "<@navigator />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "<@module>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "#--头1，大牌2，其他3--",
+    "source": "<#--头1，大牌2，其他3-->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "g-activity",
+      "id": "gactivity"
+    },
+    "name": "div",
+    "source": "<div class=\"g-activity\" id=\"gactivity\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "text": "<div "
+  },
+  {
+    "attrs": {
+      "isLastDay": ""
+    },
+    "name": "#if",
+    "source": "<#if isLastDay>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "class=\"m-toparea2\""
+  },
+  {
+    "attrs": {},
+    "name": "#else",
+    "source": "<#else>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "class=\"m-toparea\""
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": ">\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "g-bd ct-wrap"
+    },
+    "name": "div",
+    "source": "<div class=\"g-bd ct-wrap\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "src": "http://ystore.nos.netease.com/235e2029b02bd01260871d6bcb2d83ae.gif",
+      "class": "m-sock-p",
+      "id": "sockgift"
+    },
+    "name": "img",
+    "source": "<img src=\"http://ystore.nos.netease.com/235e2029b02bd01260871d6bcb2d83ae.gif\" class=\"m-sock-p\" id=\"sockgift\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "id": "countdown",
+      "class": "countdown"
+    },
+    "name": "div",
+    "source": "<div id=\"countdown\" class=\"countdown\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "link link-1",
+      "href": "javascript:void(0)"
+    },
+    "name": "a",
+    "source": "<a class=\"link link-1\" href=\"javascript:void(0)\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "links": "",
+      "as": "",
+      "link": ""
+    },
+    "name": "#list",
+    "source": "<#list links as link>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "0": "",
+      "link_index": "",
+      "gt": ""
+    },
+    "name": "#if",
+    "source": "<#if link_index gt 0>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "link link-${link_index+1}",
+      "href": "${link}",
+      "target": "_blank"
+    },
+    "name": "a",
+    "source": "<a class=\"link link-${link_index+1}\" href=\"${link}\" target=\"_blank\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "<!-- Global Fashion -->"
+  },
+  {
+    "text": "\r\n\r\n\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "#--大牌区块--",
+    "source": "<#--大牌区块-->",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "bp": "",
+      "blist": "",
+      "nd": "0"
+    },
+    "name": "#macro",
+    "source": "<#macro bp  blist nd=0>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "blist": "",
+      "as": "",
+      "p": ""
+    },
+    "name": "#list",
+    "source": "<#list blist as p>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "5": "nd",
+      "p_index": "",
+      "%": ""
+    },
+    "name": "#if",
+    "source": "<#if p_index % 5 == nd>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "m-product m-product${p_index+1}"
+    },
+    "name": "div",
+    "source": "<div class=\"m-product m-product${p_index+1}\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "href": "/search/sycProduct?brandIdArray=${p.brandId}",
+      "target": "_blank"
+    },
+    "name": "a",
+    "source": "<a  href=\"/search/sycProduct?brandIdArray=${p.brandId}\" target=\"_blank\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "class": "u-loading-1 m-zoom",
+      "data-src": "http://paopao.nosdn.127.net/${p.thumb}?imageView&thumbnail=210y340&quality=90&enlarge=1",
+      "alt": ""
+    },
+    "name": "img",
+    "source": "<img class=\"u-loading-1 m-zoom\" data-src=\"http://paopao.nosdn.127.net/${p.thumb}?imageView&thumbnail=210y340&quality=90&enlarge=1\" alt=\"\"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "#macro",
+    "source": "</#macro>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "data": "",
+      "as": "",
+      "item": ""
+    },
+    "name": "#list",
+    "source": "<#list data as item>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "item_index": "0"
+    },
+    "name": "#if",
+    "source": "<#if item_index == 0>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "m-area1",
+      "id": "a1"
+    },
+    "name": "div",
+    "source": "<div class=\"m-area1\" id=\"a1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "g-bd"
+    },
+    "name": "div",
+    "source": "<div class=\"g-bd\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "m-dapai"
+    },
+    "name": "div",
+    "source": "<div class=\"m-dapai\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "class": "m-product-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-product-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "0": "",
+      "item.brdList": ""
+    },
+    "name": "@bp",
+    "source": "<@bp item.brdList 0 />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "class": "m-product-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-product-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                    "
+  },
+  {
+    "attrs": {
+      "1": "",
+      "item.brdList": ""
+    },
+    "name": "@bp",
+    "source": "<@bp item.brdList 1 />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "class": "m-product-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-product-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "2": "",
+      "item.brdList": ""
+    },
+    "name": "@bp",
+    "source": "<@bp item.brdList 2 />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "class": "m-product-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-product-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "3": "",
+      "item.brdList": ""
+    },
+    "name": "@bp",
+    "source": "<@bp item.brdList 3 />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "class": "m-product-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-product-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "4": "",
+      "item.brdList": ""
+    },
+    "name": "@bp",
+    "source": "<@bp item.brdList 4 />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n\r\n\r\n\r\n            "
+  },
+  {
+    "attrs": {
+      "data": "",
+      "as": "",
+      "item": ""
+    },
+    "name": "#list",
+    "source": "<#list data as item>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "0": "",
+      "item_index": "",
+      "gt": ""
+    },
+    "name": "#if",
+    "source": "<#if item_index gt 0 >",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "m-area${item_index+1}",
+      "id": "a${item_index+1}"
+    },
+    "name": "div",
+    "source": "<div class=\"m-area${item_index+1}\" id=\"a${item_index+1}\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "g-bd"
+    },
+    "name": "div",
+    "source": "<div class=\"g-bd\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "area-title"
+    },
+    "name": "div",
+    "source": "<div class=\"area-title\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "g-middle"
+    },
+    "name": "div",
+    "source": "<div class=\"g-middle\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "area-content f-cb"
+    },
+    "name": "div",
+    "source": "<div class=\"area-content f-cb\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "href": "http://www.xiupin.com/activity/show?pageId=603${item_index+1}",
+      "target": "_blank",
+      "data-ganame": "",
+      "data-gapoint": "",
+      "data-gapage": "",
+      "data-login": "0"
+    },
+    "name": "a",
+    "source": "<a href=\"http://www.xiupin.com/activity/show?pageId=603${item_index+1}\" target=\"_blank\" data-ganame=\"\" data-gapoint=\"\" data-gapage=\"\" data-login=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "data-src": "http://paopao.nosdn.127.net/${item.title_img}?imageView&thumbnail=430y316&quality=90&enlarge=1",
+      "class": "u-loading-1 m-zoom",
+      "alt": ""
+    },
+    "name": "img",
+    "source": "<img data-src=\"http://paopao.nosdn.127.net/${item.title_img}?imageView&thumbnail=430y316&quality=90&enlarge=1\"  class=\"u-loading-1 m-zoom\" alt=\"\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "item.brdList??": ""
+    },
+    "name": "#if",
+    "source": "<#if item.brdList??>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {
+      "item.brdList": "",
+      "as": "",
+      "list": ""
+    },
+    "name": "#list",
+    "source": "<#list item.brdList as list>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                        "
+  },
+  {
+    "attrs": {
+      "href": "/search/sycProduct?brandIdArray=${list.brandId}&fromPost=normalbrand-${list.brandId}",
+      "target": "_blank",
+      "data-ganame": "",
+      "data-gapoint": "",
+      "data-gapage": "",
+      "data-login": "0"
+    },
+    "name": "a",
+    "source": "<a href=\"/search/sycProduct?brandIdArray=${list.brandId}&fromPost=normalbrand-${list.brandId}\" target=\"_blank\" data-ganame=\"\" data-gapoint=\"\" data-gapage=\"\" data-login=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                            "
+  },
+  {
+    "attrs": {
+      "data-src": "http://paopao.nosdn.127.net/${list.thumb}?imageView&thumbnail=210y316&quality=90&enlarge=1",
+      "class": "u-loading-1 m-zoom",
+      "alt": ""
+    },
+    "name": "img",
+    "source": "<img data-src=\"http://paopao.nosdn.127.net/${list.thumb}?imageView&thumbnail=210y316&quality=90&enlarge=1\"  class=\"u-loading-1 m-zoom\" alt=\"\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                        "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                                "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "<!-- 百变女装 -->"
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "#if",
+    "source": "</#if>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "#list",
+    "source": "</#list>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {
+      "class": "m-area11"
+    },
+    "name": "div",
+    "source": "<div class=\"m-area11\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "area-title"
+    },
+    "name": "div",
+    "source": "<div class=\"area-title\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "g-middle"
+    },
+    "name": "div",
+    "source": "<div class=\"g-middle\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "area-content f-cb"
+    },
+    "name": "div",
+    "source": "<div class=\"area-content f-cb\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "href": "http://www.163.com/taidu/2015?utm_source=xiupin&utm_medium=pc&utm_campaign=taidu",
+      "target": "_blank",
+      "data-ganame": "",
+      "data-gapoint": "",
+      "data-gapage": "",
+      "data-login": "0"
+    },
+    "name": "a",
+    "source": "<a href=\"http://www.163.com/taidu/2015?utm_source=xiupin&utm_medium=pc&utm_campaign=taidu\" target=\"_blank\" data-ganame=\"\" data-gapoint=\"\" data-gapage=\"\" data-login=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "data-src": "/res/images/activity/20151224/bottom_news.jpg",
+      "src": "/res/images/activity/20151224/bottom_news.jpg",
+      "class": "u-loading-1",
+      "alt": ""
+    },
+    "name": "img",
+    "source": "<img data-src=\"/res/images/activity/20151224/bottom_news.jpg\" src=\"/res/images/activity/20151224/bottom_news.jpg\" class=\"u-loading-1\" alt=\"\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "href": "http://www.huihui.cn/deals/30641556?keyfrom=xiupin151207",
+      "target": "_blank",
+      "data-ganame": "",
+      "data-gapoint": "",
+      "data-gapage": "",
+      "data-login": "0"
+    },
+    "name": "a",
+    "source": "<a href=\"http://www.huihui.cn/deals/30641556?keyfrom=xiupin151207\" target=\"_blank\" data-ganame=\"\" data-gapoint=\"\" data-gapage=\"\" data-login=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "data-src": "/res/images/activity/20151224/bottom_huihui.jpg",
+      "src": "/res/images/activity/20151224/bottom_huihui.jpg",
+      "class": "u-loading-1",
+      "alt": ""
+    },
+    "name": "img",
+    "source": "<img data-src=\"/res/images/activity/20151224/bottom_huihui.jpg\" src=\"/res/images/activity/20151224/bottom_huihui.jpg\" class=\"u-loading-1\" alt=\"\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "href": "http://music.163.com/",
+      "target": "_blank",
+      "data-ganame": "",
+      "data-gapoint": "",
+      "data-gapage": "",
+      "data-login": "0"
+    },
+    "name": "a",
+    "source": "<a href=\"http://music.163.com/\" target=\"_blank\" data-ganame=\"\" data-gapoint=\"\" data-gapage=\"\" data-login=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "data-src": "/res/images/activity/20151224/bottom_music.jpg",
+      "src": "/res/images/activity/20151224/bottom_music.jpg",
+      "class": "u-loading-1",
+      "alt": ""
+    },
+    "name": "img",
+    "source": "<img data-src=\"/res/images/activity/20151224/bottom_music.jpg\" src=\"/res/images/activity/20151224/bottom_music.jpg\" class=\"u-loading-1\" alt=\"\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "href": "http://yuedu.163.com/",
+      "target": "_blank",
+      "data-ganame": "",
+      "data-gapoint": "",
+      "data-gapage": "",
+      "data-login": "0"
+    },
+    "name": "a",
+    "source": "<a href=\"http://yuedu.163.com/\" target=\"_blank\" data-ganame=\"\" data-gapoint=\"\" data-gapage=\"\" data-login=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "data-src": "/res/images/activity/20151224/bottom_read.jpg",
+      "src": "/res/images/activity/20151224/bottom_huihui.jpg",
+      "class": "u-loading-1",
+      "alt": ""
+    },
+    "name": "img",
+    "source": "<img data-src=\"/res/images/activity/20151224/bottom_read.jpg\" src=\"/res/images/activity/20151224/bottom_huihui.jpg\" class=\"u-loading-1\" alt=\"\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "href": "http://u.163.com/6s?from=xiupin",
+      "target": "_blank",
+      "data-ganame": "",
+      "data-gapoint": "",
+      "data-gapage": "",
+      "data-login": "0"
+    },
+    "name": "a",
+    "source": "<a href=\"http://u.163.com/6s?from=xiupin\" target=\"_blank\" data-ganame=\"\" data-gapoint=\"\" data-gapage=\"\" data-login=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "data-src": "/res/images/activity/20151224/bottom_mail.jpg",
+      "src": "/res/images/activity/20151224/bottom_mail.jpg",
+      "class": "u-loading-1",
+      "alt": ""
+    },
+    "name": "img",
+    "source": "<img data-src=\"/res/images/activity/20151224/bottom_mail.jpg\" src=\"/res/images/activity/20151224/bottom_mail.jpg\" class=\"u-loading-1\" alt=\"\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "href": "http://trip.163.com/huoche/activity/pc/index.html?from=tgxiupin",
+      "target": "_blank",
+      "data-ganame": "",
+      "data-gapoint": "",
+      "data-gapage": "",
+      "data-login": "0"
+    },
+    "name": "a",
+    "source": "<a href=\"http://trip.163.com/huoche/activity/pc/index.html?from=tgxiupin\" target=\"_blank\" data-ganame=\"\" data-gapoint=\"\" data-gapage=\"\" data-login=\"0\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "data-src": "/res/images/activity/20151224/bottom_ticket.jpg",
+      "src": "/res/images/activity/20151224/bottom_ticket.jpg",
+      "class": "u-loading-1",
+      "alt": ""
+    },
+    "name": "img",
+    "source": "<img data-src=\"/res/images/activity/20151224/bottom_ticket.jpg\" src=\"/res/images/activity/20151224/bottom_ticket.jpg\" class=\"u-loading-1\" alt=\"\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "<!-- 时尚联盟 -->"
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n\r\n            "
+  },
+  {
+    "attrs": {
+      "class": "sidebar-container",
+      "id": "sidebar-container"
+    },
+    "name": "div",
+    "source": "<div class=\"sidebar-container\" id=\"sidebar-container\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                "
+  },
+  {
+    "attrs": {
+      "class": "m-rightbanner j-spy",
+      "id": "j-spy"
+    },
+    "name": "div",
+    "source": "<div class=\"m-rightbanner j-spy\" id=\"j-spy\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {
+      "class": "inner-nav"
+    },
+    "name": "div",
+    "source": "<div class=\"inner-nav\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {
+      "class": "f-cb"
+    },
+    "name": "ul",
+    "source": "<ul class=\"f-cb\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 31px; line-height: 31px;",
+      "data-target": "a1"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 31px; line-height: 31px;\" data-target=\"a1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "http://www.xiupin.com/activity/show?pageId=6029",
+      "target": "_blank"
+    },
+    "name": "a",
+    "source": "<a href=\"http://www.xiupin.com/activity/show?pageId=6029\" target=\"_blank\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 31px; line-height: 31px;",
+      "data-target": "a1"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 31px; line-height: 31px;\" data-target=\"a1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a1"
+    },
+    "name": "a",
+    "source": "<a href=\"#a1\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 39px; line-height: 39px;",
+      "data-target": "a2"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 39px; line-height: 39px;\" data-target=\"a2\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a2"
+    },
+    "name": "a",
+    "source": "<a href=\"#a2\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 35px; line-height: 35px;",
+      "data-target": "a3"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 35px; line-height: 35px;\" data-target=\"a3\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a3"
+    },
+    "name": "a",
+    "source": "<a href=\"#a3\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 36px; line-height: 36px;",
+      "data-target": "a4"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 36px; line-height: 36px;\" data-target=\"a4\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a4"
+    },
+    "name": "a",
+    "source": "<a href=\"#a4\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 35px; line-height: 35px;",
+      "data-target": "a5"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 35px; line-height: 35px;\" data-target=\"a5\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a5"
+    },
+    "name": "a",
+    "source": "<a href=\"#a5\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 38px; line-height: 38px;",
+      "data-target": "a6"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 38px; line-height: 38px;\" data-target=\"a6\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a6"
+    },
+    "name": "a",
+    "source": "<a href=\"#a6\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 35px; line-height: 35px;",
+      "data-target": "a7"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 35px; line-height: 35px;\" data-target=\"a7\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a7"
+    },
+    "name": "a",
+    "source": "<a href=\"#a7\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 38px; line-height: 38px;",
+      "data-target": "a8"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 38px; line-height: 38px;\" data-target=\"a8\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a8"
+    },
+    "name": "a",
+    "source": "<a href=\"#a8\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 35px; line-height: 35px;",
+      "data-target": "a9"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 35px; line-height: 35px;\" data-target=\"a9\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a9"
+    },
+    "name": "a",
+    "source": "<a href=\"#a9\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                            "
+  },
+  {
+    "attrs": {
+      "style": "height: 34px; line-height: 34px;",
+      "data-target": "a10"
+    },
+    "name": "li",
+    "source": "<li style=\"height: 34px; line-height: 34px;\" data-target=\"a10\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {
+      "href": "#a10"
+    },
+    "name": "a",
+    "source": "<a href=\"#a10\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "li",
+    "source": "</li>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                        "
+  },
+  {
+    "attrs": {},
+    "name": "ul",
+    "source": "</ul>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n                 "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n            "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "<!-- 右侧导航 -->"
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "id": "bnav"
+    },
+    "name": "div",
+    "source": "<div id=\"bnav\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "@module",
+    "source": "</@module>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "noPadding": "true"
+    },
+    "name": "@footer",
+    "source": "<@footer noPadding=true/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n\r\n\r\n        "
+  },
+  {
+    "text": "\r\n                <#noescape>\r\n                var deadline=${t20151226};\r\n                </#noescape>\r\n        "
+  },
+  {
+    "text": "\r\n\r\n\r\n\r\n    "
+  },
+  {
+    "attrs": {
+      "class": "m-modal j-box f-dn",
+      "id": "j-box"
+    },
+    "name": "div",
+    "source": "<div class=\"m-modal j-box f-dn\" id=\"j-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "src": "/res/images/activity/20151224/rulebox.jpg"
+    },
+    "name": "img",
+    "source": "<img src=\"/res/images/activity/20151224/rulebox.jpg\" />",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n\r\n    "
+  },
+  {
+    "text": "",
+    "uri": "${jspro}page/activity/20151224/jquery-1.7.1.min.js"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "",
+    "uri": "${jspro}page/activity/20151224/jquery.snow.js"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "<#noparse>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "closed": false,
+    "command": "SCRIPT",
+    "source": "<!-- @SCRIPT -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "#noparse",
+    "source": "</#noparse>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "",
+    "uri": "${jslib}define.js?${jscnf}"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "",
+    "uri": "${jspro}page/activity/20151224/20151224.js"
+  },
+  {
+    "text": "\r\n\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "body",
+    "source": "</body>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "html",
+    "source": "</html>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "@compress",
+    "source": "</@compress>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "#escape",
+    "source": "</#escape>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  }
+]

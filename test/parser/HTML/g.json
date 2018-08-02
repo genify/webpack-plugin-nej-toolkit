@@ -1,0 +1,573 @@
+[
+  {
+    "attrs": {
+      "html": ""
+    },
+    "name": "!DOCTYPE",
+    "source": "<!DOCTYPE html>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "html",
+    "source": "<html>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n  "
+  },
+  {
+    "attrs": {},
+    "name": "head",
+    "source": "<head>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {
+      "charset": "utf-8"
+    },
+    "name": "meta",
+    "source": "<meta charset=\"utf-8\"/>",
+    "closed": false,
+    "selfClosed": true
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "title",
+    "source": "<title>",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "NEJ Module Sample - 前端实例"
+  },
+  {
+    "attrs": {},
+    "name": "title",
+    "source": "</title>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": false,
+    "command": "STYLE",
+    "source": "<!-- @STYLE -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "uri": "../css/template.css"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "uri": "../css/app.css"
+  },
+  {
+    "text": "\r\n  "
+  },
+  {
+    "attrs": {},
+    "name": "head",
+    "source": "</head>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n  "
+  },
+  {
+    "attrs": {
+      "id": "www-wd-com"
+    },
+    "name": "body",
+    "source": "<body id=\"www-wd-com\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n  \r\n    "
+  },
+  {
+    "attrs": {
+      "class": "g-doc"
+    },
+    "name": "div",
+    "source": "<div class=\"g-doc\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "g-hd"
+    },
+    "name": "div",
+    "source": "<div class=\"g-hd\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "m-logo"
+    },
+    "name": "h1",
+    "source": "<h1 class=\"m-logo\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "网易-杭研院-前端技术组-实例库"
+  },
+  {
+    "attrs": {},
+    "name": "h1",
+    "source": "</h1>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "m-title"
+    },
+    "name": "h2",
+    "source": "<h2 class=\"m-title\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "NEJ Module Sample"
+  },
+  {
+    "attrs": {},
+    "name": "h2",
+    "source": "</h2>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "g-bd",
+      "id": "module-box"
+    },
+    "name": "div",
+    "source": "<div class=\"g-bd\" id=\"module-box\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "g-bd"
+    },
+    "name": "div",
+    "source": "<div class=\"g-bd\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "m-foot"
+    },
+    "name": "div",
+    "source": "<div class=\"m-foot\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        \t如有任何问题，请联系：蔡剑飞("
+  },
+  {
+    "attrs": {
+      "href": "mailto:caijf@corp.netease.com"
+    },
+    "name": "a",
+    "source": "<a href=\"mailto:caijf@corp.netease.com\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "caijf@corp.netease.com"
+  },
+  {
+    "attrs": {},
+    "name": "a",
+    "source": "</a>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": ")\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {
+      "class": "g-ft"
+    },
+    "name": "div",
+    "source": "<div class=\"g-ft\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        "
+  },
+  {
+    "attrs": {
+      "class": "m-foot"
+    },
+    "name": "div",
+    "source": "<div class=\"m-foot\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n        \t&nbsp;&copy;&nbsp;网易-杭研院-前端技术组\r\n        "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "attrs": {
+      "id": "template-box",
+      "style": "display:none;"
+    },
+    "name": "div",
+    "source": "<div id=\"template-box\" style=\"display:none;\">",
+    "closed": false,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "closed": false,
+    "command": "TEMPLATE",
+    "source": "<!-- @TEMPLATE -->"
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/tab/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/layout/system/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/layout/blog/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/layout/blog.list/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/layout/setting/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/layout/setting.account/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/blog/tag/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "closed": true,
+    "command": "TEMPLATE",
+    "source": "<!-- /@TEMPLATE -->"
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "closed": false,
+    "command": "MODULE",
+    "source": "<!-- @MODULE -->"
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/blog/tab/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/blog/list.box/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/blog/list.tag/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/blog/list/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/setting/tab/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "type": "html",
+    "uri": "module/setting/account.tab/index.html",
+    "text": ""
+  },
+  {
+    "text": "\r\n      "
+  },
+  {
+    "closed": true,
+    "command": "MODULE",
+    "source": "<!-- /@MODULE -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "attrs": {},
+    "name": "div",
+    "source": "</div>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "closed": false,
+    "command": "IGNORE",
+    "source": "<!-- @IGNORE -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "window.DEBUG = !0;"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "",
+    "uri": "../javascript/cache/tag.data.js"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "",
+    "uri": "../javascript/cache/blog.data.js"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": true,
+    "command": "IGNORE",
+    "source": "<!-- /@IGNORE -->"
+  },
+  {
+    "text": "\r\n    \r\n    "
+  },
+  {
+    "closed": false,
+    "command": "VERSION",
+    "source": "<!-- @VERSION -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "location.config={root:'./'};"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "closed": false,
+    "command": "DEFINE",
+    "source": "<!-- @DEFINE -->"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "",
+    "uri": "http://nej.netease.com/nej/src/define.js"
+  },
+  {
+    "text": "\r\n    "
+  },
+  {
+    "text": "\r\n      define([\r\n          '{lib}util/dispatcher/dispatcher.2.js',\r\n          '{lib}util/encode/md5.js'\r\n      ],\r\n      function(){\r\n          var _  = NEJ.P;\r\n          /* start up dispatcher */\r\n          _('nej.e')._$startup({\r\n              rules:{\r\n                  rewrite:{\r\n                      '404':'/m/blog/list/',\r\n                      '/m/blog/list/':'/m/blog/',\r\n                      '/m/setting/account/':'/m/setting/'\r\n                  },\r\n                  title:{\r\n                      '/m/blog/tag/':'日志标签',\r\n                      '/m/blog/list/':'日志列表',\r\n                      '/m/setting/permission/':'权限管理',\r\n                      '/m/setting/account/':'基本资料',\r\n                      '/m/setting/account/edu/':'教育经历'\r\n                  },\r\n                  alias:{\r\n                      'system-tab':'/?/tab/',\r\n                      'blog-tab':'/?/blog/tab/',\r\n                      'blog-list-box':'/?/blog/box/',\r\n                      'blog-list-tag':'/?/blog/tag/',\r\n                      'blog-list':'/?/blog/list/',\r\n                      'setting-tab':'/?/setting/tab/',\r\n                      'setting-account-tab':'/?/setting/account/tab/',\r\n                      \r\n                      'layout-system':'/m',\r\n                      'layout-blog':'/m/blog',\r\n                      'layout-blog-list':'/m/blog/list/',\r\n                      'layout-setting':'/m/setting',\r\n                      'layout-setting-account':'/m/setting/account',\r\n                      \r\n                      'blog-tag':['/m/blog/tag/','/m/setting/tag/'],\r\n                      'setting-edu':'/m/setting/account/edu/',\r\n                      'setting-profile':'/m/setting/account/',\r\n                      'setting-permission':'/m/setting/permission/'\r\n                  }\r\n              },\r\n              modules:{\r\n                  '/?/tab/':'module/tab/index.html',\r\n                  '/?/blog/tab/':'module/blog/tab/index.html',\r\n                  '/?/blog/box/':'module/blog/list.box/index.html',\r\n                  '/?/blog/tag/':'module/blog/list.tag/index.html',\r\n                  '/?/blog/list/':'module/blog/list/index.html',\r\n                  '/?/setting/tab/':'module/setting/tab/index.html',\r\n                  '/?/setting/account/tab/':'module/setting/account.tab/index.html',\r\n                  \r\n                  '/m':{\r\n                      module:'module/layout/system/index.html',\r\n                      composite:{\r\n                          tab:'/?/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog':{\r\n                      module:'module/layout/blog/index.html',\r\n                      composite:{\r\n                          tab:'/?/blog/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog/list/':{\r\n                      module:'module/layout/blog.list/index.html',\r\n                      composite:{\r\n                          box:'/?/blog/box/',\r\n                          tag:'/?/blog/tag/',\r\n                          list:'/?/blog/list/'\r\n                      }\r\n                  },\r\n                  '/m/blog/tag/':'module/blog/tag/index.html',\r\n                  \r\n                  '/m/setting':{\r\n                      module:'module/layout/setting/index.html',\r\n                      composite:{\r\n                          tab:'/?/setting/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account':{\r\n                      module:'module/layout/setting.account/index.html',\r\n                      composite:{\r\n                          tab:'/?/setting/account/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account/':'module/setting/profile/index.html',\r\n                  '/m/setting/account/edu/':'module/setting/edu/index.html',\r\n                  '/m/setting/permission/':'module/setting/permission/index.html',\r\n                  '/m/setting/tag/':'module/blog/tag/index.html'\r\n              },\r\n              /*\r\n              modules:{\r\n                  '/?/tab/':'module/tab/index.html',\r\n                  '/?/blog/tab/':'module/blog.html',\r\n                  '/?/blog/box/':'module/blog.html',\r\n                  '/?/blog/tag/':'module/blog.html',\r\n                  '/?/blog/list/':'module/blog.html',\r\n                  '/?/setting/tab/':'module/setting.html',\r\n                  '/?/setting/account/tab/':'module/setting.html',\r\n                  \r\n                  '/m':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/blog/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog/list/':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          box:'/?/blog/box/',\r\n                          tag:'/?/blog/tag/',\r\n                          list:'/?/blog/list/'\r\n                      }\r\n                  },\r\n                  '/m/blog/tag/':'module/blog.html',\r\n                  \r\n                  '/m/setting':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/setting/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/setting/account/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account/':'module/setting.html',\r\n                  '/m/setting/account/edu/':'module/setting.html',\r\n                  '/m/setting/permission/':'module/setting.html'\r\n              },\r\n              */\r\n              onbeforechange:function(_options){\r\n                  var _umi = _options.path||'';\r\n                  if (!!_umi&&\r\n                        _umi.indexOf('/?')<0&&\r\n                        _umi.indexOf('/m')<0)\r\n                      _options.path = '/m'+_umi;\r\n              }\r\n          });\r\n      });\r\n    "
+  },
+  {
+    "text": "\r\n  "
+  },
+  {
+    "attrs": {},
+    "name": "body",
+    "source": "</body>",
+    "closed": true,
+    "selfClosed": false
+  },
+  {
+    "text": "\r\n"
+  },
+  {
+    "attrs": {},
+    "name": "html",
+    "source": "</html>",
+    "closed": true,
+    "selfClosed": false
+  }
+]
