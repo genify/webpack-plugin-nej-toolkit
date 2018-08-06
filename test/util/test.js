@@ -69,6 +69,26 @@ describe('util api', () => {
         
     });
 
+    describe('.ls', () => {
+
+        it('should be ok to list not exist directory', () => {
+            expect(util.ls('./abc')).to.eql([]);
+        });
+
+        it('should be ok to list files without filter', () => {
+            let ret = util.ls(__dirname+'/a');
+            expect(ret.length).to.eql(3);
+        });
+
+        it('should be ok to list files with filter', () => {
+            let ret = util.ls(__dirname+'/a', function (name, file) {
+                return name.indexOf('b')===0;
+            });
+            expect(ret.length).to.eql(2);
+        });
+
+    });
+
 });
 
 
