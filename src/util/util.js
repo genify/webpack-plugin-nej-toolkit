@@ -69,6 +69,56 @@ exports.mkdir = function (dir) {
 };
 
 /**
+ * list file under directory recursive
+ *
+ * @param  {String} dir - directory
+ * @param  {Function=} filter - file filter action
+ * @return {Array} file list
+ */
+exports.ls = function (dir, filter) {
+    // format filter function
+    let isOK = filter;
+    if (typeof isOK!=='function'){
+        isOK = () => {
+            return true;
+        };
+    }
+    // try to dump files
+    let list;
+    let ret = [];
+    // check file list
+    try{
+        list = fs.readdirSync(dir);
+    }catch(ex){
+        // ignore
+    }
+    if (!list||!list.length){
+        return ret;
+    }
+    // dump file list
+    list.forEach((name) => {
+        if (/^\./.test(name)){
+            return;
+        }
+        let file = exports.absolute(
+            dir, name
+        );
+        // for single file
+        if (fs.statSync(file).isFile()){
+            if (isOK(name, file)){
+                ret.push(file);
+            }
+            return;
+        }
+        // for directory
+        let arr = exports.ls(file, isOK);
+        ret.push(...arr);
+    });
+    // return file list
+    return ret;
+};
+
+/**
  * eval script code
  *
  * @param  {String} code   - script code
