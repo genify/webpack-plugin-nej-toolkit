@@ -45,8 +45,13 @@ describe('HTMLParser',function(){
                 });
                 expect(parser instanceof HTMLParser).to.be.true;
                 let match = require(__dirname+'/'+conf.result);
-                let left = JSON.parse(JSON.stringify(parser.result));
-                console.log('%j', left);
+                let left = JSON.parse(JSON.stringify(parser.result,function (key, value) {
+                    if (key.indexOf('_')===0||key==='domain'){
+                        return;
+                    }
+                    return value;
+                }));
+                // console.log('%j', left);
                 expect(left).to.deep.equal(match);
             });
         });

@@ -7,7 +7,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -19,7 +19,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -31,7 +31,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -43,7 +43,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -53,7 +53,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -63,7 +63,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -73,7 +73,7 @@
     "selfClosed": false
   },
   {
-    "text": "轻学院详情页-网易七鱼全智能云客服专家-网易七鱼"
+    "source": "轻学院详情页-网易七鱼全智能云客服专家-网易七鱼"
   },
   {
     "attrs": {},
@@ -83,7 +83,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -95,7 +95,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -108,7 +108,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -121,7 +121,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -134,7 +134,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -147,7 +147,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -160,7 +160,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "beg": {
@@ -175,7 +175,7 @@
     }
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "beg": {
@@ -190,7 +190,7 @@
     }
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "beg": {
@@ -205,7 +205,7 @@
     }
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "beg": {
@@ -220,7 +220,7 @@
     }
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "beg": {
@@ -235,7 +235,7 @@
     }
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "beg": {
@@ -250,7 +250,7 @@
     }
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "beg": {
@@ -265,7 +265,7 @@
     }
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "closed": false,
@@ -277,31 +277,31 @@
     "source": "<!-- @STYLE {core:true,inline:true} -->"
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "uri": "/res/lib/vcloud/nep.min.css"
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "uri": "${csRoot}college/detail.css"
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
-    "text": "\r\n    .a{color:#0C32F6;}\r\n    .b{color:#00BB00;}\r\n"
+    "source": "\r\n    .a{color:#0C32F6;}\r\n    .b{color:#00BB00;}\r\n"
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
-    "text": "\r\n    window.mnst = {\r\n    \trecommend:${stringify(recommend!{})},\r\n    \tlist:${stringify(list!{})},\r\n    \tsid: ${sid},\r\n    \tcid: ${cid}\r\n    };\r\n    /*window.mnst = {\r\n\t\t\"recommend\": [\r\n\t\t\t{\r\n\t\t\t\t\"cid\": \"85551\",\r\n\t\t\t\t\"sid\": \"85817\",\r\n\t\t\t\t\"title\": \"3qDrSAvMXe\",\r\n\t\t\t\t\"pic\": \"4pV4O4vh2t\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"cid\": \"86456\",\r\n\t\t\t\t\"sid\": \"86973\",\r\n\t\t\t\t\"title\": \"fgdmkyq9bC\",\r\n\t\t\t\t\"pic\": \"89xu40CciP\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"cid\": \"87644\",\r\n\t\t\t\t\"sid\": \"88259\",\r\n\t\t\t\t\"title\": \"SbwRtIpv40\",\r\n\t\t\t\t\"pic\": \"HWW3AHhsdZ\"\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"list\": [\r\n\t\t\t{\r\n\t\t\t\t\"course\": {\r\n\t\t\t\t\t\"cname\": \"章名称\",\r\n\t\t\t\t\t\"url\": \"http://vodprcspfxr.vod.126.net/vodprcspfxr/mp4/Ah5wDyHS_291075_shd.mp4\",\r\n\t\t\t\t\t\"description\": \"如果你感应到大数据时代的召唤，却不知从哪入手；如果你有数据分析基础却感叹自己是个学渣；如果你即将毕业，不知前路与社会如何接轨；如果你初入职场，却难以跟上老板高瞻远瞩的思维；如果你是数据团的老粉，认同“用数据认识世界”的价值观。\",\r\n\t\t\t\t\t\"sname\": \"节名称\"\r\n\t\t\t\t},\r\n\t\t\t\t\"teacher\": {\r\n\t\t\t\t\t\"id\": \"88985\",\r\n\t\t\t\t\t\"name\": \"老司机\",\r\n\t\t\t\t\t\"introduction\": \"如果你感应到大数据时代的召唤，却不知从哪入手；如果你有数据分析基础却感叹自己是个学渣；如果你即将毕业，不知前路与社会如何接轨；如果你初入职场，却难以跟上老板高瞻远瞩的思维；如果你是数据团的老粉，认同“用数据认识世界”的价值观。\",\r\n\t\t\t\t\t\"avatar\": \"Ao79090Ef0\"\r\n\t\t\t\t},\r\n\t\t\t\t\"sid\": \"1\",\r\n\t\t\t\t\"cid\": \"1\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"course\": {\r\n\t\t\t\t\t\"cname\": \"7jFqv9hJLd\",\r\n\t\t\t\t\t\"url\": \"http://avo.jyvrntdq.dzljkep\",\r\n\t\t\t\t\t\"description\": \"dy41j1HhQK\",\r\n\t\t\t\t\t\"sname\": \"RIiQPHvBDd\"\r\n\t\t\t\t},\r\n\t\t\t\t\"teacher\": {\r\n\t\t\t\t\t\"id\": \"91678\",\r\n\t\t\t\t\t\"name\": \"lg7R0L89AQ\",\r\n\t\t\t\t\t\"introduction\": \"ciuCMMrr6W\",\r\n\t\t\t\t\t\"avatar\": \"dJCLrOWL2H\"\r\n\t\t\t\t},\r\n\t\t\t\t\"sid\": \"91683\",\r\n\t\t\t\t\"cid\": \"92665\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"course\": {\r\n\t\t\t\t\t\"cname\": \"4RdjUvSFT6\",\r\n\t\t\t\t\t\"url\": \"http://crn.shwdozfjl.lgeynj\",\r\n\t\t\t\t\t\"description\": \"NliCqOd3YD\",\r\n\t\t\t\t\t\"sname\": \"1i5ni2IWqS\"\r\n\t\t\t\t},\r\n\t\t\t\t\"teacher\": {\r\n\t\t\t\t\t\"id\": \"93286\",\r\n\t\t\t\t\t\"name\": \"53VLOo16Cv\",\r\n\t\t\t\t\t\"introduction\": \"4pjzJiihFW\",\r\n\t\t\t\t\t\"avatar\": \"x3Lf1HrNXU\"\r\n\t\t\t\t},\r\n\t\t\t\t\"sid\": \"93875\",\r\n\t\t\t\t\"cid\": \"94322\"\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"sid\": \"95129\",\r\n\t\t\"cid\": \"95256\"\r\n\t}*/\r\n    history.auto = true;\r\n"
+    "source": "\r\n    window.mnst = {\r\n    \trecommend:${stringify(recommend!{})},\r\n    \tlist:${stringify(list!{})},\r\n    \tsid: ${sid},\r\n    \tcid: ${cid}\r\n    };\r\n    /*window.mnst = {\r\n\t\t\"recommend\": [\r\n\t\t\t{\r\n\t\t\t\t\"cid\": \"85551\",\r\n\t\t\t\t\"sid\": \"85817\",\r\n\t\t\t\t\"title\": \"3qDrSAvMXe\",\r\n\t\t\t\t\"pic\": \"4pV4O4vh2t\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"cid\": \"86456\",\r\n\t\t\t\t\"sid\": \"86973\",\r\n\t\t\t\t\"title\": \"fgdmkyq9bC\",\r\n\t\t\t\t\"pic\": \"89xu40CciP\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"cid\": \"87644\",\r\n\t\t\t\t\"sid\": \"88259\",\r\n\t\t\t\t\"title\": \"SbwRtIpv40\",\r\n\t\t\t\t\"pic\": \"HWW3AHhsdZ\"\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"list\": [\r\n\t\t\t{\r\n\t\t\t\t\"course\": {\r\n\t\t\t\t\t\"cname\": \"章名称\",\r\n\t\t\t\t\t\"url\": \"http://vodprcspfxr.vod.126.net/vodprcspfxr/mp4/Ah5wDyHS_291075_shd.mp4\",\r\n\t\t\t\t\t\"description\": \"如果你感应到大数据时代的召唤，却不知从哪入手；如果你有数据分析基础却感叹自己是个学渣；如果你即将毕业，不知前路与社会如何接轨；如果你初入职场，却难以跟上老板高瞻远瞩的思维；如果你是数据团的老粉，认同“用数据认识世界”的价值观。\",\r\n\t\t\t\t\t\"sname\": \"节名称\"\r\n\t\t\t\t},\r\n\t\t\t\t\"teacher\": {\r\n\t\t\t\t\t\"id\": \"88985\",\r\n\t\t\t\t\t\"name\": \"老司机\",\r\n\t\t\t\t\t\"introduction\": \"如果你感应到大数据时代的召唤，却不知从哪入手；如果你有数据分析基础却感叹自己是个学渣；如果你即将毕业，不知前路与社会如何接轨；如果你初入职场，却难以跟上老板高瞻远瞩的思维；如果你是数据团的老粉，认同“用数据认识世界”的价值观。\",\r\n\t\t\t\t\t\"avatar\": \"Ao79090Ef0\"\r\n\t\t\t\t},\r\n\t\t\t\t\"sid\": \"1\",\r\n\t\t\t\t\"cid\": \"1\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"course\": {\r\n\t\t\t\t\t\"cname\": \"7jFqv9hJLd\",\r\n\t\t\t\t\t\"url\": \"http://avo.jyvrntdq.dzljkep\",\r\n\t\t\t\t\t\"description\": \"dy41j1HhQK\",\r\n\t\t\t\t\t\"sname\": \"RIiQPHvBDd\"\r\n\t\t\t\t},\r\n\t\t\t\t\"teacher\": {\r\n\t\t\t\t\t\"id\": \"91678\",\r\n\t\t\t\t\t\"name\": \"lg7R0L89AQ\",\r\n\t\t\t\t\t\"introduction\": \"ciuCMMrr6W\",\r\n\t\t\t\t\t\"avatar\": \"dJCLrOWL2H\"\r\n\t\t\t\t},\r\n\t\t\t\t\"sid\": \"91683\",\r\n\t\t\t\t\"cid\": \"92665\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"course\": {\r\n\t\t\t\t\t\"cname\": \"4RdjUvSFT6\",\r\n\t\t\t\t\t\"url\": \"http://crn.shwdozfjl.lgeynj\",\r\n\t\t\t\t\t\"description\": \"NliCqOd3YD\",\r\n\t\t\t\t\t\"sname\": \"1i5ni2IWqS\"\r\n\t\t\t\t},\r\n\t\t\t\t\"teacher\": {\r\n\t\t\t\t\t\"id\": \"93286\",\r\n\t\t\t\t\t\"name\": \"53VLOo16Cv\",\r\n\t\t\t\t\t\"introduction\": \"4pjzJiihFW\",\r\n\t\t\t\t\t\"avatar\": \"x3Lf1HrNXU\"\r\n\t\t\t\t},\r\n\t\t\t\t\"sid\": \"93875\",\r\n\t\t\t\t\"cid\": \"94322\"\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"sid\": \"95129\",\r\n\t\t\"cid\": \"95256\"\r\n\t}*/\r\n    history.auto = true;\r\n"
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -311,7 +311,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -321,7 +321,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n\r\n    "
+    "source": "\r\n\r\n    "
   },
   {
     "beg": {
@@ -338,10 +338,10 @@
       "closed": true,
       "selfClosed": false
     },
-    "text": "33333333333355555555555"
+    "source": "33333333333355555555555"
   },
   {
-    "text": "\r\n\r\n    "
+    "source": "\r\n\r\n    "
   },
   {
     "beg": {
@@ -360,10 +360,10 @@
       "closed": true,
       "selfClosed": false
     },
-    "text": ".xx{color:#abc;}"
+    "source": ".xx{color:#abc;}"
   },
   {
-    "text": "\r\n\r\n    "
+    "source": "\r\n\r\n    "
   },
   {
     "beg": {
@@ -382,16 +382,13 @@
       "closed": true,
       "selfClosed": false
     },
-    "text": "\r\n        <div>xxxxx</div>\r\n        <span>yyyyyy</span>\r\n    "
+    "source": "\r\n        <div>xxxxx</div>\r\n        <span>yyyyyy</span>\r\n    "
   },
   {
-    "text": "\r\n\r\n    "
+    "source": "\r\n\r\n    "
   },
   {
-    "text": "<!-- 导航 -->"
-  },
-  {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {
@@ -403,7 +400,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n\t"
+    "source": "\r\n\t"
   },
   {
     "attrs": {
@@ -415,7 +412,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n\t\t\r\n\t"
+    "source": "\r\n\t\t\r\n\t"
   },
   {
     "attrs": {},
@@ -425,7 +422,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": false,
@@ -433,21 +430,21 @@
     "source": "<!-- @noparse -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "",
+    "source": "",
     "uri": "/res/lib/jquery.min.js"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "",
+    "source": "",
     "uri": "/res/lib/vcloud/nep.min.js"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": true,
@@ -455,13 +452,10 @@
     "source": "<!-- /@noparse -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "<!-- 底部banner -->"
-  },
-  {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {
@@ -473,13 +467,10 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "<!-- 底部样式 -->"
-  },
-  {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -489,13 +480,10 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "<!-- 页面底部 -->"
-  },
-  {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -505,7 +493,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n\r\n    "
+    "source": "\r\n\r\n    "
   },
   {
     "attrs": {
@@ -518,7 +506,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "closed": false,
@@ -526,15 +514,15 @@
     "source": "<!-- @MODULE -->"
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "type": "html",
-    "uri": "college/detail/index.html",
-    "text": ""
+    "source": "",
+    "uri": "college/detail/index.html"
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "closed": true,
@@ -542,7 +530,7 @@
     "source": "<!-- /@MODULE -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -552,7 +540,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": false,
@@ -560,13 +548,13 @@
     "source": "<!-- @VERSION -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "\r\n    \tlocation.config = {root:'/src/html/'};\r\n    "
+    "source": "\r\n    \tlocation.config = {root:'/src/html/'};\r\n    "
   },
   {
-    "text": "\r\n\t\r\n\t"
+    "source": "\r\n\t\r\n\t"
   },
   {
     "closed": false,
@@ -574,20 +562,20 @@
     "source": "<!-- @script -->"
   },
   {
-    "text": "\r\n\t"
+    "source": "\r\n\t"
   },
   {
-    "text": "",
+    "source": "",
     "uri": "${nejRoot}"
   },
   {
-    "text": "\r\n\t"
+    "source": "\r\n\t"
   },
   {
-    "text": "\r\n\t    NEJ.define([\r\n\t        'util/dispatcher/dispatcher',\r\n\t        'json!pro/college/detail/config.json'\r\n\t    ],function(d, config){\r\n\t        d._$startup(config);\r\n\t    });\r\n\t"
+    "source": "\r\n\t    NEJ.define([\r\n\t        'util/dispatcher/dispatcher',\r\n\t        'json!pro/college/detail/config.json'\r\n\t    ],function(d, config){\r\n\t        d._$startup(config);\r\n\t    });\r\n\t"
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -597,7 +585,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -607,7 +595,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},

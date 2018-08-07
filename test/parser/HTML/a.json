@@ -5,7 +5,7 @@
     "source": "<!-- @NOCOMPRESS -->"
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -19,7 +19,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -29,7 +29,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {
@@ -41,7 +41,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -51,7 +51,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n  "
+    "source": "\r\n  "
   },
   {
     "attrs": {},
@@ -61,7 +61,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": false,
@@ -69,7 +69,7 @@
     "source": "<!-- @IGNORE -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {
@@ -81,7 +81,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": true,
@@ -89,7 +89,7 @@
     "source": "<!-- /@IGNORE -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {
@@ -101,7 +101,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -111,7 +111,7 @@
     "selfClosed": false
   },
   {
-    "text": "${title!\"品购页\"}"
+    "source": "${title!\"品购页\"}"
   },
   {
     "attrs": {},
@@ -121,7 +121,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -131,7 +131,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "beg": {
@@ -147,34 +147,31 @@
     }
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "<!-- test nej template -->"
-  },
-  {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "type": "css",
     "uri": "/src/css/page/schedule.css"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "type": "js",
     "uri": "/src/js/page/schedule.js"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "type": "html",
     "uri": "/src/js/page/schedule.html"
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "attrs": {},
@@ -184,7 +181,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": false,
@@ -196,19 +193,19 @@
     "source": "<!-- @STYLE {core:false,inline:true} -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "uri": "/src/css/page/schedule.css"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "\r\n        .a{color:#aaa;}\r\n        .b{background:#bbb;}\r\n    "
+    "source": "\r\n        .a{color:#aaa;}\r\n        .b{background:#bbb;}\r\n    "
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": false,
@@ -216,13 +213,13 @@
     "source": "<!-- @noparse -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "\r\n      .a{color:#aaa;}\r\n      .b{background:#bbb;}\r\n    "
+    "source": "\r\n      .a{color:#aaa;}\r\n      .b{background:#bbb;}\r\n    "
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": true,
@@ -230,14 +227,14 @@
     "source": "<!-- /@noparse -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "type": "css",
-    "text": "\r\n        .aa{color:#aaa;}\r\n        .bb{background:#bbb;}\r\n    "
+    "source": "\r\n        .aa{color:#aaa;}\r\n        .bb{background:#bbb;}\r\n    "
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "beg": {
@@ -256,10 +253,10 @@
       "closed": true,
       "selfClosed": false
     },
-    "text": "\r\n        .aa{color:#aaa;}\r\n        .bb{background:#bbb;}\r\n    "
+    "source": "\r\n        .aa{color:#aaa;}\r\n        .bb{background:#bbb;}\r\n    "
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": false,
@@ -267,13 +264,13 @@
     "source": "<!-- @noparse -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "\r\n      <#assign nowTime = .now?long>\r\n      <#assign endTime = (schedule.endTime)!0>\r\n      <#assign startTime = (schedule.startTime)!0>\r\n      window.config = {\r\n          brandId:${(schedule.brandId)!\"0\"},\r\n          scheduleId:${(schedule.id)!\"0\"},\r\n          leftTime:${endTime-nowTime},\r\n          noprice:${(startTime>nowTime)?string(\"true\",\"false\")}\r\n      };\r\n    "
+    "source": "\r\n      <#assign nowTime = .now?long>\r\n      <#assign endTime = (schedule.endTime)!0>\r\n      <#assign startTime = (schedule.startTime)!0>\r\n      window.config = {\r\n          brandId:${(schedule.brandId)!\"0\"},\r\n          scheduleId:${(schedule.id)!\"0\"},\r\n          leftTime:${endTime-nowTime},\r\n          noprice:${(startTime>nowTime)?string(\"true\",\"false\")}\r\n      };\r\n    "
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": true,
@@ -281,13 +278,13 @@
     "source": "<!-- /@noparse -->"
   },
   {
-    "text": "\r\n\r\n    "
+    "source": "\r\n\r\n    "
   },
   {
-    "text": "\r\n      console.log('abc')\r\n    "
+    "source": "\r\n      console.log('abc')\r\n    "
   },
   {
-    "text": "\r\n  "
+    "source": "\r\n  "
   },
   {
     "attrs": {},
@@ -297,7 +294,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n  "
+    "source": "\r\n  "
   },
   {
     "attrs": {
@@ -310,7 +307,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -320,10 +317,10 @@
     "selfClosed": false
   },
   {
-    "text": " aaaa"
+    "source": " aaaa"
   },
   {
-    "text": "<"
+    "source": "<"
   },
   {
     "attrs": {
@@ -335,7 +332,7 @@
     "selfClosed": false
   },
   {
-    "text": ">ddddd "
+    "source": ">ddddd "
   },
   {
     "attrs": {},
@@ -345,7 +342,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {
@@ -357,7 +354,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "attrs": {
@@ -370,7 +367,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -382,7 +379,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -394,7 +391,7 @@
     "selfClosed": false
   },
   {
-    "text": "筛选"
+    "source": "筛选"
   },
   {
     "attrs": {},
@@ -404,7 +401,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -417,7 +414,7 @@
     "selfClosed": false
   },
   {
-    "text": "&nbsp;"
+    "source": "&nbsp;"
   },
   {
     "attrs": {},
@@ -427,7 +424,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -437,7 +434,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -450,7 +447,7 @@
     "selfClosed": false
   },
   {
-    "text": "全部"
+    "source": "全部"
   },
   {
     "attrs": {},
@@ -460,7 +457,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -472,7 +469,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -486,7 +483,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -499,7 +496,7 @@
     "selfClosed": false
   },
   {
-    "text": "${x.name}"
+    "source": "${x.name}"
   },
   {
     "attrs": {},
@@ -509,7 +506,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {},
@@ -519,7 +516,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -529,7 +526,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -539,7 +536,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "attrs": {},
@@ -549,7 +546,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -561,7 +558,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -575,7 +572,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -588,7 +585,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {
@@ -600,7 +597,7 @@
     "selfClosed": false
   },
   {
-    "text": "&nbsp;"
+    "source": "&nbsp;"
   },
   {
     "attrs": {},
@@ -610,7 +607,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {},
@@ -620,7 +617,7 @@
     "selfClosed": false
   },
   {
-    "text": "${followed?string(\"取消关注\",\"关注品牌\")}"
+    "source": "${followed?string(\"取消关注\",\"关注品牌\")}"
   },
   {
     "attrs": {},
@@ -630,7 +627,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {},
@@ -640,7 +637,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -650,7 +647,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -660,7 +657,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "attrs": {},
@@ -670,7 +667,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -682,7 +679,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -694,7 +691,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -706,7 +703,7 @@
     "selfClosed": false
   },
   {
-    "text": "${startTime?number_to_datetime?string(\"MM月dd日hh点\")}开售"
+    "source": "${startTime?number_to_datetime?string(\"MM月dd日hh点\")}开售"
   },
   {
     "attrs": {},
@@ -716,7 +713,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -726,7 +723,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -736,7 +733,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -748,7 +745,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -760,7 +757,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -773,7 +770,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {
@@ -785,7 +782,7 @@
     "selfClosed": false
   },
   {
-    "text": "${activities}"
+    "source": "${activities}"
   },
   {
     "attrs": {},
@@ -795,7 +792,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {
@@ -807,7 +804,7 @@
     "selfClosed": false
   },
   {
-    "text": "&nbsp;"
+    "source": "&nbsp;"
   },
   {
     "attrs": {},
@@ -817,7 +814,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {},
@@ -827,7 +824,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -840,7 +837,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {
@@ -852,7 +849,7 @@
     "selfClosed": false
   },
   {
-    "text": "&nbsp;"
+    "source": "&nbsp;"
   },
   {
     "attrs": {},
@@ -862,7 +859,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {
@@ -876,7 +873,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {},
@@ -886,7 +883,7 @@
     "selfClosed": false
   },
   {
-    "text": "${x}"
+    "source": "${x}"
   },
   {
     "attrs": {},
@@ -896,7 +893,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {},
@@ -906,7 +903,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {},
@@ -916,7 +913,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {},
@@ -926,7 +923,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -938,7 +935,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {
@@ -950,7 +947,7 @@
     "selfClosed": false
   },
   {
-    "text": "&nbsp;"
+    "source": "&nbsp;"
   },
   {
     "attrs": {},
@@ -960,7 +957,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n          "
+    "source": "\r\n          "
   },
   {
     "attrs": {
@@ -972,7 +969,7 @@
     "selfClosed": false
   },
   {
-    "text": "0天0时0分0秒后结束"
+    "source": "0天0时0分0秒后结束"
   },
   {
     "attrs": {},
@@ -982,7 +979,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {},
@@ -992,7 +989,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -1002,7 +999,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -1012,7 +1009,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -1022,7 +1019,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "attrs": {},
@@ -1032,7 +1029,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -1045,7 +1042,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -1058,7 +1055,7 @@
     "selfClosed": false
   },
   {
-    "text": "推荐"
+    "source": "推荐"
   },
   {
     "attrs": {},
@@ -1068,7 +1065,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -1082,7 +1079,7 @@
     "selfClosed": false
   },
   {
-    "text": "价格"
+    "source": "价格"
   },
   {
     "attrs": {
@@ -1094,7 +1091,7 @@
     "selfClosed": false
   },
   {
-    "text": "&nbsp;"
+    "source": "&nbsp;"
   },
   {
     "attrs": {},
@@ -1111,7 +1108,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -1124,7 +1121,7 @@
     "selfClosed": false
   },
   {
-    "text": "折扣"
+    "source": "折扣"
   },
   {
     "attrs": {
@@ -1136,7 +1133,7 @@
     "selfClosed": false
   },
   {
-    "text": "&nbsp;"
+    "source": "&nbsp;"
   },
   {
     "attrs": {},
@@ -1153,7 +1150,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -1166,7 +1163,7 @@
     "selfClosed": false
   },
   {
-    "text": "筛选"
+    "source": "筛选"
   },
   {
     "attrs": {
@@ -1178,7 +1175,7 @@
     "selfClosed": false
   },
   {
-    "text": "&nbsp;"
+    "source": "&nbsp;"
   },
   {
     "attrs": {},
@@ -1195,7 +1192,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -1205,7 +1202,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -1215,7 +1212,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "attrs": {},
@@ -1225,7 +1222,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -1245,7 +1242,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -1255,7 +1252,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "attrs": {},
@@ -1265,7 +1262,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "attrs": {},
@@ -1275,7 +1272,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -1285,7 +1282,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "closed": false,
@@ -1293,53 +1290,50 @@
     "source": "<!-- @TEMPLATE -->"
   },
   {
-    "text": "\r\n      \r\n      "
+    "source": "\r\n      \r\n      "
   },
   {
-    "text": "<!-- test nej template -->"
-  },
-  {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "css",
-    "uri": "./a.css",
-    "text": ""
+    "source": "",
+    "uri": "./a.css"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "js",
-    "uri": "./a.js",
-    "text": ""
+    "source": "",
+    "uri": "./a.js"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "./a.html",
-    "text": ""
+    "source": "",
+    "uri": "./a.html"
   },
   {
-    "text": "\r\n      \r\n      "
+    "source": "\r\n      \r\n      "
   },
   {
     "type": "txt",
-    "id": "product-loading",
-    "text": "\r\n        <div class=\"loading\">加载中...</div>\r\n      "
+    "source": "\r\n        <div class=\"loading\">加载中...</div>\r\n      ",
+    "id": "product-loading"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "jst",
-    "id": "product-list",
-    "text": "\r\n        {list beg..end as y}\r\n          {var x=xlist[y]}\r\n          <div class=\"m-poprd {if noprice}j-nobg{/if}\">\r\n            <a class=\"body\" href=\"/detail?id=${x.id}\">\r\n              <div class=\"img m-img\">\r\n                <img class=\"u-loading-1\" src=\"/res/3g/images/blank.gif\" data-src=\"${x.listShowPicList[0]}\"/>\r\n                {if isSoldout(x.skuList)}\r\n                <div class=\"so\">&nbsp;</div>\r\n                {/if}\r\n              </div>\r\n              <div class=\"x ln0\">${x.productName||'商品名称'}</div>\r\n              {var sale = x.salePrice}\r\n              {var market = x.marketPrice}\r\n              {if noprice}\r\n              <div class=\"x ln1\">\r\n                <span class=\"zg\">专柜价</span>\r\n                <span class=\"mp\">&yen;${Math.floor(market)}</span>\r\n              </div>\r\n              {else}\r\n              <div class=\"x ln1\">\r\n                <span class=\"sp\">&yen;<em>${Math.floor(sale)}</em></span>\r\n                <span class=\"mp\">&yen;${Math.floor(market)}</span>\r\n                <span class=\"zk\">${(sale*10/market)|toFixed:1}折</span>\r\n              </div>\r\n              {/if}\r\n            </a>\r\n          </div>\r\n        {/list}\r\n      "
+    "source": "\r\n        {list beg..end as y}\r\n          {var x=xlist[y]}\r\n          <div class=\"m-poprd {if noprice}j-nobg{/if}\">\r\n            <a class=\"body\" href=\"/detail?id=${x.id}\">\r\n              <div class=\"img m-img\">\r\n                <img class=\"u-loading-1\" src=\"/res/3g/images/blank.gif\" data-src=\"${x.listShowPicList[0]}\"/>\r\n                {if isSoldout(x.skuList)}\r\n                <div class=\"so\">&nbsp;</div>\r\n                {/if}\r\n              </div>\r\n              <div class=\"x ln0\">${x.productName||'商品名称'}</div>\r\n              {var sale = x.salePrice}\r\n              {var market = x.marketPrice}\r\n              {if noprice}\r\n              <div class=\"x ln1\">\r\n                <span class=\"zg\">专柜价</span>\r\n                <span class=\"mp\">&yen;${Math.floor(market)}</span>\r\n              </div>\r\n              {else}\r\n              <div class=\"x ln1\">\r\n                <span class=\"sp\">&yen;<em>${Math.floor(sale)}</em></span>\r\n                <span class=\"mp\">&yen;${Math.floor(market)}</span>\r\n                <span class=\"zk\">${(sale*10/market)|toFixed:1}折</span>\r\n              </div>\r\n              {/if}\r\n            </a>\r\n          </div>\r\n        {/list}\r\n      ",
+    "id": "product-list"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "closed": false,
@@ -1347,31 +1341,31 @@
     "source": "<!-- @MODULE -->"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "./a.html",
-    "text": ""
+    "source": "",
+    "uri": "./a.html"
   },
   {
-    "text": "\r\n      "
-  },
-  {
-    "type": "html",
-    "uri": "./b.html",
-    "text": ""
-  },
-  {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "./c.html",
-    "text": ""
+    "source": "",
+    "uri": "./b.html"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
+  },
+  {
+    "type": "html",
+    "source": "",
+    "uri": "./c.html"
+  },
+  {
+    "source": "\r\n      "
   },
   {
     "closed": true,
@@ -1379,7 +1373,7 @@
     "source": "<!-- /@MODULE -->"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -1389,7 +1383,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -1399,7 +1393,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": false,
@@ -1407,21 +1401,21 @@
     "source": "<!-- @SCRIPT -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "",
+    "source": "",
     "uri": "${jslib}define.js?${jscnf}"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "",
+    "source": "",
     "uri": "${jspro}page/schedule/schedule.js"
   },
   {
-    "text": "\r\n  "
+    "source": "\r\n  "
   },
   {
     "attrs": {},
@@ -1431,7 +1425,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -1441,7 +1435,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -1451,7 +1445,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},

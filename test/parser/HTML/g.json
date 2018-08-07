@@ -9,7 +9,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
@@ -19,7 +19,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n  "
+    "source": "\r\n  "
   },
   {
     "attrs": {},
@@ -29,7 +29,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {
@@ -41,7 +41,7 @@
     "selfClosed": true
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -51,7 +51,7 @@
     "selfClosed": false
   },
   {
-    "text": "NEJ Module Sample - 前端实例"
+    "source": "NEJ Module Sample - 前端实例"
   },
   {
     "attrs": {},
@@ -61,7 +61,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": false,
@@ -69,19 +69,19 @@
     "source": "<!-- @STYLE -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "uri": "../css/template.css"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "uri": "../css/app.css"
   },
   {
-    "text": "\r\n  "
+    "source": "\r\n  "
   },
   {
     "attrs": {},
@@ -91,7 +91,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n  "
+    "source": "\r\n  "
   },
   {
     "attrs": {
@@ -103,7 +103,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n  \r\n    "
+    "source": "\r\n  \r\n    "
   },
   {
     "attrs": {
@@ -115,7 +115,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -127,7 +127,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -139,7 +139,7 @@
     "selfClosed": false
   },
   {
-    "text": "网易-杭研院-前端技术组-实例库"
+    "source": "网易-杭研院-前端技术组-实例库"
   },
   {
     "attrs": {},
@@ -149,7 +149,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -161,7 +161,7 @@
     "selfClosed": false
   },
   {
-    "text": "NEJ Module Sample"
+    "source": "NEJ Module Sample"
   },
   {
     "attrs": {},
@@ -171,7 +171,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -181,7 +181,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -201,7 +201,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -213,7 +213,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -225,7 +225,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        \t如有任何问题，请联系：蔡剑飞("
+    "source": "\r\n        \t如有任何问题，请联系：蔡剑飞("
   },
   {
     "attrs": {
@@ -237,7 +237,7 @@
     "selfClosed": false
   },
   {
-    "text": "caijf@corp.netease.com"
+    "source": "caijf@corp.netease.com"
   },
   {
     "attrs": {},
@@ -247,7 +247,7 @@
     "selfClosed": false
   },
   {
-    "text": ")\r\n        "
+    "source": ")\r\n        "
   },
   {
     "attrs": {},
@@ -257,7 +257,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -267,7 +267,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {
@@ -279,7 +279,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        "
+    "source": "\r\n        "
   },
   {
     "attrs": {
@@ -291,7 +291,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n        \t&nbsp;&copy;&nbsp;网易-杭研院-前端技术组\r\n        "
+    "source": "\r\n        \t&nbsp;&copy;&nbsp;网易-杭研院-前端技术组\r\n        "
   },
   {
     "attrs": {},
@@ -301,7 +301,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "attrs": {},
@@ -311,7 +311,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -321,7 +321,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "attrs": {
@@ -334,7 +334,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "closed": false,
@@ -342,63 +342,63 @@
     "source": "<!-- @TEMPLATE -->"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "module/tab/index.html",
-    "text": ""
+    "source": "",
+    "uri": "module/tab/index.html"
   },
   {
-    "text": "\r\n      "
-  },
-  {
-    "type": "html",
-    "uri": "module/layout/system/index.html",
-    "text": ""
-  },
-  {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "module/layout/blog/index.html",
-    "text": ""
+    "source": "",
+    "uri": "module/layout/system/index.html"
   },
   {
-    "text": "\r\n      "
-  },
-  {
-    "type": "html",
-    "uri": "module/layout/blog.list/index.html",
-    "text": ""
-  },
-  {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "module/layout/setting/index.html",
-    "text": ""
+    "source": "",
+    "uri": "module/layout/blog/index.html"
   },
   {
-    "text": "\r\n      "
-  },
-  {
-    "type": "html",
-    "uri": "module/layout/setting.account/index.html",
-    "text": ""
-  },
-  {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "module/blog/tag/index.html",
-    "text": ""
+    "source": "",
+    "uri": "module/layout/blog.list/index.html"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
+  },
+  {
+    "type": "html",
+    "source": "",
+    "uri": "module/layout/setting/index.html"
+  },
+  {
+    "source": "\r\n      "
+  },
+  {
+    "type": "html",
+    "source": "",
+    "uri": "module/layout/setting.account/index.html"
+  },
+  {
+    "source": "\r\n      "
+  },
+  {
+    "type": "html",
+    "source": "",
+    "uri": "module/blog/tag/index.html"
+  },
+  {
+    "source": "\r\n      "
   },
   {
     "closed": true,
@@ -406,7 +406,7 @@
     "source": "<!-- /@TEMPLATE -->"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "closed": false,
@@ -414,55 +414,55 @@
     "source": "<!-- @MODULE -->"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "module/blog/tab/index.html",
-    "text": ""
+    "source": "",
+    "uri": "module/blog/tab/index.html"
   },
   {
-    "text": "\r\n      "
-  },
-  {
-    "type": "html",
-    "uri": "module/blog/list.box/index.html",
-    "text": ""
-  },
-  {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "module/blog/list.tag/index.html",
-    "text": ""
+    "source": "",
+    "uri": "module/blog/list.box/index.html"
   },
   {
-    "text": "\r\n      "
-  },
-  {
-    "type": "html",
-    "uri": "module/blog/list/index.html",
-    "text": ""
-  },
-  {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "module/setting/tab/index.html",
-    "text": ""
+    "source": "",
+    "uri": "module/blog/list.tag/index.html"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
   },
   {
     "type": "html",
-    "uri": "module/setting/account.tab/index.html",
-    "text": ""
+    "source": "",
+    "uri": "module/blog/list/index.html"
   },
   {
-    "text": "\r\n      "
+    "source": "\r\n      "
+  },
+  {
+    "type": "html",
+    "source": "",
+    "uri": "module/setting/tab/index.html"
+  },
+  {
+    "source": "\r\n      "
+  },
+  {
+    "type": "html",
+    "source": "",
+    "uri": "module/setting/account.tab/index.html"
+  },
+  {
+    "source": "\r\n      "
   },
   {
     "closed": true,
@@ -470,7 +470,7 @@
     "source": "<!-- /@MODULE -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "attrs": {},
@@ -480,7 +480,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "closed": false,
@@ -488,27 +488,27 @@
     "source": "<!-- @IGNORE -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "window.DEBUG = !0;"
+    "source": "window.DEBUG = !0;"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "",
+    "source": "",
     "uri": "../javascript/cache/tag.data.js"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "",
+    "source": "",
     "uri": "../javascript/cache/blog.data.js"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": true,
@@ -516,7 +516,7 @@
     "source": "<!-- /@IGNORE -->"
   },
   {
-    "text": "\r\n    \r\n    "
+    "source": "\r\n    \r\n    "
   },
   {
     "closed": false,
@@ -524,13 +524,13 @@
     "source": "<!-- @VERSION -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "location.config={root:'./'};"
+    "source": "location.config={root:'./'};"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
     "closed": false,
@@ -538,20 +538,20 @@
     "source": "<!-- @DEFINE -->"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "",
+    "source": "",
     "uri": "http://nej.netease.com/nej/src/define.js"
   },
   {
-    "text": "\r\n    "
+    "source": "\r\n    "
   },
   {
-    "text": "\r\n      define([\r\n          '{lib}util/dispatcher/dispatcher.2.js',\r\n          '{lib}util/encode/md5.js'\r\n      ],\r\n      function(){\r\n          var _  = NEJ.P;\r\n          /* start up dispatcher */\r\n          _('nej.e')._$startup({\r\n              rules:{\r\n                  rewrite:{\r\n                      '404':'/m/blog/list/',\r\n                      '/m/blog/list/':'/m/blog/',\r\n                      '/m/setting/account/':'/m/setting/'\r\n                  },\r\n                  title:{\r\n                      '/m/blog/tag/':'日志标签',\r\n                      '/m/blog/list/':'日志列表',\r\n                      '/m/setting/permission/':'权限管理',\r\n                      '/m/setting/account/':'基本资料',\r\n                      '/m/setting/account/edu/':'教育经历'\r\n                  },\r\n                  alias:{\r\n                      'system-tab':'/?/tab/',\r\n                      'blog-tab':'/?/blog/tab/',\r\n                      'blog-list-box':'/?/blog/box/',\r\n                      'blog-list-tag':'/?/blog/tag/',\r\n                      'blog-list':'/?/blog/list/',\r\n                      'setting-tab':'/?/setting/tab/',\r\n                      'setting-account-tab':'/?/setting/account/tab/',\r\n                      \r\n                      'layout-system':'/m',\r\n                      'layout-blog':'/m/blog',\r\n                      'layout-blog-list':'/m/blog/list/',\r\n                      'layout-setting':'/m/setting',\r\n                      'layout-setting-account':'/m/setting/account',\r\n                      \r\n                      'blog-tag':['/m/blog/tag/','/m/setting/tag/'],\r\n                      'setting-edu':'/m/setting/account/edu/',\r\n                      'setting-profile':'/m/setting/account/',\r\n                      'setting-permission':'/m/setting/permission/'\r\n                  }\r\n              },\r\n              modules:{\r\n                  '/?/tab/':'module/tab/index.html',\r\n                  '/?/blog/tab/':'module/blog/tab/index.html',\r\n                  '/?/blog/box/':'module/blog/list.box/index.html',\r\n                  '/?/blog/tag/':'module/blog/list.tag/index.html',\r\n                  '/?/blog/list/':'module/blog/list/index.html',\r\n                  '/?/setting/tab/':'module/setting/tab/index.html',\r\n                  '/?/setting/account/tab/':'module/setting/account.tab/index.html',\r\n                  \r\n                  '/m':{\r\n                      module:'module/layout/system/index.html',\r\n                      composite:{\r\n                          tab:'/?/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog':{\r\n                      module:'module/layout/blog/index.html',\r\n                      composite:{\r\n                          tab:'/?/blog/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog/list/':{\r\n                      module:'module/layout/blog.list/index.html',\r\n                      composite:{\r\n                          box:'/?/blog/box/',\r\n                          tag:'/?/blog/tag/',\r\n                          list:'/?/blog/list/'\r\n                      }\r\n                  },\r\n                  '/m/blog/tag/':'module/blog/tag/index.html',\r\n                  \r\n                  '/m/setting':{\r\n                      module:'module/layout/setting/index.html',\r\n                      composite:{\r\n                          tab:'/?/setting/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account':{\r\n                      module:'module/layout/setting.account/index.html',\r\n                      composite:{\r\n                          tab:'/?/setting/account/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account/':'module/setting/profile/index.html',\r\n                  '/m/setting/account/edu/':'module/setting/edu/index.html',\r\n                  '/m/setting/permission/':'module/setting/permission/index.html',\r\n                  '/m/setting/tag/':'module/blog/tag/index.html'\r\n              },\r\n              /*\r\n              modules:{\r\n                  '/?/tab/':'module/tab/index.html',\r\n                  '/?/blog/tab/':'module/blog.html',\r\n                  '/?/blog/box/':'module/blog.html',\r\n                  '/?/blog/tag/':'module/blog.html',\r\n                  '/?/blog/list/':'module/blog.html',\r\n                  '/?/setting/tab/':'module/setting.html',\r\n                  '/?/setting/account/tab/':'module/setting.html',\r\n                  \r\n                  '/m':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/blog/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog/list/':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          box:'/?/blog/box/',\r\n                          tag:'/?/blog/tag/',\r\n                          list:'/?/blog/list/'\r\n                      }\r\n                  },\r\n                  '/m/blog/tag/':'module/blog.html',\r\n                  \r\n                  '/m/setting':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/setting/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/setting/account/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account/':'module/setting.html',\r\n                  '/m/setting/account/edu/':'module/setting.html',\r\n                  '/m/setting/permission/':'module/setting.html'\r\n              },\r\n              */\r\n              onbeforechange:function(_options){\r\n                  var _umi = _options.path||'';\r\n                  if (!!_umi&&\r\n                        _umi.indexOf('/?')<0&&\r\n                        _umi.indexOf('/m')<0)\r\n                      _options.path = '/m'+_umi;\r\n              }\r\n          });\r\n      });\r\n    "
+    "source": "\r\n      define([\r\n          '{lib}util/dispatcher/dispatcher.2.js',\r\n          '{lib}util/encode/md5.js'\r\n      ],\r\n      function(){\r\n          var _  = NEJ.P;\r\n          /* start up dispatcher */\r\n          _('nej.e')._$startup({\r\n              rules:{\r\n                  rewrite:{\r\n                      '404':'/m/blog/list/',\r\n                      '/m/blog/list/':'/m/blog/',\r\n                      '/m/setting/account/':'/m/setting/'\r\n                  },\r\n                  title:{\r\n                      '/m/blog/tag/':'日志标签',\r\n                      '/m/blog/list/':'日志列表',\r\n                      '/m/setting/permission/':'权限管理',\r\n                      '/m/setting/account/':'基本资料',\r\n                      '/m/setting/account/edu/':'教育经历'\r\n                  },\r\n                  alias:{\r\n                      'system-tab':'/?/tab/',\r\n                      'blog-tab':'/?/blog/tab/',\r\n                      'blog-list-box':'/?/blog/box/',\r\n                      'blog-list-tag':'/?/blog/tag/',\r\n                      'blog-list':'/?/blog/list/',\r\n                      'setting-tab':'/?/setting/tab/',\r\n                      'setting-account-tab':'/?/setting/account/tab/',\r\n                      \r\n                      'layout-system':'/m',\r\n                      'layout-blog':'/m/blog',\r\n                      'layout-blog-list':'/m/blog/list/',\r\n                      'layout-setting':'/m/setting',\r\n                      'layout-setting-account':'/m/setting/account',\r\n                      \r\n                      'blog-tag':['/m/blog/tag/','/m/setting/tag/'],\r\n                      'setting-edu':'/m/setting/account/edu/',\r\n                      'setting-profile':'/m/setting/account/',\r\n                      'setting-permission':'/m/setting/permission/'\r\n                  }\r\n              },\r\n              modules:{\r\n                  '/?/tab/':'module/tab/index.html',\r\n                  '/?/blog/tab/':'module/blog/tab/index.html',\r\n                  '/?/blog/box/':'module/blog/list.box/index.html',\r\n                  '/?/blog/tag/':'module/blog/list.tag/index.html',\r\n                  '/?/blog/list/':'module/blog/list/index.html',\r\n                  '/?/setting/tab/':'module/setting/tab/index.html',\r\n                  '/?/setting/account/tab/':'module/setting/account.tab/index.html',\r\n                  \r\n                  '/m':{\r\n                      module:'module/layout/system/index.html',\r\n                      composite:{\r\n                          tab:'/?/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog':{\r\n                      module:'module/layout/blog/index.html',\r\n                      composite:{\r\n                          tab:'/?/blog/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog/list/':{\r\n                      module:'module/layout/blog.list/index.html',\r\n                      composite:{\r\n                          box:'/?/blog/box/',\r\n                          tag:'/?/blog/tag/',\r\n                          list:'/?/blog/list/'\r\n                      }\r\n                  },\r\n                  '/m/blog/tag/':'module/blog/tag/index.html',\r\n                  \r\n                  '/m/setting':{\r\n                      module:'module/layout/setting/index.html',\r\n                      composite:{\r\n                          tab:'/?/setting/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account':{\r\n                      module:'module/layout/setting.account/index.html',\r\n                      composite:{\r\n                          tab:'/?/setting/account/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account/':'module/setting/profile/index.html',\r\n                  '/m/setting/account/edu/':'module/setting/edu/index.html',\r\n                  '/m/setting/permission/':'module/setting/permission/index.html',\r\n                  '/m/setting/tag/':'module/blog/tag/index.html'\r\n              },\r\n              /*\r\n              modules:{\r\n                  '/?/tab/':'module/tab/index.html',\r\n                  '/?/blog/tab/':'module/blog.html',\r\n                  '/?/blog/box/':'module/blog.html',\r\n                  '/?/blog/tag/':'module/blog.html',\r\n                  '/?/blog/list/':'module/blog.html',\r\n                  '/?/setting/tab/':'module/setting.html',\r\n                  '/?/setting/account/tab/':'module/setting.html',\r\n                  \r\n                  '/m':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/blog/tab/'\r\n                      }\r\n                  },\r\n                  '/m/blog/list/':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          box:'/?/blog/box/',\r\n                          tag:'/?/blog/tag/',\r\n                          list:'/?/blog/list/'\r\n                      }\r\n                  },\r\n                  '/m/blog/tag/':'module/blog.html',\r\n                  \r\n                  '/m/setting':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/setting/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account':{\r\n                      module:'module/layout.html',\r\n                      composite:{\r\n                          tab:'/?/setting/account/tab/'\r\n                      }\r\n                  },\r\n                  '/m/setting/account/':'module/setting.html',\r\n                  '/m/setting/account/edu/':'module/setting.html',\r\n                  '/m/setting/permission/':'module/setting.html'\r\n              },\r\n              */\r\n              onbeforechange:function(_options){\r\n                  var _umi = _options.path||'';\r\n                  if (!!_umi&&\r\n                        _umi.indexOf('/?')<0&&\r\n                        _umi.indexOf('/m')<0)\r\n                      _options.path = '/m'+_umi;\r\n              }\r\n          });\r\n      });\r\n    "
   },
   {
-    "text": "\r\n  "
+    "source": "\r\n  "
   },
   {
     "attrs": {},
@@ -561,7 +561,7 @@
     "selfClosed": false
   },
   {
-    "text": "\r\n"
+    "source": "\r\n"
   },
   {
     "attrs": {},
