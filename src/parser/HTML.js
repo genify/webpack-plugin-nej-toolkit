@@ -6,15 +6,14 @@
 const Tagger  = require('./Tagger.js');
 const Emitter = require('../util/emitter.js');
 
-// node type
-const NODE_TAG         = Symbol('tag');
-const NODE_TEXT        = Symbol('text');
-const NODE_STYLE       = Symbol('style');
-const NODE_SCRIPT      = Symbol('script');
-const NODE_COMMENT     = Symbol('comment');
-const NODE_TEMPLATE    = Symbol('template');
-const NODE_RESOURCE    = Symbol('resource');
-const NODE_INSTRUCTION = Symbol('instruction');
+// node class
+const Tag      = require('./node/Tag.js');
+const Text     = require('./node/Text.js');
+const Style    = require('./node/Style.js');
+const Script   = require('./node/Script.js');
+const Template = require('./node/Template.js');
+const Resource = require('./node/Resource.js');
+const Instruction = require('./node/Instruction.js');
 
 // private name
 const file          = Symbol('file');
@@ -40,69 +39,13 @@ const onTag         = Symbol('onTag');
  */
 class HTMLParser extends Emitter{
     /**
-     * node type of tag
+     * serialize parse result to html
      *
-     * @type {symbol}
+     * @param  {Array} list - parse result
+     * @return {String} html content
      */
-    static get NODE_TAG() {
-        return NODE_TAG;
-    }
+    static stringify(list) {
 
-    /**
-     * node type of text
-     *
-     * @type {symbol}
-     */
-    static get NODE_TEXT() {
-        return NODE_TEXT;
-    }
-    /**
-     * node type of style
-     *
-     * @type {symbol}
-     */
-    static get NODE_STYLE() {
-        return NODE_STYLE;
-    }
-    /**
-     * node type of script
-     *
-     * @type {symbol}
-     */
-    static get NODE_SCRIPT() {
-        return NODE_SCRIPT;
-    }
-    /**
-     * node type of template
-     *
-     * @type {symbol}
-     */
-    static get NODE_TEMPLATE() {
-        return NODE_TEMPLATE;
-    }
-    /**
-     * node type of resource
-     *
-     * @type {symbol}
-     */
-    static get NODE_RESOURCE() {
-        return NODE_RESOURCE;
-    }
-    /**
-     * node type of instruction
-     *
-     * @type {symbol}
-     */
-    static get NODE_INSTRUCTION() {
-        return NODE_INSTRUCTION;
-    }
-    /**
-     * node type of comment
-     *
-     * @type {symbol}
-     */
-    static get NODE_COMMENT() {
-        return NODE_COMMENT;
     }
 
     /**
@@ -130,6 +73,8 @@ class HTMLParser extends Emitter{
         });
     }
 
+
+
     /**
      * format nej template type
      *
@@ -155,15 +100,14 @@ class HTMLParser extends Emitter{
     [onResource](event) {
         // console.log('%s:%s','resource',type);
         let ret = {
-            node: HTMLParser.NODE_RESOURCE,
-            beg: event.beg
+            beg: new Tag(event.beg)
         };
         // not self close tag resource
         if (event.beg!==event.end){
-            ret.end = event.end;
-            ret.text = event.source;
+            ret.end = new Tag(event.end);
+            ret.source = event.source;
         }
-        this.result.push(ret);
+        this.result.push(new Resource(ret));
     }
 
     /**
@@ -189,36 +133,38 @@ class HTMLParser extends Emitter{
         // check external style
         // check nej external template
         let external = () => {
-            let ret = {};
+            let ret;
             let rel = (conf.rel||'').toLowerCase().trim();
             if (rel.indexOf('stylesheet')>=0){
-                ret.node = HTMLParser.NODE_STYLE;
+                ret = new Style({
+                    uri: conf.href
+                });
             }else if(rel==='nej'){
-                ret.node = HTMLParser.NODE_TEMPLATE;
-                ret.type = this[format](type);
+                ret = new Template({
+                    type: this[format](type),
+                    uri: conf.href
+                });
             }
-            if (ret.node){
-                ret.uri = conf.href;
-                return ret;
-            }
+            return ret;
         };
         // check inline style
         // check nej inline style template
         let internal = () => {
-            let ret = {};
+            let ret;
             if (!type||type==='text/css'){
-                ret.node = HTMLParser.NODE_STYLE;
+                ret = new Style({
+                    source: event.source
+                });
             }
             // check nej inline style template
             if (type.indexOf('nej/')===0){
-                ret.node = HTMLParser.NODE_TEMPLATE;
-                ret.type = this[format](type);
-                ret.id = conf.id;
+                ret = new Template({
+                    type: this[format](type),
+                    source: event.source,
+                    id: conf.id
+                });
             }
-            if (ret.node){
-                ret.text = event.source;
-                return ret;
-            }
+            return ret;
         };
         // run resource transform
         let ret = !conf.href ? internal() : external();
@@ -251,21 +197,19 @@ class HTMLParser extends Emitter{
         let type = (conf.type||'').toLowerCase().trim();
         // for nej template
         if (type.indexOf('nej/')===0){
-            ret = {
-                node: HTMLParser.NODE_TEMPLATE,
+            ret = new Template({
                 type: this[format](type),
-                text: event.source,
+                source: event.source,
                 uri: conf.src,
                 id: conf.id
-            };
+            });
         }
         // for script
         if (!type||/(text|application)\/(x-)?javascript/i.test(type)){
-            ret = {
-                node: HTMLParser.NODE_SCRIPT,
-                text: event.source,
+            ret = new Script({
+                source: event.source,
                 uri: conf.src
-            };
+            });
         }
         // save resource
         if (ret){
@@ -298,18 +242,16 @@ class HTMLParser extends Emitter{
     [onTextarea](event) {
         // console.log('%s:%j','textarea',event);
         let cnf = event.config||{};
-        let ret = {
-            node: HTMLParser.NODE_TEMPLATE,
-            type: cnf.name||''
-        };
+        let type = cnf.name||'';
         // for nej template
-        if (ret.type.indexOf('nej/')===0||
-            /txt|jst|ntp|js|css|html/i.test(ret.type)){
-            ret.type = this[format](ret.type);
-            ret.id   = cnf.id;
-            ret.uri  = cnf['data-src'];
-            ret.text = event.source;
-            this.result.push(ret);
+        if (type.indexOf('nej/')===0||
+            /txt|jst|ntp|js|css|html/i.test(type)){
+            this.result.push(new Template({
+                type: this[format](type),
+                source: event.source,
+                uri: cnf['data-src'],
+                id: cnf.id
+            }));
         }else{
             this[onResource](event);
         }
@@ -333,8 +275,7 @@ class HTMLParser extends Emitter{
      */
     [onInstruction](event) {
         // console.log('%s:%j','instr',event);
-        event.node = HTMLParser.NODE_INSTRUCTION;
-        this.result.push(event);
+        this.result.push(new Instruction(event));
     };
 
     /**
@@ -343,11 +284,8 @@ class HTMLParser extends Emitter{
      * @param  {Object} event - event object
      */
     [onComment](event) {
+        // ignore html comment code
         // console.log('%s:%j','comment',event);
-        this.result.push({
-            node: HTMLParser.NODE_COMMENT,
-            text: event.source
-        });
     };
 
     /**
@@ -357,8 +295,7 @@ class HTMLParser extends Emitter{
      */
     [onTag](event) {
         // console.log('%s:%j','tag',event);
-        event.tag.node = HTMLParser.NODE_TAG;
-        this.result.push(event.tag);
+        this.result.push(new Tag(event.tag));
     };
 
     /**
@@ -368,12 +305,10 @@ class HTMLParser extends Emitter{
      */
     [onText](event) {
         // console.log('%s:%j','text',event);
-        this.result.push({
-            node: HTMLParser.NODE_TEXT,
-            text: event.source
-        });
+        this.result.push(new Text({
+            source: event.source
+        }));
     };
-
 }
 
 // export html parser

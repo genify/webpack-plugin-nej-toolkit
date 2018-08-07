@@ -663,6 +663,20 @@ class Parser extends Emitter{
     }
 
     /**
+     * format config object
+     *
+     * @param  {Object} map - key map, e.g. {root: 'DIR_WEBROOT'}
+     * @return {Object} config with new key
+     */
+    format(map) {
+        let ret = {};
+        Object.keys(map).forEach((key) => {
+            ret[key] = this.get(map[key]);
+        });
+        return ret;
+    }
+
+    /**
      * filter config value
      *
      * @param  {Function} func  - filter action
@@ -970,7 +984,7 @@ class Parser extends Emitter{
         let res = [];
         (ret||[]).forEach((dm) => {
             if (dm){
-                let dm = this[formatDomain](dm);
+                dm = this[formatDomain](dm);
                 if (dm) res.push(dm);
             }
         });
