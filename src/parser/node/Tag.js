@@ -3,6 +3,7 @@
  *
  * @author caijf(genify@163.com)
  */
+const nd   = require('./type.js');
 const Node = require('./Node.js');
 
 /**
@@ -21,6 +22,7 @@ class NodeTag extends Node {
      */
     constructor(options={}) {
         super(options);
+        this.nodeType = nd.TAG;
     }
 
 

@@ -3,12 +3,12 @@
  *
  * @author caijf(genify@163.com)
  */
-const Emitter = require('../../util/emitter.js');
+const nd = require('./type.js');
 
 /**
  * Base Node Class
  */
-class Node extends Emitter {
+class Node {
     /**
      * Base Node Class
      *
@@ -16,8 +16,8 @@ class Node extends Emitter {
      * @param {String} options.source - node source code
      */
     constructor(options={}) {
-        super(options);
         Object.assign(this, options);
+        this.nodeType = nd.UNKNOWN;
     }
 }
 
