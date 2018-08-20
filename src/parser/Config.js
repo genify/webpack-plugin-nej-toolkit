@@ -605,7 +605,7 @@ FILTERS_CONFIG.forEach((it) => {
 /**
  * Config Content Parser
  */
-class Parser extends Emitter{
+class CFGParser extends Emitter{
     /**
      * Config Content Parser
      *
@@ -1109,4 +1109,4 @@ class Parser extends Emitter{
 
 }
 // export config parser
-module.exports = Parser;
+module.exports = CFGParser;

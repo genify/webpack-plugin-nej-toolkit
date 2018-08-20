@@ -77,7 +77,7 @@ describe('util api', () => {
 
         it('should be ok to list files without filter', () => {
             let ret = util.ls(__dirname+'/a');
-            expect(ret.length).to.eql(3);
+            expect(ret.length).to.eql(4);
         });
 
         it('should be ok to list files with filter', () => {

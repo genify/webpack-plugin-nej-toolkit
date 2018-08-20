@@ -97,9 +97,6 @@ exports.ls = function (dir, filter) {
     }
     // dump file list
     list.forEach((name) => {
-        if (/^\./.test(name)){
-            return;
-        }
         let file = exports.absolute(
             dir, name
         );

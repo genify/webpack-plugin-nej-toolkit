@@ -7,26 +7,27 @@ const Tagger  = require('./Tagger.js');
 const Emitter = require('../util/emitter.js');
 
 // node class
-const Tag      = require('./node/Tag.js');
-const Text     = require('./node/Text.js');
-const Style    = require('./node/Style.js');
-const Script   = require('./node/Script.js');
-const Template = require('./node/Template.js');
-const Resource = require('./node/Resource.js');
+const Tag         = require('./node/Tag.js');
+const Text        = require('./node/Text.js');
+const Style       = require('./node/Style.js');
+const Script      = require('./node/Script.js');
+const Template    = require('./node/Template.js');
+const Resource    = require('./node/Resource.js');
 const Instruction = require('./node/Instruction.js');
 
 // private name
 const file          = Symbol('file');
+const flag          = Symbol('flag');
 const parser        = Symbol('parser');
 const format        = Symbol('format');
-const onInstruction = Symbol('onInstruction');
-const onResource    = Symbol('onResource');
-const onTextarea    = Symbol('onTextarea');
-const onComment     = Symbol('onComment');
-const onScript      = Symbol('onScript');
-const onStyle       = Symbol('onStyle');
-const onText        = Symbol('onText');
 const onTag         = Symbol('onTag');
+const onText        = Symbol('onText');
+const onStyle       = Symbol('onStyle');
+const onScript      = Symbol('onScript');
+const onComment     = Symbol('onComment');
+const onTextarea    = Symbol('onTextarea');
+const onResource    = Symbol('onResource');
+const onInstruction = Symbol('onInstruction');
 
 /**
  * HTML Parser
@@ -51,14 +52,16 @@ class HTMLParser extends Emitter{
     /**
      * HTML Parser
      *
-     * @param {Object} options - config object
-     * @param {String} options.file    - html file path
-     * @param {String} options.content - html content
+     * @param {Object}  options - config object
+     * @param {Boolean} options.flag    - is server side template flag
+     * @param {String}  options.file    - html file path
+     * @param {String}  options.content - html content
      */
     constructor(options={}) {
         super(options);
         // private properties
         this[file]   = options.file;
+        this[flag]   = options.flag;
         this.result  = [];
         // parse content
         this[parser] = new Tagger({
@@ -72,8 +75,6 @@ class HTMLParser extends Emitter{
             instruction : this[onInstruction].bind(this)
         });
     }
-
-
 
     /**
      * format nej template type

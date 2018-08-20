@@ -1,9 +1,9 @@
 let path = require('path');
-let NEJPluginPrepareEntry = require('../../src/plugins/PrepareEntry');
+let NEJEntry = require('../../../src/plugin/Entry');
 
 module.exports = {
     entry: path.resolve(__dirname,'release.conf'),
     plugins: [
-        new NEJPluginPrepareEntry()
+        new NEJEntry()
     ]
 };

@@ -11,7 +11,7 @@
     "url": "https://github.com/genify/webpack-plugin-nej-toolkit.git"
   },
   "scripts": {
-    "test": "mocha test/**/test.js"
+    "test": "nyc mocha --exit test/**/test.js"
   },
   "dependencies": {
     "winston": "^3.0.0",
@@ -22,5 +22,10 @@
     "eslint": "^5.2.0",
     "mocha": "^5.2.0",
     "chai": "^4.1.2"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ]
   }
 }
