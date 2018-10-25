@@ -7,27 +7,28 @@ const fs       = require('fs');
 const dt       = require('fecha');
 const qs       = require('querystring');
 const path     = require('path');
-const _util    = require('../util/util.js');
+const util     = require('../util/util.js');
 const Emitter  = require('../util/emitter.js');
 
 // private name
-const cache          = Symbol('cache');
-const check          = Symbol('check');
-const filter         = Symbol('filter');
-const parse          = Symbol('parse');
-const parseProp      = Symbol('parseProp');
-const deprecate      = Symbol('deprecate');
-const formatKey      = Symbol('formatKey');
-const formatDir      = Symbol('formatDir');
-const formatDirSub   = Symbol('formatDirSub');
-const formatDomain   = Symbol('formatDomain');
-const formatDomains  = Symbol('formatDomains');
-const formatBoolean  = Symbol('formatBoolean');
-const formatNumber   = Symbol('formatNumber');
-const formatRegExp   = Symbol('formatRegExp');
-const formatPathVar  = Symbol('formatPathVar');
-const formatJSONObj  = Symbol('formatJSONObj');
-const formatCoreList = Symbol('formatCoreList');
+const cache           = Symbol('cache');
+const check           = Symbol('check');
+const filter          = Symbol('filter');
+const attach          = Symbol('attach');
+const parse           = Symbol('parse');
+const parseProp       = Symbol('parseProp');
+const deprecate       = Symbol('deprecate');
+const formatKey       = Symbol('formatKey');
+const formatDir       = Symbol('formatDir');
+const formatDirSub    = Symbol('formatDirSub');
+const formatDomain    = Symbol('formatDomain');
+const formatDomains   = Symbol('formatDomains');
+const formatBoolean   = Symbol('formatBoolean');
+const formatNumber    = Symbol('formatNumber');
+const formatRegExp    = Symbol('formatRegExp');
+const formatPathVar   = Symbol('formatPathVar');
+const formatJSONObj   = Symbol('formatJSONObj');
+const formatCoreList  = Symbol('formatCoreList');
 
 // config filters
 const FILTERS_INDEXED = {};
@@ -35,7 +36,7 @@ const FILTERS_CONFIG = [
     {
         // relative to DIR_CONFIG
         DIR_WEBROOT:function(v){
-            return _util.absolute(
+            return util.absolute(
                 this.get('DIR_CONFIG'),
                 (v||'.')+'/'
             );
@@ -58,11 +59,11 @@ const FILTERS_CONFIG = [
     },{
         // relative to DIR_WEBROOT
         DIR_OUTPUT:function(v){
-            let ret = _util.absolute(
+            let ret = util.absolute(
                 this.get('DIR_WEBROOT'),
                 this[formatPathVar](v||'.')+'/'
             );
-            _util.mkdir(ret);
+            util.mkdir(ret);
             return ret;
         }
     },{
@@ -86,7 +87,7 @@ const FILTERS_CONFIG = [
             let output = v
                 ? this[formatDir](v)
                 : this.get('DIR_OUTPUT');
-            _util.mkdir(output);
+            util.mkdir(output);
             return output;
         }
     },{
@@ -96,7 +97,7 @@ const FILTERS_CONFIG = [
                     ? this[formatDir](v)
                     : this.get('DIR_OUTPUT')||
                       this.get('DIR_WEBROOT');
-            _util.mkdir(output);
+            util.mkdir(output);
             return output;
         }
     },{
@@ -304,7 +305,7 @@ const FILTERS_CONFIG = [
             if (!v){
                 v = './src/javascript/lib/regularjs/dist/regular.js';
             }
-            v = _util.absolute(this.get('DIR_WEBROOT'),v);
+            v = util.absolute(this.get('DIR_WEBROOT'),v);
             return fs.existsSync(v) ? v : 'regularjs';
         },
         NEJ_PLATFORM:function(v){
@@ -313,7 +314,7 @@ const FILTERS_CONFIG = [
         NEJ_PROCESSOR:function(v){
             let ret;
             if (v){
-                let file = _util.absolute(
+                let file = util.absolute(
                     this.get('DIR_CONFIG'),v
                 );
                 try{
@@ -353,7 +354,7 @@ const FILTERS_CONFIG = [
             return v||'I$';
         },
         NEJ_MODULE_ROOT:function(v){
-            return _util.normalize(
+            return util.normalize(
                 this[formatDomain](v), true
             );
         },
@@ -375,7 +376,7 @@ const FILTERS_CONFIG = [
         },
         OPT_IMAGE_SPRITE:function(v){
             if (v){
-                return _util.absolute(
+                return util.absolute(
                     this.get('DIR_STATIC'), v+'/'
                 );
             }
@@ -385,7 +386,7 @@ const FILTERS_CONFIG = [
         },
 
         MANIFEST_ROOT:function(v){
-            return _util.normalize(
+            return util.normalize(
                 this[formatDomain](v), true
             );
         },
@@ -397,7 +398,7 @@ const FILTERS_CONFIG = [
             let content;
             if (v){
                 // relative to DIR_CONFIG
-                let mtpl = _util.absolute(
+                let mtpl = util.absolute(
                     this.get('DIR_CONFIG'),v
                 );
                 if (fs.existsSync(mtpl)){
@@ -427,7 +428,7 @@ const FILTERS_CONFIG = [
             return this[formatNumber](v,0,3,0);
         },
         OBF_NAME_BAGS:function(v){
-            return _util.absolute(
+            return util.absolute(
                 this.get('DIR_CONFIG'),
                 v||'./names.json'
             );
@@ -444,7 +445,7 @@ const FILTERS_CONFIG = [
             if (v){
                 let dir = this.get('DIR_OUTPUT_STATIC')+'s/';
                 this.set('DIR_SOURCE_MAP',dir);
-                _util.mkdir(dir);
+                util.mkdir(dir);
             }
             return v;
         },
@@ -556,7 +557,7 @@ const FILTERS_CONFIG = [
                 v = './cache.json';
             }
             // relative to DIR_CONFIG
-            return _util.absolute(
+            return util.absolute(
                 this.get('DIR_CONFIG'),v
             );
         },
@@ -607,6 +608,70 @@ FILTERS_CONFIG.forEach((it) => {
  */
 class CFGParser extends Emitter{
     /**
+     * core file merge strategy for auto
+     *
+     * @type {Number}
+     */
+    static get CORE_MERGE_FLAG_AUTO () {
+        return 0;
+    }
+    /**
+     * core file merge strategy for merge style by page
+     *
+     * @type {Number}
+     */
+    static get CORE_MERGE_FLAG_EXCLUDE_STYLE() {
+        return 1;
+    }
+    /**
+     * core file merge strategy for merge script by page
+     *
+     * @type {Number}
+     */
+    static get CORE_MERGE_FLAG_EXCLUDE_SCRIPT() {
+        return 2;
+    }
+    /**
+     * core file merge strategy for merge style/script by page
+     *
+     * @type {Number}
+     */
+    static get CORE_MERGE_FLAG_EXCLUDE_ALL() {
+        return 3;
+    }
+    /**
+     * not parse inline resource flag by deploy tag in page
+     *
+     * @type {Number}
+     */
+    static get CORE_NOPARSE_FLAG_AUTO() {
+        return 0;
+    }
+    /**
+     * not parse inline resource flag for all style
+     *
+     * @type {Number}
+     */
+    static get CORE_NOPARSE_FLAG_STYLE() {
+        return 1;
+    }
+    /**
+     * not parse inline resource flag for all script
+     *
+     * @type {Number}
+     */
+    static get CORE_NOPARSE_FLAG_SCRIPT() {
+        return 2;
+    }
+    /**
+     * not parse inline resource flag for all
+     *
+     * @type {Number}
+     */
+    static get CORE_NOPARSE_FLAG_ALL() {
+        return 3;
+    }
+    /**
      * Config Content Parser
      *
      * @param {Object} options - config object
@@ -620,6 +685,8 @@ class CFGParser extends Emitter{
 
         this[parse](options.config);
         this[check]();
+        this[attach]();
+
         this.emit('done',{
             message: 'config parse done'
         });
@@ -674,6 +741,46 @@ class CFGParser extends Emitter{
             ret[key] = this.get(map[key]);
         });
         return ret;
+    }
+
+    /**
+     * update nej config
+     *
+     * @param  {Object} conf - nej config
+     * @param  {Object} conf.params  - other path config
+     * @param  {String} conf.nejRoot - nej lib root
+     */
+    update(conf) {
+        let dict = this.get('')
+    }
+
+    /**
+     * attach config property to instance
+     */
+    [attach]() {
+        // DIR_SOURCE -> dirSource
+        let key2camel = (key) => {
+            let arr = key.split('_');
+            arr.forEach((it, index, list) => {
+                it = it.toLowerCase();
+                if (index>0){
+                    let brr = it.split('');
+                    brr[0] = brr[0].toUpperCase();
+                    it = brr.join('');
+                }
+                list[index] = it;
+            });
+            return arr.join('');
+        };
+        Object.keys(this[cache]).forEach((key) => {
+            Object.defineProperty(
+                this, key2camel(key), {
+                    get : () => {
+                        return this.get(key);
+                    }
+                }
+            );
+        });
     }
 
     /**
@@ -817,12 +924,12 @@ class CFGParser extends Emitter{
         }
         // parse config
         let ret = conf;
-        let dir = _util.absolute(
+        let dir = util.absolute(
             process.cwd()+'/'
         );
         // dump config from file
         if (typeof ret==='string'){
-            let file = _util.absolute(dir,ret);
+            let file = util.absolute(dir,ret);
             this.emit('info', {
                 message: `parse config file ${file}`
             });
@@ -921,7 +1028,7 @@ class CFGParser extends Emitter{
     [formatDir](dir) {
         if (dir){
             let root = this.get('DIR_WEBROOT');
-            return _util.absolute(root, dir);
+            return util.absolute(root, dir);
         }
     }
 
@@ -935,7 +1042,7 @@ class CFGParser extends Emitter{
     [formatDirSub](sub, root) {
         let ret = [];
         sub.split(/[,;\s]+/).forEach((dir) => {
-            let subdir = _util.absolute(
+            let subdir = util.absolute(
                 root, (dir||'.')+'/'
             );
             if (ret.indexOf(subdir)<0){
@@ -1076,7 +1183,7 @@ class CFGParser extends Emitter{
             return list;
         }
         // for file path
-        let file = _util.absolute(
+        let file = util.absolute(
             this.get('DIR_CONFIG'), value
         );
         try{
@@ -1106,7 +1213,6 @@ class CFGParser extends Emitter{
         }
         return value;
     }
-
 }
 // export config parser
 module.exports = CFGParser;

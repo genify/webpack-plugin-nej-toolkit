@@ -155,6 +155,7 @@ describe('CFGParser', () => {
                 config: {NAME_SUFFIX:'v2'},
                 done: (self) => {
                     expect(self.get('VERSION_MODE')).to.equal('[FILENAME]_v2');
+                    expect(self.versionMode).to.equal('[FILENAME]_v2');
                 }
             },
             {
@@ -162,6 +163,7 @@ describe('CFGParser', () => {
                 config: {RAND_VERSION:true},
                 done: (self) => {
                     expect(self.get('VERSION_MODE')).to.equal(1);
+                    expect(self.versionMode).to.equal(1);
                 }
             },
             {
@@ -169,6 +171,7 @@ describe('CFGParser', () => {
                 config: {STATIC_VERSION:true},
                 done: (self) => {
                     expect(self.get('VERSION_STATIC')).to.be.true;
+                    expect(self.versionStatic).to.be.true;
                 }
             },
             {
@@ -176,6 +179,7 @@ describe('CFGParser', () => {
                 config: {X_NOCORE_STYLE:true},
                 done: (self) => {
                     expect(self.get('CORE_MERGE_FLAG')).to.equal(1);
+                    expect(self.coreMergeFlag).to.equal(1);
                 }
             },
             {
@@ -183,6 +187,7 @@ describe('CFGParser', () => {
                 config: {X_NOCORE_SCRIPT:true},
                 done: (self) => {
                     expect(self.get('CORE_MERGE_FLAG')).to.equal(2);
+                    expect(self.coreMergeFlag).to.equal(2);
                 }
             },
             {
@@ -190,6 +195,7 @@ describe('CFGParser', () => {
                 config: {X_NOCORE_STYLE:true,X_NOCORE_SCRIPT:true},
                 done: (self) => {
                     expect(self.get('CORE_MERGE_FLAG')).to.equal(3);
+                    expect(self.coreMergeFlag).to.equal(3);
                 }
             },
             {
@@ -197,6 +203,7 @@ describe('CFGParser', () => {
                 config: {X_MODULE_WRAPPER:'<#noparse>%s</#noparse>'},
                 done: (self) => {
                     expect(self.get('WRP_INLINE_SOURCE')).to.equal('<#noparse>%s</#noparse>');
+                    expect(self.wrpInlineSource).to.equal('<#noparse>%s</#noparse>');
                 }
             },
             {
@@ -204,6 +211,7 @@ describe('CFGParser', () => {
                 config: {X_SCRIPT_WRAPPER:'<#noparse>%s</#noparse>'},
                 done: (self) => {
                     expect(self.get('WRP_INLINE_SOURCE')).to.equal('<#noparse>%s</#noparse>');
+                    expect(self.wrpInlineSource).to.equal('<#noparse>%s</#noparse>');
                 }
             },
             {
@@ -211,6 +219,7 @@ describe('CFGParser', () => {
                 config: {DM_STATIC_MF:'/pub/'},
                 done: (self) => {
                     expect(self.get('MANIFEST_ROOT')).to.equal('/pub/');
+                    expect(self.manifestRoot).to.equal('/pub/');
                 }
             }
         ];

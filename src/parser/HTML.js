@@ -36,6 +36,7 @@ const onInstruction = Symbol('onInstruction');
  * - file       html file path
  * - content    html file content
  * supported properties
+ * - file       html file path
  * - result     content result after parse
  */
 class HTMLParser extends Emitter{
@@ -60,9 +61,9 @@ class HTMLParser extends Emitter{
     constructor(options={}) {
         super(options);
         // private properties
-        this[file]   = options.file;
-        this[flag]   = options.flag;
-        this.result  = [];
+        this[flag]  = options.flag;
+        this.file   = options.file;
+        this.result = [];
         // parse content
         this[parser] = new Tagger({
             content     : options.content||'',

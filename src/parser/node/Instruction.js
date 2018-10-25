@@ -21,6 +21,7 @@ class NodeInstruction extends Node {
      */
     constructor(options={}) {
         super(options);
+        this.config = this.config||{};
         this.nodeType = nd.INSTRUCTION;
     }
 }

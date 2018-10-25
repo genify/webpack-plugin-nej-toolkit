@@ -21,6 +21,7 @@ class NodeStyle extends Node {
         super(options);
         this.nodeType = nd.STYLE;
     }
+
 }
 
 // export class
