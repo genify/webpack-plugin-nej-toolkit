@@ -2,7 +2,8 @@
   {
     "closed": false,
     "command": "NOCOMPRESS",
-    "source": "<!-- @NOCOMPRESS -->"
+    "source": "<!-- @NOCOMPRESS -->",
+    "config": {}
   },
   {
     "source": "\r\n"
@@ -66,7 +67,8 @@
   {
     "closed": false,
     "command": "IGNORE",
-    "source": "<!-- @IGNORE -->"
+    "source": "<!-- @IGNORE -->",
+    "config": {}
   },
   {
     "source": "\r\n    "
@@ -86,7 +88,8 @@
   {
     "closed": true,
     "command": "IGNORE",
-    "source": "<!-- /@IGNORE -->"
+    "source": "<!-- /@IGNORE -->",
+    "config": {}
   },
   {
     "source": "\r\n    "
@@ -210,7 +213,8 @@
   {
     "closed": false,
     "command": "NOPARSE",
-    "source": "<!-- @noparse -->"
+    "source": "<!-- @noparse -->",
+    "config": {}
   },
   {
     "source": "\r\n    "
@@ -224,7 +228,8 @@
   {
     "closed": true,
     "command": "NOPARSE",
-    "source": "<!-- /@noparse -->"
+    "source": "<!-- /@noparse -->",
+    "config": {}
   },
   {
     "source": "\r\n    "
@@ -261,7 +266,8 @@
   {
     "closed": false,
     "command": "NOPARSE",
-    "source": "<!-- @noparse -->"
+    "source": "<!-- @noparse -->",
+    "config": {}
   },
   {
     "source": "\r\n    "
@@ -275,7 +281,8 @@
   {
     "closed": true,
     "command": "NOPARSE",
-    "source": "<!-- /@noparse -->"
+    "source": "<!-- /@noparse -->",
+    "config": {}
   },
   {
     "source": "\r\n\r\n    "
@@ -1287,7 +1294,8 @@
   {
     "closed": false,
     "command": "TEMPLATE",
-    "source": "<!-- @TEMPLATE -->"
+    "source": "<!-- @TEMPLATE -->",
+    "config": {}
   },
   {
     "source": "\r\n      \r\n      "
@@ -1338,7 +1346,8 @@
   {
     "closed": false,
     "command": "MODULE",
-    "source": "<!-- @MODULE -->"
+    "source": "<!-- @MODULE -->",
+    "config": {}
   },
   {
     "source": "\r\n      "
@@ -1370,7 +1379,8 @@
   {
     "closed": true,
     "command": "MODULE",
-    "source": "<!-- /@MODULE -->"
+    "source": "<!-- /@MODULE -->",
+    "config": {}
   },
   {
     "source": "\r\n      "
@@ -1398,7 +1408,8 @@
   {
     "closed": false,
     "command": "SCRIPT",
-    "source": "<!-- @SCRIPT -->"
+    "source": "<!-- @SCRIPT -->",
+    "config": {}
   },
   {
     "source": "\r\n    "

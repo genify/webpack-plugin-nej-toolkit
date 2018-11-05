@@ -2121,7 +2121,8 @@
   {
     "closed": false,
     "command": "SCRIPT",
-    "source": "<!-- @SCRIPT -->"
+    "source": "<!-- @SCRIPT -->",
+    "config": {}
   },
   {
     "source": "\r\n    "

@@ -427,7 +427,8 @@
   {
     "closed": false,
     "command": "NOPARSE",
-    "source": "<!-- @noparse -->"
+    "source": "<!-- @noparse -->",
+    "config": {}
   },
   {
     "source": "\r\n    "
@@ -449,7 +450,8 @@
   {
     "closed": true,
     "command": "NOPARSE",
-    "source": "<!-- /@noparse -->"
+    "source": "<!-- /@noparse -->",
+    "config": {}
   },
   {
     "source": "\r\n    "
@@ -511,7 +513,8 @@
   {
     "closed": false,
     "command": "MODULE",
-    "source": "<!-- @MODULE -->"
+    "source": "<!-- @MODULE -->",
+    "config": {}
   },
   {
     "source": "\r\n        "
@@ -527,7 +530,8 @@
   {
     "closed": true,
     "command": "MODULE",
-    "source": "<!-- /@MODULE -->"
+    "source": "<!-- /@MODULE -->",
+    "config": {}
   },
   {
     "source": "\r\n    "
@@ -545,7 +549,8 @@
   {
     "closed": false,
     "command": "VERSION",
-    "source": "<!-- @VERSION -->"
+    "source": "<!-- @VERSION -->",
+    "config": {}
   },
   {
     "source": "\r\n    "
@@ -559,7 +564,8 @@
   {
     "closed": false,
     "command": "SCRIPT",
-    "source": "<!-- @script -->"
+    "source": "<!-- @script -->",
+    "config": {}
   },
   {
     "source": "\r\n\t"

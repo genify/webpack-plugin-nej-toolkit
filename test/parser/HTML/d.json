@@ -4401,7 +4401,8 @@
   {
     "closed": false,
     "command": "NOPARSE",
-    "source": "<!-- @NOPARSE -->"
+    "source": "<!-- @NOPARSE -->",
+    "config": {}
   },
   {
     "source": "\r\n"
@@ -4415,7 +4416,8 @@
   {
     "closed": true,
     "command": "NOPARSE",
-    "source": "<!-- /@NOPARSE -->"
+    "source": "<!-- /@NOPARSE -->",
+    "config": {}
   },
   {
     "source": "\r\n\r\n"

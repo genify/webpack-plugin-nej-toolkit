@@ -686,7 +686,7 @@ class CFGParser extends Emitter{
      * @param  {String} conf.nejRoot - nej lib root
      */
     update(conf) {
-        let dict = this.get('')
+        // TODO
     }
 
     /**
