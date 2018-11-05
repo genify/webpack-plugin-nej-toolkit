@@ -1,7 +1,7 @@
 let fs = require('fs');
 let expect = require('chai').expect;
 let NEJRoot = require('../../../src/parser/Root.js');
-let CFGParser = require('../../../src/parser/Config.js');
+let CFGParser = require('../../../src/parser/config/Config.js');
 
 let log = (msg) => {
     // console.log(msg);

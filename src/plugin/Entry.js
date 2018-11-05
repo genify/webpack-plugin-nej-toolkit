@@ -6,7 +6,7 @@
  */
 let path = require('path');
 let NEJRooter = require('../parser/Root.js');
-let CFGParser = require('../parser/Config.js');
+let CFGParser = require('../parser/config/Config.js');
 
 /**
  * Prepare Webpack Entry Plugin

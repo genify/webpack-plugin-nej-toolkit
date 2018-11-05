@@ -24,8 +24,6 @@ class NodeTag extends Node {
         super(options);
         this.nodeType = nd.TAG;
     }
-
-
 }
 
 // export class

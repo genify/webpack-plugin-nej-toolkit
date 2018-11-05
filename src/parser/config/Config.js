@@ -7,8 +7,8 @@ const fs       = require('fs');
 const dt       = require('fecha');
 const qs       = require('querystring');
 const path     = require('path');
-const util     = require('../util/util.js');
-const Emitter  = require('../util/emitter.js');
+const util     = require('../../util/util.js');
+const Emitter  = require('../../util/emitter.js');
 
 // private name
 const cache           = Symbol('cache');
@@ -581,7 +581,6 @@ const FILTERS_CONFIG = [
             return this[formatJSONObj](v);
         },
 
-
         X_RELEASE_MODE:function(v){
             return (v||'online').toLowerCase();
         },
@@ -607,70 +606,6 @@ FILTERS_CONFIG.forEach((it) => {
  * Config Content Parser
  */
 class CFGParser extends Emitter{
-    /**
-     * core file merge strategy for auto
-     *
-     * @type {Number}
-     */
-    static get CORE_MERGE_FLAG_AUTO () {
-        return 0;
-    }
-    /**
-     * core file merge strategy for merge style by page
-     *
-     * @type {Number}
-     */
-    static get CORE_MERGE_FLAG_EXCLUDE_STYLE() {
-        return 1;
-    }
-    /**
-     * core file merge strategy for merge script by page
-     *
-     * @type {Number}
-     */
-    static get CORE_MERGE_FLAG_EXCLUDE_SCRIPT() {
-        return 2;
-    }
-    /**
-     * core file merge strategy for merge style/script by page
-     *
-     * @type {Number}
-     */
-    static get CORE_MERGE_FLAG_EXCLUDE_ALL() {
-        return 3;
-    }
-    /**
-     * not parse inline resource flag by deploy tag in page
-     *
-     * @type {Number}
-     */
-    static get CORE_NOPARSE_FLAG_AUTO() {
-        return 0;
-    }
-    /**
-     * not parse inline resource flag for all style
-     *
-     * @type {Number}
-     */
-    static get CORE_NOPARSE_FLAG_STYLE() {
-        return 1;
-    }
-    /**
-     * not parse inline resource flag for all script
-     *
-     * @type {Number}
-     */
-    static get CORE_NOPARSE_FLAG_SCRIPT() {
-        return 2;
-    }
-    /**
-     * not parse inline resource flag for all
-     *
-     * @type {Number}
-     */
-    static get CORE_NOPARSE_FLAG_ALL() {
-        return 3;
-    }
     /**
      * Config Content Parser
      *

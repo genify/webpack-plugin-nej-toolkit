@@ -1,5 +1,5 @@
 /*
- * Node type constant
+ * Node Type Constant
  *
  * @author caijf(genify@163.com)
  */

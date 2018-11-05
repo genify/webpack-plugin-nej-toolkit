@@ -7,8 +7,8 @@ const path       = require('path');
 const nd         = require('./node/type.js');
 const ut         = require('../util/util.js');
 const nej        = require('../util/nej.js');
+const cfg        = require('./config/const.js');
 const Emitter    = require('../util/emitter.js');
-const CFGParser  = require('./Config.js');
 
 // private name
 const status     = Symbol('status');
@@ -258,8 +258,8 @@ class Transformer extends Emitter {
             instr: 'STYLE',
             index: index,
             notparse: (flag) => {
-                return flag===CFGParser.CORE_NOPARSE_FLAG_STYLE||
-                       flag===CFGParser.CORE_NOPARSE_FLAG_ALL;
+                return flag===cfg.CORE_NOPARSE_FLAG_STYLE||
+                       flag===cfg.CORE_NOPARSE_FLAG_ALL;
             }
         });
     }
@@ -305,8 +305,8 @@ class Transformer extends Emitter {
             instr: 'SCRIPT',
             index: index,
             notparse: (flag) => {
-                return (flag===CFGParser.CORE_NOPARSE_FLAG_SCRIPT||
-                        flag===CFGParser.CORE_NOPARSE_FLAG_ALL)&&
+                return (flag===cfg.CORE_NOPARSE_FLAG_SCRIPT||
+                        flag===cfg.CORE_NOPARSE_FLAG_ALL)&&
                         !nej.isNEJScript(node.source);
             }
         });

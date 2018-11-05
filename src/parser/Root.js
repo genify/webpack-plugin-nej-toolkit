@@ -7,7 +7,7 @@ const fs         = require('fs');
 const util       = require('util');
 const _util      = require('../util/util.js');
 const Emitter    = require('../util/emitter.js');
-const CFGParser  = require('./Config.js');
+const CFGParser  = require('./config/Config.js');
 const HTMLParser = require('./HTML.js');
 
 // private name
