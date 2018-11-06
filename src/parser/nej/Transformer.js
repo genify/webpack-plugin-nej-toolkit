@@ -4,7 +4,7 @@
  * @author caijf(genify@163.com)
  */
 const path       = require('path');
-const nt         = require('../node/const.js');
+const node       = require('../node/const.js');
 const cfg        = require('../config/const.js');
 const util       = require('../../util/util.js');
 const nej        = require('../../util/nej.js');
@@ -252,7 +252,7 @@ class Transformer extends Emitter {
      * @param  {Number} index  - node index in buffer
      * @param  {Array}  buffer - html result buffer
      */
-    [nt.STYLE](node, index, buffer) {
+    [node.STYLE](node, index, buffer) {
         this[resource](node, {
             type: 'styles',
             instr: 'STYLE',
@@ -271,7 +271,7 @@ class Transformer extends Emitter {
      * @param  {Number} index  - node index in buffer
      * @param  {Array}  buffer - html result buffer
      */
-    [nt.SCRIPT](node, index, buffer) {
+    [node.SCRIPT](node, index, buffer) {
         // check umi root config
         if (this[status]===STATE.VERSION&&node.source){
             this[status] = STATE.NULL;
@@ -319,7 +319,7 @@ class Transformer extends Emitter {
      * @param  {Number} index  - node index in buffer
      * @param  {Array}  buffer - html result buffer
      */
-    [nt.TEMPLATE](node, index, buffer) {
+    [node.TEMPLATE](node, index, buffer) {
 
     }
 
@@ -330,7 +330,7 @@ class Transformer extends Emitter {
      * @param  {Number} index  - node index in buffer
      * @param  {Array}  buffer - html result buffer
      */
-    [nt.INSTRUCTION](node, index, buffer) {
+    [node.INSTRUCTION](node, index, buffer) {
         // clear instruction node
         buffer[index] = null;
         // process instruction

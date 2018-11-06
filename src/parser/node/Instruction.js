@@ -13,7 +13,7 @@ const type = Symbol('instruction');
  */
 class NodeInstruction extends Node {
     /**
-     * Tag Node type identifier
+     * Instruction Node type identifier
      *
      * @type {symbol}
      */

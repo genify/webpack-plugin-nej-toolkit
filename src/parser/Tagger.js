@@ -4,6 +4,7 @@
  * @author caijf(genify@163.com)
  */
 const util      = require('../util/util.js');
+const instr     = require('./instr/const.js');
 const Emitter   = require('../util/emitter.js');
 const Tokenizer = require('./Tokenizer.js');
 
@@ -242,10 +243,11 @@ class Tagger extends Emitter {
      * @return {Object} instruction config object
      */
     [parseInstruction](comment) {
+        let ret;
         comment = (comment||'').trim();
         // begin instruction
         if (comment.indexOf('@')===0){
-            let ret = {closed:!1};
+            ret = {closed:!1};
             // @ABC {a:'',b:''}
             let index = comment.search(/[\s{]/);
             if (index>0){
@@ -258,11 +260,16 @@ class Tagger extends Emitter {
         }
         // end instruction
         if (comment.indexOf('/@')===0){
-            return {
+            ret = {
                 closed:!0,
                 command:comment.substr(2).toUpperCase()
             };
         }
+        // check illegal instruction
+        if (ret&&!instr.get(ret.command)){
+            ret = null;
+        }
+        return ret;
     }
 
     /**
