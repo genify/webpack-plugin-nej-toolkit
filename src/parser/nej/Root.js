@@ -4,17 +4,16 @@
  * @author caijf(genify@163.com)
  */
 const fs         = require('fs');
-const util       = require('util');
-const _util      = require('../util/util.js');
-const Emitter    = require('../util/emitter.js');
-const CFGParser  = require('./config/Config.js');
-const HTMLParser = require('./HTML.js');
+const ut         = require('util');
+const util       = require('../../util/util.js');
+const Emitter    = require('../../util/emitter.js');
+const CFGParser  = require('../config/Config.js');
+const HTMLParser = require('../HTML.js');
 
 // private name
 const config        = Symbol('config');
 const loadSource    = Symbol('loadSource');
 const loadAllSource = Symbol('loadAllSource');
-
 
 /**
  * NEJ Root Parser
@@ -86,7 +85,7 @@ class NEJRoot extends Emitter {
         let ret = [];
         (opt.sub||[opt.dir]).forEach((dir) => {
             // list files that match config rules
-            let list = _util.ls(dir, (name, file) => {
+            let list = util.ls(dir, (name, file) => {
                 return !/^\./.test(name)&&
                     (!filter||filter.test(file))&&   // match path
                     (!exclude||!exclude.test(file)); // not exclude path
@@ -100,7 +99,7 @@ class NEJRoot extends Emitter {
                 test[it] = true;
                 // load file
                 ret.push(
-                    util.promisify(fs.readFile)(it,'utf-8').then(
+                    ut.promisify(fs.readFile)(it,'utf-8').then(
                         (content) => {
                             this.root.push(new HTMLParser({
                                 file: it,
@@ -114,8 +113,6 @@ class NEJRoot extends Emitter {
         });
         return ret;
     }
-
-
 
     /**
      * get webpack entry list

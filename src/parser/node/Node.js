@@ -3,12 +3,23 @@
  *
  * @author caijf(genify@163.com)
  */
-const nd = require('./type.js');
+
+// private variables
+const type = Symbol('unknown');
 
 /**
  * Base Node Class
  */
 class Node {
+    /**
+     * Node type identifier
+     *
+     * @type {symbol}
+     */
+    static get TYPE() {
+        return type;
+    }
+
     /**
      * Base Node Class
      *
@@ -17,7 +28,7 @@ class Node {
      */
     constructor(options={}) {
         Object.assign(this, options);
-        this.nodeType = nd.UNKNOWN;
+        this.nodeType = type;
     }
 }
 

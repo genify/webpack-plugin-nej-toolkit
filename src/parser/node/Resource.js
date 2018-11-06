@@ -3,13 +3,24 @@
  *
  * @author caijf(genify@163.com)
  */
-const nd   = require('./type.js');
 const Node = require('./Node.js');
+
+// private variables
+const type = Symbol('resource');
 
 /**
  * Resource Node Class
  */
 class NodeResource extends Node {
+    /**
+     * Resource Node type identifier
+     *
+     * @type {symbol}
+     */
+    static get TYPE() {
+        return type;
+    }
+
     /**
      * Resource Node Class
      *
@@ -20,7 +31,7 @@ class NodeResource extends Node {
      */
     constructor(options={}) {
         super(options);
-        this.nodeType = nd.RESOURCE;
+        this.nodeType = type;
     }
 }
 

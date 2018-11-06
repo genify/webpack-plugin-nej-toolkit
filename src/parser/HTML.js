@@ -3,17 +3,9 @@
  *
  * @author caijf(genify@163.com)
  */
+const node    = require('./node/const.js');
 const Tagger  = require('./Tagger.js');
 const Emitter = require('../util/emitter.js');
-
-// node class
-const Tag         = require('./node/Tag.js');
-const Text        = require('./node/Text.js');
-const Style       = require('./node/Style.js');
-const Script      = require('./node/Script.js');
-const Template    = require('./node/Template.js');
-const Resource    = require('./node/Resource.js');
-const Instruction = require('./node/Instruction.js');
 
 // private name
 const file          = Symbol('file');
@@ -37,7 +29,7 @@ const onInstruction = Symbol('onInstruction');
  * - content    html file content
  * supported properties
  * - file       html file path
- * - result     content result after parse
+ * - result     node list result after parse
  */
 class HTMLParser extends Emitter{
     /**
@@ -102,14 +94,14 @@ class HTMLParser extends Emitter{
     [onResource](event) {
         // console.log('%s:%s','resource',type);
         let ret = {
-            beg: new Tag(event.beg)
+            beg: new node.Tag(event.beg)
         };
         // not self close tag resource
         if (event.beg!==event.end){
-            ret.end = new Tag(event.end);
+            ret.end = new node.Tag(event.end);
             ret.source = event.source;
         }
-        this.result.push(new Resource(ret));
+        this.result.push(new node.Resource(ret));
     }
 
     /**
@@ -138,11 +130,11 @@ class HTMLParser extends Emitter{
             let ret;
             let rel = (conf.rel||'').toLowerCase().trim();
             if (rel.indexOf('stylesheet')>=0){
-                ret = new Style({
+                ret = new node.Style({
                     uri: conf.href
                 });
             }else if(rel==='nej'){
-                ret = new Template({
+                ret = new node.Template({
                     type: this[format](type),
                     uri: conf.href
                 });
@@ -154,13 +146,13 @@ class HTMLParser extends Emitter{
         let internal = () => {
             let ret;
             if (!type||type==='text/css'){
-                ret = new Style({
+                ret = new node.Style({
                     source: event.source
                 });
             }
             // check nej inline style template
             if (type.indexOf('nej/')===0){
-                ret = new Template({
+                ret = new node.Template({
                     type: this[format](type),
                     source: event.source,
                     id: conf.id
@@ -199,7 +191,7 @@ class HTMLParser extends Emitter{
         let type = (conf.type||'').toLowerCase().trim();
         // for nej template
         if (type.indexOf('nej/')===0){
-            ret = new Template({
+            ret = new node.Template({
                 type: this[format](type),
                 source: event.source,
                 uri: conf.src,
@@ -208,7 +200,7 @@ class HTMLParser extends Emitter{
         }
         // for script
         if (!type||/(text|application)\/(x-)?javascript/i.test(type)){
-            ret = new Script({
+            ret = new node.Script({
                 source: event.source,
                 uri: conf.src
             });
@@ -248,7 +240,7 @@ class HTMLParser extends Emitter{
         // for nej template
         if (type.indexOf('nej/')===0||
             /txt|jst|ntp|js|css|html/i.test(type)){
-            this.result.push(new Template({
+            this.result.push(new node.Template({
                 type: this[format](type),
                 source: event.source,
                 uri: cnf['data-src'],
@@ -277,7 +269,7 @@ class HTMLParser extends Emitter{
      */
     [onInstruction](event) {
         // console.log('%s:%j','instr',event);
-        this.result.push(new Instruction(event));
+        this.result.push(new node.Instruction(event));
     };
 
     /**
@@ -297,7 +289,7 @@ class HTMLParser extends Emitter{
      */
     [onTag](event) {
         // console.log('%s:%j','tag',event);
-        this.result.push(new Tag(event.tag));
+        this.result.push(new node.Tag(event.tag));
     };
 
     /**
@@ -307,7 +299,7 @@ class HTMLParser extends Emitter{
      */
     [onText](event) {
         // console.log('%s:%j','text',event);
-        this.result.push(new Text({
+        this.result.push(new node.Text({
             source: event.source
         }));
     };

@@ -3,13 +3,24 @@
  *
  * @author caijf(genify@163.com)
  */
-const nd   = require('./type.js');
 const Node = require('./Node.js');
+
+// private variables
+const type = Symbol('script');
 
 /**
  * Script Node Class
  */
 class NodeScript extends Node {
+    /**
+     * Script Node type identifier
+     *
+     * @type {symbol}
+     */
+    static get TYPE() {
+        return type;
+    }
+
     /**
      * Script Node Class
      *
@@ -19,7 +30,7 @@ class NodeScript extends Node {
      */
     constructor(options={}) {
         super(options);
-        this.nodeType = nd.SCRIPT;
+        this.nodeType = type;
     }
 }
 

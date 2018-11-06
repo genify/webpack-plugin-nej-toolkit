@@ -3,13 +3,24 @@
  *
  * @author caijf(genify@163.com)
  */
-const nd   = require('./type.js');
 const Node = require('./Node.js');
+
+// private variables
+const type = Symbol('text');
 
 /**
  * Text Node Class
  */
 class NodeText extends Node {
+    /**
+     * Text Node type identifier
+     *
+     * @type {symbol}
+     */
+    static get TYPE() {
+        return type;
+    }
+
     /**
      * Text Node Class
      *
@@ -18,7 +29,7 @@ class NodeText extends Node {
      */
     constructor(options={}) {
         super(options);
-        this.nodeType = nd.TEXT;
+        this.nodeType = type;
     }
 }
 

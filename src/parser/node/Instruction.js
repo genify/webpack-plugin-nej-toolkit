@@ -3,13 +3,24 @@
  *
  * @author caijf(genify@163.com)
  */
-const nd   = require('./type.js');
 const Node = require('./Node.js');
+
+// private variables
+const type = Symbol('instruction');
 
 /**
  * Instruction Node Class
  */
 class NodeInstruction extends Node {
+    /**
+     * Tag Node type identifier
+     *
+     * @type {symbol}
+     */
+    static get TYPE() {
+        return type;
+    }
+
     /**
      * Instruction Node Class
      *
@@ -22,7 +33,7 @@ class NodeInstruction extends Node {
     constructor(options={}) {
         super(options);
         this.config = this.config||{};
-        this.nodeType = nd.INSTRUCTION;
+        this.nodeType = type;
     }
 }
 

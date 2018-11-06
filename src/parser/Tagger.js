@@ -3,7 +3,7 @@
  *
  * @author caijf(genify@163.com)
  */
-const _util     = require('../util/util.js');
+const util      = require('../util/util.js');
 const Emitter   = require('../util/emitter.js');
 const Tokenizer = require('./Tokenizer.js');
 
@@ -250,7 +250,7 @@ class Tagger extends Emitter {
             let index = comment.search(/[\s{]/);
             if (index>0){
                 ret.command = comment.substr(1,index-1).toUpperCase();
-                ret.config = _util.eval('result = '+comment.substr(index)).result;
+                ret.config = util.eval('result = '+comment.substr(index)).result;
             }else{
                 ret.command = comment.substr(1).toUpperCase();
             }
