@@ -3,33 +3,61 @@
  *
  * @author caijf(genify@163.com)
  */
+const ntype = require('../node/const.js');
 const Instruction = require('./Instruction.js');
-
-// private variables
-const type = Symbol('template');
 
 /**
  * Template Instruction Class
+ *
+ * supported properties
+ * - result     style list
  */
 class InstrTemplate extends Instruction {
     /**
-     * Template Instruction type
+     * Template Instruction Class
      *
-     * @type {symbol}
+     * @param {Object} options - config object
+     * @param {String} options.file - file path
      */
-    static get TYPE() {
-        return type;
+    constructor(options) {
+        super(options);
+        this.result = [];
     }
 
     /**
-     * Instruction Class
+     * process instruction beg tag
      *
-     * @param {Object} options - config object
-     * @param {String} options.node - Instruction Node
+     * ```html
+     *      <!-- @name {a:111, b:2222} -->
+     * ```
+     *
+     * @param  {Node}   node   - Instruction Node
+     * @param  {Number} index  - instruction pointer in the buffer
+     * @param  {Array}  buffer - Node list
      */
-    constructor(options={}) {
-        super(options);
-        this.type = type;
+    begInstr(node, index, buffer) {
+        super.begInstr(...arguments);
+
+    }
+
+    /**
+     * process content between instrction beg tag to end tag
+     *
+     * ```html
+     *      <div>
+     *          <img src="/path/to/image.png"/>
+     *      </div>
+     * ```
+     *
+     * @param  {Node}   node   - Resource Node
+     * @param  {Number} index  - instruction pointer in the buffer
+     * @param  {Array}  buffer - Node list
+     */
+    procInstr(node, index, buffer) {
+        super.procInstr(...arguments);
+        if (node.nodeType===ntype.TEMPLATE){
+            this.result.push(node);
+        }
     }
 }
 

@@ -12,6 +12,7 @@ const HTMLParser = require('../HTML.js');
 
 // private name
 const config        = Symbol('config');
+const procSource    = Symbol('procSource');
 const loadSource    = Symbol('loadSource');
 const loadAllSource = Symbol('loadAllSource');
 
@@ -101,17 +102,30 @@ class NEJRoot extends Emitter {
                 ret.push(
                     ut.promisify(fs.readFile)(it,'utf-8').then(
                         (content) => {
-                            this.root.push(new HTMLParser({
-                                file: it,
-                                flag: opt.flag,
-                                content: content
-                            }));
+                            this[procSource](it, content, opt.flag);
                         }
                     )
                 );
             });
         });
         return ret;
+    }
+
+    /**
+     * process resource content
+     *
+     * @param  {String}  file    - file path
+     * @param  {String}  content - resource content
+     * @param  {Boolean} flag    - is template flag
+     */
+    [procSource](file, content, flag) {
+        let parser = new HTMLParser({
+            file: file,
+            flag: flag,
+            content: content
+        });
+        this.root.push(parser);
+
     }
 
     /**

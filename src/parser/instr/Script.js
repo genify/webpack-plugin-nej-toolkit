@@ -3,33 +3,64 @@
  *
  * @author caijf(genify@163.com)
  */
+const ntype = require('../node/const.js');
 const Instruction = require('./Instruction.js');
 
 // private variables
-const type = Symbol('script');
+const config = Symbol('config');
 
 /**
  * Script Instruction Class
+ *
+ * supported properties
+ * - result     script list
  */
 class InstrScript extends Instruction {
     /**
-     * Script Instruction type
+     * Script Instruction Class
      *
-     * @type {symbol}
+     * @param {Object} options - config object
+     * @param {String} options.file - file path
      */
-    static get TYPE() {
-        return type;
+    constructor(options) {
+        super(options);
+        this.result = [];
     }
 
     /**
-     * Instruction Class
+     * process instruction beg tag
      *
-     * @param {Object} options - config object
-     * @param {String} options.node - Instruction Node
+     * ```html
+     *      <!-- @name {a:111, b:2222} -->
+     * ```
+     *
+     * @param  {Node}   node   - Instruction Node
+     * @param  {Number} index  - instruction pointer in the buffer
+     * @param  {Array}  buffer - Node list
      */
-    constructor(options={}) {
-        super(options);
-        this.type = type;
+    begInstr(node, index, buffer) {
+        super.begInstr(...arguments);
+        this[config] = node.config||{};
+    }
+
+    /**
+     * process content between instrction beg tag to end tag
+     *
+     * ```html
+     *      <div>
+     *          <img src="/path/to/image.png"/>
+     *      </div>
+     * ```
+     *
+     * @param  {Node}   node   - Resource Node
+     * @param  {Number} index  - instruction pointer in the buffer
+     * @param  {Array}  buffer - Node list
+     */
+    procInstr(node, index, buffer) {
+        super.procInstr(...arguments);
+        if (node.nodeType===ntype.SCRIPT){
+            this.result.push(node);
+        }
     }
 }
 

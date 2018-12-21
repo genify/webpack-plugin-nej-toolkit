@@ -3,11 +3,23 @@
  *
  * @author caijf(genify@163.com)
  */
+const Emitter = require('../../util/emitter.js');
 
 /**
  * Instruction Base Class
  */
-class Instruction {
+class Instruction extends Emitter {
+    /**
+     * Base Instruction Class
+     *
+     * @param {Object} options - config object
+     * @param {String} options.file - file path
+     */
+    constructor(options) {
+        super(options);
+
+    }
+
     /**
      * process instruction beg tag
      *
@@ -19,7 +31,7 @@ class Instruction {
      * @param  {Number} index  - instruction pointer in the buffer
      * @param  {Array}  buffer - Node list
      */
-    static onInstrBeg(node, index, buffer) {
+    begInstr(node, index, buffer) {
         // do something by sub class
     }
 
@@ -36,8 +48,8 @@ class Instruction {
      * @param  {Number} index  - instruction pointer in the buffer
      * @param  {Array}  buffer - Node list
      */
-    static onInstrProc(node, index, buffer) {
-
+    procInstr(node, index, buffer) {
+        // do something by sub class
     }
 
     /**
@@ -51,7 +63,7 @@ class Instruction {
      * @param  {Number} index  - instruction pointer in the buffer
      * @param  {Array}  buffer - Node list
      */
-    static onInstrEnd(node, index, buffer) {
+    endInstr(node, index, buffer) {
         // do something by sub class
     }
 }
